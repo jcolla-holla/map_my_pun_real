@@ -36,9 +36,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #is this the production group??
 
+
+gem 'jquery-rails'
+
 group :production do 
   gem 'rails_12factor'
-  gem 'jquery-rails'
 end
 
 group :development, :test do
