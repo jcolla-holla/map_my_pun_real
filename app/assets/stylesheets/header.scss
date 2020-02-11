@@ -1,0 +1,61 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+ #header {
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    height: 64px;
+    z-index: 20;
+    border-bottom: darkgrey .2px solid;
+    font-family: Roboto;
+    justify-content: center;
+    align-items: center;
+ }
+
+  #header .navOptions {
+    list-style: none;
+    display: flex;
+    font-size: 10px;
+ }
+
+ #header li {
+    padding: 5px;
+    color:darkgrey;
+}
+
+#header li:hover {
+    color:gray; 
+  } 
+
+ #header button {
+    font-family: Roboto;
+    height: 33px;
+    width: 89.5px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 4px;
+ }
+
+#header .loginButton {
+    color:rgb(34, 38, 40);
+    border: none;
+ }
+
+#header .signupButton {
+    color: white;
+    background-color:rgb(29, 221, 124);
+    border: none;
+ }
+
+ #header .loginButton:hover {
+    background-color: lightgray;
+ }
+
+#header .signupButton:hover {
+    background-color:rgb(50, 180, 124);
+ }
+
+ //I'm not sure if this is actually working or not
+ #header .headerButtons {
+    float: right;
+ }
