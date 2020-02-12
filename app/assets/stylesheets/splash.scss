@@ -1,0 +1,112 @@
+
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+ #splash {
+     height: 1000px;
+     width: 100%;
+     background-image: asset-data-url("photo-1496163668521-39614a16b23f.jpeg");
+     z-index: -1;
+     font-family: Roboto;
+ }
+
+ #splash .anchorDiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+ }
+
+ #splash h1 {
+    color: rgb(34, 38, 40);
+    height: 36px;
+    width: 530px;
+    font-size: 50px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 160px;
+ }
+    
+#splash h2 {
+    top: 240px;
+    color: rgb(34, 38, 40);
+    // background-color: darkgrey;
+    height: 36px;
+    width: 400px;
+    border-radius: 3px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+#splash .featureDesc {
+    color: rgb(34, 38, 40);
+    height: 36px;
+    border-radius: 3px;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-size: 23px;
+    // background-color: darkgrey;
+    // top: 360px;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
+    // position: absolute;
+}
+
+#splash .featureContainer {
+    width: 260px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(128, 128, 128, 0.397);
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+}
+
+#splash .signupButton {
+    top: 300px;
+    height: 33px;
+    width: 89.5px;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    position: absolute;
+    font-size: 15px;
+    margin: 0 auto;
+ }
+
+ #splash .featuresDiv {
+    top: 400px;
+    position: absolute;
+    display: flex;
+ }
+
+ #splash a {
+    text-decoration: none;
+    font-style: italic;
+    // background-color: gray;
+    color: white;
+    border-radius: 5px;
+    padding: 7px;
+    transition: background-color 0.5s;
+ }
+
+ #splash a:hover {
+    background-color: gray;
+ }
+
+// #splash .secondFeatureContainer {
+//     display: block;
+//     // justify-content: center;
+//     position: relative;
+//     align-items: center;
+// }
+
+//  #splash p {
+//     position: absolute;
+//  }
+
