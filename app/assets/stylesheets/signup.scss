@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+#signupFormContainer {
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    position: relative;
+}
+
+#signupFormContainer .loginLinkContainer {
+    display: flex;
+    width: 320px;
+    position: relative;
+    height: 36px;
+}
+
+#signupFormContainer .loginLink {
+    margin-bottom: 10px;
+    right: 0px;
+    text-decoration: none;
+    color: gray;
+    position: absolute;
+}
+
+#signupFormContainer p {
+    color: gray
+}
+
+//TO DO: figure out the line under the OR
+// #signupFormContainer .signupForm {
+//     // border-top: 1px solid gray;
+// }
+
+#signupFormContainer input {
+    height: 50px;
+    font-size: 18px;
+    width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 12px;
+    line-height: 50px;
+}
+
+#signupFormContainer select {
+    height: 50px;
+    font-size: 18px;
+    width: 356px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 12px;
+    line-height: 50px;
+    color: gray;
+    border: .5px solid lightgray;
+    background-color: white;
+    border-radius: 0;
+
+}
+
+#signupFormContainer .signupForm {
+    display: flex;
+    flex-direction: column;
+}
+
+//this will also apply to the Login component facebook button
+.facebookSignIn {
+    font-size: 14px;
+    background-color: rgb(59, 89, 152);
+    color: white;
+    width: 320px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+}
+
+#signupFormContainer .signupButton {
+    width: 200px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    align-self: center;
+}
+
+
+
+
+

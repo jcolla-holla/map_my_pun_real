@@ -5,7 +5,7 @@
      height: 1000px;
      width: 100%;
      background-image: asset-data-url("photo-1496163668521-39614a16b23f.jpeg");
-     z-index: -1;
+     z-index: -10;
      font-family: Roboto;
  }
 
@@ -68,9 +68,11 @@
 }
 
 #splash .signupButton {
-    top: 300px;
+    top: 310px;
     position: absolute;
     margin: 0 auto;
+    text-align: center;
+    height: 50px;
  }
 
  #splash .featuresDiv {

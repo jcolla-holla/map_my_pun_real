@@ -30,20 +30,27 @@
    cursor: pointer;
   } 
 
- #header button {
-    font-family: Roboto;
-    height: 33px;
-    width: 89.5px;
-    font-weight: bold;
-    margin: 5px;
-    border-radius: 4px;
- }
+
+// 
 
 #header .loginButton {
     color:rgb(34, 38, 40);
     border: none;
     transition: background-color 0.5s;
     font-size: 15px;
+    text-decoration: none;
+   padding-top: 9px;
+   padding-bottom: 9px;
+   padding-left: 13px;
+   padding-right: 13px;
+
+   //for all buttons in header but they are Links
+   font-family: Roboto;
+    height: 33px;
+    width: 89.5px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 4px;
  }
 
  //note: this also affects the SignUp button in the Splash
@@ -58,6 +65,12 @@
    color: white;
    background-color:rgb(29, 221, 124);
    transition: background-color 0.5s;
+   text-decoration: none;
+   padding: 9px;
+
+   //for all buttons in header but they are Links
+   font-family: Roboto;
+   margin: 5px;
  }
 
  #header .loginButton:hover {
@@ -65,13 +78,21 @@
     cursor: pointer;
  }
 
- //need to make more fresh with fancy graphic
 .signupButton:hover {
     background-color:rgb(50, 180, 124);
     cursor: pointer;
  }
 
- //I'm not sure if this is actually working or not
- #header .headerButtons {
-    float: right;
- }
+
+ //various discarded stuff:
+
+
+   //commented this out when changed these from Button elements to Link components
+//  #header Link {
+//     font-family: Roboto;
+//     height: 33px;
+//     width: 89.5px;
+//     font-weight: bold;
+//     margin: 5px;
+//     border-radius: 4px;
+//  }
