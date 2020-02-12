@@ -1,4 +1,7 @@
 import React from 'react';
+import NavBar from './navbar';
+import Footer from './footer';
+import Splash from './splash';
 
 class App extends React.Component {
     constructor(props) {
@@ -7,8 +10,13 @@ class App extends React.Component {
     }
     render() { 
         return ( 
-            // <Header></Header>
-            <h3>This is the app component rendering</h3>
+            <div id="appContainer">
+                <NavBar />
+                    {/* turnery statement if session does NOT exist, show landingImg  */}
+                <Splash />
+                    {/* everything else lol */}
+                <Footer />
+            </div>
         );
     }
 }

@@ -12,7 +12,6 @@ class Root extends React.Component {
         return (
             <div>
                 <Provider store={this.props.store}>
-                    <h3>This is the root component rendering</h3>
                     <App />
                 </Provider>
             </div>
