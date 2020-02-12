@@ -1,8 +1,3 @@
-#appContainer {
-    width: 1002px;
-    z-index: 1;
-}
-
 .logo {
     width: 163px;
     height: 100%;
@@ -12,4 +7,11 @@
     align-items: center;
     left: 40px;
     position: relative;
+    font-size: 20px;
+    text-decoration: none;
+ }
+
+ .logo:hover {
+    cursor: pointer;
+    text-decoration: none;
  }

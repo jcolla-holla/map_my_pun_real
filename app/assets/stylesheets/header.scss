@@ -15,16 +15,19 @@
   #header .navOptions {
     list-style: none;
     display: flex;
-    font-size: 10px;
+    font-size: 14px;
+    padding: 120px;
  }
 
  #header li {
-    padding: 5px;
-    color:darkgrey;
+    padding: 20px;
+    color:gray;
+    font-size: 16px;
 }
 
 #header li:hover {
-    color:gray; 
+    color:#0075bf;
+   cursor: pointer;
   } 
 
  #header button {
@@ -40,23 +43,32 @@
     color:rgb(34, 38, 40);
     border: none;
     transition: background-color 0.5s;
+    font-size: 15px;
  }
 
  //note: this also affects the SignUp button in the Splash
 .signupButton {
-    color: white;
-    background-color:rgb(29, 221, 124);
-    border: none;
-    transition: background-color 0.5s;
+   //INHERITED by .signUpButton in #splash also:
+   width: 89.5px;
+   font-weight: bold;
+   font-size: 15px;
+   height: 33px;
+   border-radius: 4px;
+   border: none;
+   color: white;
+   background-color:rgb(29, 221, 124);
+   transition: background-color 0.5s;
  }
 
  #header .loginButton:hover {
     background-color: lightgray;
+    cursor: pointer;
  }
 
  //need to make more fresh with fancy graphic
 .signupButton:hover {
     background-color:rgb(50, 180, 124);
+    cursor: pointer;
  }
 
  //I'm not sure if this is actually working or not

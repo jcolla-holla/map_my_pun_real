@@ -2,7 +2,13 @@
 
 #appContainer {
     position: relative;
-
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
     //don't think min-height is necessary
     // min-height: 100vh;
+}
+
+html, body, #root, #root > div {
+    width: 100%;
 }

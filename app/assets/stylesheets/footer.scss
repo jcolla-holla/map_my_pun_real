@@ -50,50 +50,64 @@
     display: flex;
     background-color: lightgray;
     align-items: center;
+    justify-content: center;
 }
 
 #footer .activitiesList {
     display: flex;
-    
 }
+
 
 #footer .activitiesList li {
     margin : 10px;
     color: rgb(146, 151, 163);
     font-weight: bold;
+    padding-left: 40px;
+    font-size: 20px;
 }
 
 #footer .activitiesList li:hover {
+    //TO DO::
     //to update and have each li hover generate a different color/image
     color: red;
+    cursor: pointer;
+}
+
+
+#footer .activitiesSection .logo {
+    border-right: 1px rgb(146, 151, 163) solid;
 }
 
 #footer .lists {
     display: flex;
     background-image: asset-data-url("1fb53630c0234d4396417e96ffc2ec85.png");
+    justify-content: center;
 }
 
 #footer .lists ul {
     color: white;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
+    padding-left: 120px;
 }
 
 #footer .lists li {
     margin-top: 4px;
     color:rgb(146, 151, 163);
     font-weight: lighter;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 #footer .lists li:hover {   
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #footer .legal {
     height: 50px;
     background-color: white;
     display: flex;
+    justify-content: center;
 }
 
 #footer .legal ul {
@@ -101,10 +115,11 @@
 }
 
 #footer .legal li {
-    height: 10px;
-    padding: 3px;
+    height: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
     color: rgb(146, 151, 163);
-    font-size: 9px;
+    font-size: 12px;
     border-right: .5px rgb(146, 151, 163) solid;
 }
 

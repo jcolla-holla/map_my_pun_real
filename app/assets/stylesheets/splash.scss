@@ -60,7 +60,7 @@
     width: 260px;
     border-radius: 5px;
     padding: 20px;
-    margin: 10px;
+    margin: 40px;
     background-color: rgba(128, 128, 128, 0.397);
     display: flex;  
     flex-direction: column;
@@ -69,13 +69,7 @@
 
 #splash .signupButton {
     top: 300px;
-    height: 33px;
-    width: 89.5px;
-    font-size: 10px;
-    font-weight: bold;
-    border-radius: 4px;
     position: absolute;
-    font-size: 15px;
     margin: 0 auto;
  }
 
@@ -98,15 +92,3 @@
  #splash a:hover {
     background-color: gray;
  }
-
-// #splash .secondFeatureContainer {
-//     display: block;
-//     // justify-content: center;
-//     position: relative;
-//     align-items: center;
-// }
-
-//  #splash p {
-//     position: absolute;
-//  }
-
