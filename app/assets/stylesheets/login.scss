@@ -16,6 +16,8 @@
     height: 36px;
 }
 
+
+
 #loginFormContainer .signupLink {
     margin-bottom: 10px;
     right: 0px;
@@ -24,9 +26,15 @@
     position: absolute;
 }
 
+#loginFormContainer .signupLink:hover {
+    text-decoration: underline;
+}
+
 #loginFormContainer p {
     color: gray
 }
+
+
 
 //TO DO: figure out the line under the OR
 // #loginFormContainer .signupForm {
@@ -58,6 +66,19 @@
     align-self: center;
     background-color:rgb(29, 221, 124);
     border: none;
+    transition: background-color 0.5s;
+    border-radius: 4px;
+}
+
+#loginFormContainer .forgotPassword:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+#loginFormContainer .loginButton:hover {
+    cursor: pointer;
+    background-color:rgb(50, 180, 124);
 }
 
 

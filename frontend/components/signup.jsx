@@ -14,6 +14,10 @@ class SignUp extends React.Component {
         this.props.processForm(this.state);
     }
 
+    demoLogin() {
+        this.props.processForm({ email: "demo_user@fake.com", password: "password", first_name: "Demo", last_name: "User", country: "United States", gender: "Female" });
+    }
+
     renderErrors() {
         return (
             <ul>
@@ -45,7 +49,7 @@ class SignUp extends React.Component {
                 <div className="loginLinkContainer">
                     <Link to="/login" className="loginLink">LOGIN</Link>
                 </div>
-                <a className="facebookSignIn">DEMO USER</a>
+                <a className="facebookSignIn" onClick={this.demoLogin}>DEMO USER</a>
                 <p>OR</p>
 
                 <form className="signupForm" onSubmit={this.handleSubmit}>

@@ -24,6 +24,11 @@
     position: absolute;
 }
 
+#signupFormContainer .loginLink:hover { 
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 #signupFormContainer p {
     color: gray
 }
@@ -55,7 +60,6 @@
     border: .5px solid lightgray;
     background-color: white;
     border-radius: 0;
-
 }
 
 #signupFormContainer .signupForm {
@@ -78,12 +82,21 @@
     text-align: center;
 }
 
+.facebookSignIn:hover {
+    cursor: pointer;
+}   
+
 #signupFormContainer .signupButton {
     width: 200px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 30px;
     color: white;
     text-align: center;
     align-self: center;
+}
+
+#signupFormContainer .signupButton:hover {
+    cursor: pointer;
 }
 
 

@@ -4,13 +4,19 @@ import { Link } from 'react-router-dom';
 class Login extends React.Component {
     constructor(props) {
         super(props);
+        //this.props.user is: {email:"", password:""}
         this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     handleSubmit (e) {
         e.preventDefault();
         this.props.processForm(this.state);
+    }
+
+    demoLogin(){
+        this.props.processForm({ email: "demo_user@fake.com", password: "password", first_name: "Demo", last_name: "User", country: "United States", gender: "Female"});
     }
 
     renderErrors() {
@@ -33,16 +39,17 @@ class Login extends React.Component {
     
     render() { 
         return ( 
+
             <div id="loginFormContainer">
                 <div className="signupLinkContainer">
                     <Link to="/signup" className="signupLink">SIGNUP</Link>
                 </div>
-                <a className="facebookSignIn">DEMO USER</a>
+                <a className="facebookSignIn" onClick={this.demoLogin}>DEMO USER</a>
                 <p>OR</p>
 
                 <form className="loginForm" onSubmit={this.handleSubmit}>
                         <input placeholder="Email" type="text" value={this.state.email} onChange={this.update("email")}/>
-                        <input placeholder="Password" type="text" value={this.state.password} onChange={this.update("password")}/>
+                        <input placeholder="Password" type="password" value={this.state.password} onChange={this.update("password")}/>
 
                     <p className="forgotPassword">Forgot Password?</p>
 

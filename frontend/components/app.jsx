@@ -4,6 +4,8 @@ import Footer from './footer';
 import Splash from './splash';
 import SignUpContainer from './signup_container';
 import LoginContainer from './login_container';
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
+import FeedIndexContainer from './feed_index_container';
 import {
     Route,
     Redirect,
@@ -28,8 +30,11 @@ class App extends React.Component {
                     <Route path="/login" component={LoginContainer} />
                     <Route path="/" component={Footer}/>
                 </Switch>
+
+                {/* TO DO: experiment with AuthRoute*/}
+                <Route path="/home" component={FeedIndexContainer}/>
                 
-                    {/* Feed, etc -- everything else */}
+                {/* Feed, etc -- everything else */}
                 
                 {/* possible cool thing to implement - a blacklist Route path -- doesnt render when path is X*/}
             </div>
