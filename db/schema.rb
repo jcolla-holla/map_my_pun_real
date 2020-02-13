@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_13_203212) do
+ActiveRecord::Schema.define(version: 2020_02_13_224157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "routes", force: :cascade do |t|
-    t.string "category", null: false
+    t.string "activity_type", null: false
     t.string "name", null: false
     t.string "city", null: false
     t.integer "user_id", null: false

@@ -7,7 +7,6 @@ import configureStore from './store/store';
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     let store;
-    // debugger;
     if (window.currentUser) {
         const preloadedState = {
             entities: {
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
-    // debugger;
     ReactDOM.render(<Root store={store} />, root);
 })
 

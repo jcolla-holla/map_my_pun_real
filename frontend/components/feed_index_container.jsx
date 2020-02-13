@@ -1,15 +1,17 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import FeedIndex from './feed_index';
+import {getRoutes} from '../actions/routes_actions';
+import {getWorkouts} from '../actions/workouts_actions';
 
-const mapStateToProps = ({routes, workouts}) => ({
-    routes,
-    workouts
+
+const mapStateToProps = (state) => ({
+    routes: Object.values(state.entities.routes),
+    workouts: Object.values(state.entities.workouts)
 });
 
-//I dont think I need any dispatch functions here right now... just passing this dummy to avoid possible errors for now
-const mapDispatchToProps = ({
-    nothing: null
+const mapDispatchToProps = dispatch => ({
+    getRoutes: () => dispatch(getRoutes()),
+    getWorkouts: () => dispatch(getWorkouts())
 })
  
 export default connect(mapStateToProps, mapDispatchToProps)(FeedIndex);

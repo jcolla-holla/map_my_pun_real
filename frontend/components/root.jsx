@@ -9,10 +9,8 @@ class Root extends React.Component {
         super(props);
         // this.state = {sessionId: this.props.store.getState().session.id}
 
-        // debugger
         // // sessionId stores if there is a session or not
         // let sessionId = this.props.store.getState().session.id;
-        // debugger
     }
 
 

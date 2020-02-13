@@ -17,7 +17,7 @@ demo_user = User.create!(email: "demo_user@fake.com", password: "password", firs
 r1 = Route.create(
         distance: 5.8,
         name: "downhill fun",
-        category: "run",
+        activity_type: "swim",
         city: "Seattle",
         user_id: 3,
         users_completed: true, 

@@ -1,8 +1,8 @@
 class Api::WorkoutsController < ApplicationController
-    # /need before_action logged_in?
-
+    # need before_action logged_in?
+    
     def create
-        @workout = workout.new(workout_params)
+        @workout = Workout.new(workout_params)
         if @workout.save
             render :show
         else  
@@ -11,23 +11,23 @@ class Api::WorkoutsController < ApplicationController
     end
 
     def show
-        @workout = workout.find(params[:id])
+        @workout = Workout.find(params[:id])
         render :show
     end
 
     def index
-        @workouts = workout.all
+        @workouts = Workout.all
         render :index
     end
 
     def destroy
-        @workout = workout.find(params[:id])
+        @workout = Workout.find(params[:id])
         @workout.destroy
         render :index
     end
 
     def update 
-        @workout = workout.find(params[:id])
+        @workout = Workout.find(params[:id])
         if @workout.update(workout_params)
             render :show
         else
