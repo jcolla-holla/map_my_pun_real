@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?, :current_user
 
   def ensure_logged_in
-    render json: {error: "you are not logged in"}, status: 404 unless logged_in?
+    render json: ["you are not logged in"], status: 404 unless logged_in?
   end
 
   def current_user

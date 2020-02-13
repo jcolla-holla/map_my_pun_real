@@ -11,29 +11,35 @@ class SignUp extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        debugger
+        //create the user
         this.props.processForm(this.state);
+        //login the user
+        debugger
+        this.props.login({email: this.state.email, password: this.state.password });
     }
 
     demoLogin() {
         this.props.demoLogin({ email: "demo_user@fake.com", password: "password", first_name: "Demo", last_name: "User", country: "United States", gender: "Female" });
     }
 
-    renderErrors() {
-        debugger
-        if (this.props.errors) {
-            return (
-                <ul>
-                    {this.props.errors.map((error, i) => (
-                        <li className="sessionError" key={`error-${i}`}>
-                            Error {i+1} -- {error}
-                        </li>
-                    ))}
-                </ul>
-            );
-        } else {
-            return "";
-        }
-    }
+    //PREVIOUS VERSION
+    // renderErrors() {
+    //     debugger
+    //     if (this.props.errors) {
+    //         return (
+    //             <ul>
+    //                 {this.props.errors.map((error, i) => (
+    //                     <li className="sessionError" key={`error-${i}`}>
+    //                         Error {i+1} -- {error}
+    //                     </li>
+    //                 ))}
+    //             </ul>
+    //         );
+    //     } else {
+    //         return "";
+    //     }
+    // }
 
     update(field) {
         return e => {
@@ -42,17 +48,30 @@ class SignUp extends React.Component {
     }
 
     render() { 
-
+        debugger
         let countries = [
             <option key="US" value="United States">United States</option>,
             <option key="CA" value="Canada">Canada</option>,
             <option key="MX" value="Mexico">Mexico</option>
         ];
 
+        let renderErrors = (this.props.errors) ?
+            (
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li className="sessionError" key={`error-${i}`}>
+                            Error {i + 1} -- {error}
+                        </li>
+                    ))}
+                </ul>
+            )
+            :
+            ("")
+
         return ( 
             <div id="signupFormContainer">
                 <div className="sessionErrors">
-                    {this.renderErrors()}
+                    {renderErrors}
                 </div>
                 <div className="loginLinkContainer">
                     <Link to="/login" className="loginLink">LOGIN</Link>

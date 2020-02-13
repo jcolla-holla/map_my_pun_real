@@ -6,6 +6,7 @@ class NavBar extends React.Component {
         super(props);
     }
     render() { 
+        debugger
         let userExists = this.props.currentUser;
         let greetingButtons = (userExists) ?
                 (
