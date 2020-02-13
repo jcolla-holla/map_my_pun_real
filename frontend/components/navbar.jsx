@@ -6,6 +6,22 @@ class NavBar extends React.Component {
         super(props);
     }
     render() { 
+        let userExists = this.props.currentUser;
+        let greetingButtons = (userExists) ?
+                (
+                    <section className="headerButtons">
+                        <button className="logoutButton" onClick={() => this.props.logout()}>LOGOUT</button>
+                        <div className="profilePic"></div>
+                    </section>
+                )
+                :
+                (
+                    <section className="headerButtons">
+                        <Link to="/login" className="loginButton">LOG IN</Link>
+                        <Link to="/signup" className="signupButton">SIGN UP</Link>
+                    </section>
+                )
+
         return (  
             <div id="header">
                 <a className="logo" href="#">Map My Pun</a>
@@ -19,10 +35,12 @@ class NavBar extends React.Component {
                     <li className="shopButton">Shop</li>
                 </ul>
 
-                <section className="headerButtons">
+                {greetingButtons}
+
+                {/* <section className="headerButtons">
                     <Link to="/login" className="loginButton">LOG IN</Link>
                     <Link to="/signup" className="signupButton">SIGN UP</Link>
-                </section>
+                </section> */}
 
                 {/* IF LOGGED IN  - image profile picture */}
             </div>

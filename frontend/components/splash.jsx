@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -11,7 +12,8 @@ class Splash extends React.Component {
                 <div className="anchorDiv">
                     <h1>Running Out of Routes?</h1>
                     <h2>Run Up Miles with Friends</h2>
-                    <button className="signupButton">SIGN UP</button>
+
+                    <Link to="/signup" className="signupButton">SIGN UP</Link>
                     <div className="featuresDiv">
                         <div className="featureContainer">
                             <h3 className="featureDesc">Create Running Routes</h3>

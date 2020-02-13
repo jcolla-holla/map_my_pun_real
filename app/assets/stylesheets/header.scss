@@ -39,38 +39,36 @@
     transition: background-color 0.5s;
     font-size: 15px;
     text-decoration: none;
-   padding-top: 9px;
-   padding-bottom: 9px;
-   padding-left: 13px;
-   padding-right: 13px;
+    line-height: 46px;
+   text-align: center;
 
    //for all buttons in header but they are Links
    font-family: Roboto;
-    height: 33px;
-    width: 89.5px;
+    height: 46px;
+    width: 120px;
     font-weight: bold;
-    margin: 5px;
     border-radius: 4px;
+    margin-right: 24px;
  }
 
  //note: this also affects the SignUp button in the Splash
 .signupButton {
    //INHERITED by .signUpButton in #splash also:
-   width: 89.5px;
+   width: 120px;
    font-weight: bold;
    font-size: 15px;
-   height: 33px;
-   border-radius: 4px;
+   height: 46px;
    border: none;
    color: white;
    background-color:rgb(29, 221, 124);
    transition: background-color 0.5s;
    text-decoration: none;
-   padding: 9px;
+   border-radius: 4px;
+   line-height: 46px;
+   text-align: center;
 
    //for all buttons in header but they are Links
    font-family: Roboto;
-   margin: 5px;
  }
 
  #header .loginButton:hover {
@@ -83,9 +81,45 @@
     cursor: pointer;
  }
 
+.headerButtons {
+   display: flex;
+   margin: 10px;
+}
+
+
+.headerButtons .profilePic {
+   background-size: cover;
+   height: 40px;
+   width: 40px;
+   background-image: asset-data-url("profile_pic_stand_in.png");
+   border-radius: 50%
+}
+
+#header .logoutButton {
+ color:rgb(34, 38, 40);
+    border: none;
+    transition: background-color 0.5s;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 46px;
+   text-align: center;
+
+   //for all buttons in header but they are Links
+   font-family: Roboto;
+    height: 46px;
+    width: 120px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 24px;
+}
+
+#header .logoutButton:hover {
+   background-color: lightgray;
+   cursor: pointer;
+}
+
 
  //various discarded stuff:
-
 
    //commented this out when changed these from Button elements to Link components
 //  #header Link {

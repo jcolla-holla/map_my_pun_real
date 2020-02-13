@@ -6,6 +6,7 @@ import SignUpContainer from './signup_container';
 import LoginContainer from './login_container';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import FeedIndexContainer from './feed_index_container';
+import NavBarContainer from './navbar_container';
 import {
     Route,
     Redirect,
@@ -23,7 +24,7 @@ class App extends React.Component {
     render() { 
         return ( 
             <div id="appContainer">
-                <NavBar />
+                <NavBarContainer />
                 <Route exact path="/" component={Splash}/>
                 <Switch>
                     <Route path="/signup" component={SignUpContainer}/>
@@ -32,6 +33,7 @@ class App extends React.Component {
                 </Switch>
 
                 {/* TO DO: experiment with AuthRoute*/}
+                {/* render  */}
                 <Route path="/home" component={FeedIndexContainer}/>
                 
                 {/* Feed, etc -- everything else */}

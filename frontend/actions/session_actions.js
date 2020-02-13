@@ -4,19 +4,18 @@ export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
 export const login = (user) => dispatch => {
-    debugger
     util.login(user)
-        .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
+        .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors.responseJSON)));
 };
 
 export const logout = () => dispatch => {
-    util.logout
-        .then(() => dispatch(logoutCurrentUser()), errors => dispatch(receiveErrors(errors)));
+    util.logout()
+        .then(() => dispatch(logoutCurrentUser()), errors => dispatch(receiveErrors(errors.responseJSON)));
 };
 
 export const signup = (user) => dispatch => {
     util.signup(user)
-        .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)));
+        .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors.responseJSON)));
 };
 
 const receiveCurrentUser = (user) => ({

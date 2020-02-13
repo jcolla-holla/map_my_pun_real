@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
       log_in(@user)
       render :show
     else 
-      render json: { error: ["log in unsuccessful"]}, status: 400
+      render json: ["invalid email and password combination"], status: 400
     end
   end
 

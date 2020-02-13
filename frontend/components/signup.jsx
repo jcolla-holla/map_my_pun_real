@@ -6,28 +6,32 @@ class SignUp extends React.Component {
         super(props);
         this.state = {email:"", password:"",first_name:"",last_name:"",birthday: undefined, gender: undefined, country: "", subscribed: false};
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
         this.props.processForm(this.state);
     }
 
     demoLogin() {
-        this.props.processForm({ email: "demo_user@fake.com", password: "password", first_name: "Demo", last_name: "User", country: "United States", gender: "Female" });
+        this.props.demoLogin({ email: "demo_user@fake.com", password: "password", first_name: "Demo", last_name: "User", country: "United States", gender: "Female" });
     }
 
     renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
+        if (this.props.errors) {
+            return (
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li className="sessionError" key={`error-${i}`}>
+                            Error {i+1} -- {error}
+                        </li>
+                    ))}
+                </ul>
+            );
+        } else {
+            return "";
+        }
     }
 
     update(field) {
@@ -46,6 +50,9 @@ class SignUp extends React.Component {
 
         return ( 
             <div id="signupFormContainer">
+                <div className="sessionErrors">
+                    {this.renderErrors()}
+                </div>
                 <div className="loginLinkContainer">
                     <Link to="/login" className="loginLink">LOGIN</Link>
                 </div>

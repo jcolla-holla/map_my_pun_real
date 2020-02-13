@@ -81,6 +81,17 @@
     background-color:rgb(50, 180, 124);
 }
 
+.sessionErrors {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sessionError {
+    color: red;
+    list-style: none;
+}
+
 
 
 

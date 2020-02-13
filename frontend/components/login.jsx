@@ -20,15 +20,19 @@ class Login extends React.Component {
     }
 
     renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
+        if (this.props.errors) {
+            return (
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li className="sessionError" key={`error-${i}`}>
+                            Error {i + 1} -- {error}
+                        </li>
+                    ))}
+                </ul>
+            );
+        } else {
+            return "";
+        };
     }
 
     update(field) {
@@ -41,6 +45,9 @@ class Login extends React.Component {
         return ( 
 
             <div id="loginFormContainer">
+                <div className="sessionErrors">
+                    {this.renderErrors()}
+                </div>
                 <div className="signupLinkContainer">
                     <Link to="/signup" className="signupLink">SIGNUP</Link>
                 </div>
