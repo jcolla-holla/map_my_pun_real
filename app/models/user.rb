@@ -4,6 +4,14 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :routes,
+    foreign_key: :user_id,
+    class_name: "Route"
+
+  has_many :workouts,
+    foreign_key: :route_completed_id,
+    class_name: "Workout"
+
   attr_reader :password
 
   def password=(password)

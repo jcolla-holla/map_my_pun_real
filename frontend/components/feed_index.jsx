@@ -12,14 +12,15 @@ class FeedIndex extends React.Component {
         // return (
         //     <div id="feedIndexContainer">
         //         <h1>All Activities</h1>
-        //         <div className="routesIndex">
-        //             {this.props.routes.map( route => <PostIndexItem itemType="route" item={route} />)}
-        //         </div>
-        //         <div className="workoutsIndex">
-        //             {this.props.workouts.map( workouts => <PostIndexItem itemType="workout" item={workouts} />)}
-        //         </div>
+        //         <ul className="routesIndex">
+        //             {this.props.routes.map( route => <FeedIndexItem itemType="route" item={route} />)}
+        //         </ul>
+        //         <ul className="workoutsIndex">
+        //             {this.props.workouts.map( workouts => <FeedIndexItem itemType="workout" item={workouts} />)}
+        //         </ul>
         //     </div>
         // );
+
         return (  
             <div id="feedIndexContainer">
                 <h1>the feed index is rendering</h1>
