@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import SignUp from "./signUp";
+import SignUp from "./signup";
 import {signup, login} from '../actions/session_actions'
 import { Link } from 'react-router-dom';
 import React from 'react';

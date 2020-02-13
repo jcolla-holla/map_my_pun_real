@@ -19,6 +19,7 @@ class SignUp extends React.Component {
     }
 
     renderErrors() {
+        debugger
         if (this.props.errors) {
             return (
                 <ul>
