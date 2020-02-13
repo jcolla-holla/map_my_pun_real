@@ -6,13 +6,12 @@ class NavBar extends React.Component {
         super(props);
     }
     render() { 
-        debugger
         let userExists = this.props.currentUser;
         let greetingButtons = (userExists) ?
                 (
                     <section className="headerButtons">
                         <button className="logoutButton" onClick={() => this.props.logout()}>LOGOUT</button>
-                        <div className="profilePic"></div>
+                        <Link to="/home" className="profilePic"></Link>
                     </section>
                 )
                 :

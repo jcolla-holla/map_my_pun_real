@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './navbar';
 import Footer from './footer';
 import Splash from './splash';
 import SignUpContainer from './signup_container';
@@ -27,14 +26,13 @@ class App extends React.Component {
                 <NavBarContainer />
                 <Route exact path="/" component={Splash}/>
                 <Switch>
-                    <Route path="/signup" component={SignUpContainer}/>
-                    <Route path="/login" component={LoginContainer} />
+                    <AuthRoute exact path="/signup" component={SignUpContainer}/>
+                    <AuthRoute exact path="/login" component={LoginContainer} />
                     <Route path="/" component={Footer}/>
                 </Switch>
 
-                {/* TO DO: experiment with AuthRoute*/}
-                {/* render  */}
-                <Route path="/home" component={FeedIndexContainer}/>
+
+                <ProtectedRoute path="/home" component={FeedIndexContainer}/>
                 
                 {/* Feed, etc -- everything else */}
                 

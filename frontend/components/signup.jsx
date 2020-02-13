@@ -11,11 +11,9 @@ class SignUp extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
         //create the user
         this.props.processForm(this.state);
         //login the user
-        debugger
         this.props.login({email: this.state.email, password: this.state.password });
     }
 
@@ -48,7 +46,6 @@ class SignUp extends React.Component {
     }
 
     render() { 
-        debugger
         let countries = [
             <option key="US" value="United States">United States</option>,
             <option key="CA" value="Canada">Canada</option>,
