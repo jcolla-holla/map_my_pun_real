@@ -1,0 +1,27 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+#feedIndexContainer {
+    width: 50%;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#feedIndexContainer .activityFeedTitle{
+    color: #0075bf;
+    padding-top: 15px;
+}
+
+#feedIndexContainer ul {
+    list-style: none;
+}
+
+#feedIndexContainer li {  
+    padding: 10px;
+    width: 100%;
+    border: .5px lightgray solid;
+    box-shadow: 1px 1px 1px lightgray;
+    height: 180px;
+    margin-bottom: 10px;
+}

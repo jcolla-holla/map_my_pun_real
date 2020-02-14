@@ -6,6 +6,8 @@ import LoginContainer from './login_container';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import FeedIndexContainer from './feed_index_container';
 import NavBarContainer from './navbar_container';
+import CreateRouteContainer from './create_route_container'
+import homeHeader from './home_header';
 import {
     Route,
     Redirect,
@@ -32,7 +34,19 @@ class App extends React.Component {
                 </Switch>
 
 
-                <ProtectedRoute path="/home" component={FeedIndexContainer}/>
+                {/* hacky way of making navbar persist - probably a better way to do this */}
+                <div id="homeContainer">
+                    <Switch>
+                        <ProtectedRoute path="/home" component={homeHeader} />
+                        <ProtectedRoute path="/createRoute" component={homeHeader} />
+                        <ProtectedRoute path="/logWorkout" component={homeHeader} />
+                        <ProtectedRoute path="/importWorkout" component={homeHeader} />
+                        <ProtectedRoute path="/createGoal" component={homeHeader} />
+                    </Switch>
+                    <ProtectedRoute path="/home/feed" component={FeedIndexContainer}/>
+                    <ProtectedRoute path="/createRoute" component={CreateRouteContainer}/>
+                </div>
+
                 
                 {/* Feed, etc -- everything else */}
                 

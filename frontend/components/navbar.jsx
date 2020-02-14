@@ -11,7 +11,7 @@ class NavBar extends React.Component {
                 (
                     <section className="headerButtons">
                         <button className="logoutButton" onClick={() => this.props.logout()}>LOGOUT</button>
-                        <Link to="/home" className="profilePic"></Link>
+                        <Link to="/home/feed" className="profilePic"></Link>
                     </section>
                 )
                 :
@@ -26,14 +26,15 @@ class NavBar extends React.Component {
             <div id="header">
                 <a className="logo" href="#">Map My Pun</a>
 
-                <ul className="navOptions">
+                {/* might eventually bring these back */}
+                {/* <ul className="navOptions">
                     <li>Training</li>
                     <li>Routes</li>
                     <li>Challenges</li>
                     <li>Go Premium</li>
                     <li>Blog</li>
                     <li className="shopButton">Shop</li>
-                </ul>
+                </ul> */}
 
                 {greetingButtons}
 

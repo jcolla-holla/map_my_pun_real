@@ -6,10 +6,15 @@
     display: flex;
     height: 64px;
     z-index: 2;
-    border-bottom: darkgrey .2px solid;
+   //  border-bottom: darkgrey .2px solid;
     font-family: Roboto;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    
+ }
+
+ #header .logo {
+    padding-left: 100px;
  }
 
   #header .navOptions {
@@ -84,6 +89,7 @@
 .headerButtons {
    display: flex;
    margin: 10px;
+   padding-right: 130px;
 }
 
 
