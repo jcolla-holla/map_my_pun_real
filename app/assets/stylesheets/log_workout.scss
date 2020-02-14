@@ -7,7 +7,6 @@
     flex-direction: column;
     font-family: Roboto;
     align-items: center;
-    font-size: 18px;
 }
 
 #createWorkoutFormContainer .createWorkoutForm{
@@ -69,7 +68,7 @@
 #createWorkoutFormContainer .createWorkoutButton {
     margin-top: 16px;
     width: 160px;
-   font-weight: bold;
+   font-weight: none;
    font-size: 15px;
    height: 46px;
    border: none;

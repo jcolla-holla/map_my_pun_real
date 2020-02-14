@@ -6,12 +6,19 @@ class CreateRoute extends React.Component {
         super(props);
         this.state = { activity_type: "", name: "", city: "", user_id: this.props.currentUser.id, distance: undefined, start_loc_lat: undefined, start_loc_long: undefined, end_loc_lat: undefined, end_loc_long: undefined}
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateCoords = this.updateCoords.bind(this);
+        this.coords = []
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.createRoute(this.state);
         //redirect back to /Home to see feed
+    }
+
+    updateCoords (coords) {
+        debugger
+        this.coords.push(coords);
     }
 
     update(field) {
@@ -33,7 +40,7 @@ class CreateRoute extends React.Component {
                     <input className="regularFields" type="text" value={this.state.name} placeholder="Route Name" onChange={this.update("name")}/>
                     <input className="createRouteButton" type="submit" value="Create Route" />
                     <div id="mapInputContainer">
-                        <Map />
+                        <Map updateCoords={this.updateCoords}/>
                     </div>
                     <input className="createRouteButton" type="submit" value="Create Route" />
 
