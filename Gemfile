@@ -41,6 +41,7 @@ gem 'jquery-rails'
 
 group :production do 
   gem 'rails_12factor'
+  gem "figaro"
 end
 
 group :development, :test do
@@ -50,6 +51,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
+    gem "figaro"
 end
 
 group :development do

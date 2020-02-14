@@ -1,9 +1,8 @@
  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-
 #createRouteFormContainer {
     width: 100%;
-    height: 800px;
+    height: 1200px;
     display: flex;
     flex-direction: column;
     font-family: Roboto;
@@ -25,10 +24,6 @@
     margin: 10px;
 }
 
-.mapInputContainer .mapInput{
-    width: 1000px;
-    height: 200px;
-}
 
 #createRouteFormContainer .createRouteButton{
     margin-top: 16px;
@@ -45,6 +40,7 @@
    line-height: 46px;
    text-align: center;
 }
+
 
 
 

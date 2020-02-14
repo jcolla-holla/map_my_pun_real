@@ -1,5 +1,5 @@
 class Route < ApplicationRecord
-   validates :activity_type, :name, :city, :user_id, presence: true
+   validates :activity_type, :name, :city, :user_id, :distance, presence: true
     # allow_nil: false is different than example    
    validates :city, length: { minimum: 2, allow_nil: false}
     

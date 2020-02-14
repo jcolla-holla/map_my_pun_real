@@ -1,8 +1,8 @@
 import * as util from '../util/routes_api_util';
-
 export const RECEIVE_ROUTE = "RECEIEVE_ROUTE";
 export const RECEIVE_ROUTES = "RECEIEVE_ROUTES";
 export const REMOVE_ROUTE = "REMOVE_ROUTE";
+
 
 const receiveRoute = (route) => ({
     type: RECEIVE_ROUTE,

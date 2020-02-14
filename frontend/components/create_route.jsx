@@ -1,4 +1,5 @@
 import React from 'react';
+import Map from './map';
 
 class CreateRoute extends React.Component {
     constructor(props) {
@@ -24,16 +25,18 @@ class CreateRoute extends React.Component {
     render() { 
         return ( 
             <div id="createRouteFormContainer">
-                <h1>Make a new route by clicking a start and end point</h1>
+                <h1>Make a new route</h1>
                 <form className="createRouteForm" onSubmit={this.handleSubmit}>
 
 
                     <input className="regularFields" type="text" value={this.state.activity_type} placeholder="Activity Type (ex: run, swim, bike)" onChange={this.update("activity_type")}/>
                     <input className="regularFields" type="text" value={this.state.name} placeholder="Route Name" onChange={this.update("name")}/>
-                    <div className="mapInputContainer">
-                        <input className="mapInput" type="text" value="this is where the map goes!"/>
+                    <input className="createRouteButton" type="submit" value="Create Route" />
+                    <div id="mapInputContainer">
+                        <Map />
                     </div>
-                    <input className="createRouteButton" type="submit" value="Create Route"/>
+                    <input className="createRouteButton" type="submit" value="Create Route" />
+
                 </form>
             </div>
          )

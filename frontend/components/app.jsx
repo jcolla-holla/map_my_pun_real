@@ -8,6 +8,9 @@ import FeedIndexContainer from './feed_index_container';
 import NavBarContainer from './navbar_container';
 import CreateRouteContainer from './create_route_container'
 import homeHeader from './home_header';
+import LogWorkoutContainer from './log_workout_container';
+import importWorkout from './import_workout';
+import createGoal from './create_goal';
 import {
     Route,
     Redirect,
@@ -45,10 +48,11 @@ class App extends React.Component {
                     </Switch>
                     <ProtectedRoute path="/home/feed" component={FeedIndexContainer}/>
                     <ProtectedRoute path="/createRoute" component={CreateRouteContainer}/>
-                </div>
+                    <ProtectedRoute path="/logWorkout" component={LogWorkoutContainer} />
+                    <ProtectedRoute path="/importWorkout" component={importWorkout} />
+                    <ProtectedRoute path="/createGoal" component={createGoal} />
 
-                
-                {/* Feed, etc -- everything else */}
+                </div>
                 
                 {/* possible cool thing to implement - a blacklist Route path -- doesnt render when path is X*/}
             </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_13_224157) do
+ActiveRecord::Schema.define(version: 2020_02_14_155755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_02_13_224157) do
     t.string "city", null: false
     t.integer "user_id", null: false
     t.boolean "users_completed"
-    t.decimal "distance"
+    t.decimal "distance", null: false
     t.decimal "start_loc_lat"
     t.decimal "start_loc_long"
     t.decimal "end_loc_lat"
@@ -51,6 +51,12 @@ ActiveRecord::Schema.define(version: 2020_02_13_224157) do
     t.decimal "avg_pace", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.json "route"
+    t.date "completed_date", null: false
+    t.string "name", null: false
+    t.text "notes", null: false
+    t.time "duration", null: false
   end
 
 end

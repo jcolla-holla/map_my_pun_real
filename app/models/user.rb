@@ -9,7 +9,7 @@ class User < ApplicationRecord
     class_name: "Route"
 
   has_many :workouts,
-    foreign_key: :route_completed_id,
+    foreign_key: :user_id,
     class_name: "Workout"
 
   attr_reader :password
