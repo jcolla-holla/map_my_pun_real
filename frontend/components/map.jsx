@@ -9,16 +9,19 @@ const mapCenter = {lat: 40.7128, lng: -74.0060};
 //     { lat: 40.6782, lng: 73.9442, name: "Brooklyn" }
 // ];
 
+const getCoordsObj = latLng => ({
+    lat: latLng.lat(),
+    lng: latLng.lng()
+});
+
 class Map extends React.Component {
     constructor(props) {
         super(props);
-
-        //add a single routeNode?
-        this.addRouteNode = this.addRouteNode.bind(this);
-        this.numRouteNodes = 0;
+        this.handleClick = this.handleClick.bind(this);
+        
+        // set an empty array for each market object {lat: x, lng: y}
     }
 
-    
     componentDidMount() {
         /*
         * ReactDOM.findDOMNode gets us a pointer to the actual html DOM 
@@ -40,21 +43,31 @@ class Map extends React.Component {
         // this line actually creates the map and renders it into the DOM
         this.map = new google.maps.Map(map, options);
 
-        // add a movement listener -- don't think this function serves any real purpose from demo
-        // this.registerListeners();
-    }
-
-    addRouteNode(routeNode) {
-        const pos = new google.maps.LatLng(routeNode.lat, routeNode.lng);
-
-        const marker = new google.maps.Marker({
-            position: pos,
-            map: this.map
+        google.maps.event.addListener(this.map, 'click', (event) => {
+            const coords = getCoordsObj(event.latLng);
+            this.handleClick(coords);
         });
-
-        //not sure if "this" here will work
-        this.numRouteNodes += 1;
     }
+
+
+    handleClick (coords) {
+        debugger
+        //coords should be in format of object {lat: x, lng: y}
+        this.props.updateCoords(coords)
+        
+    }
+
+    // addRouteNode(routeNode) {
+    //     const pos = new google.maps.LatLng(routeNode.lat, routeNode.lng);
+
+    //     const marker = new google.maps.Marker({
+    //         position: pos,
+    //         map: this.map
+    //     });
+
+    //     //not sure if "this" here will work
+    //     this.numRouteNodes += 1;
+    // }
 
     render() { 
         return (  
