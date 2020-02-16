@@ -1,12 +1,5 @@
  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-#feedIndexContainer {
-    width: 50%;
-    font-family: Roboto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 #feedIndexContainer .activityFeedTitle{
     color: #0075bf;
@@ -23,5 +16,8 @@
     border: .5px lightgray solid;
     box-shadow: 1px 1px 1px lightgray;
     height: 180px;
+
+
+    //this made the index items go under the footer
     margin-bottom: 10px;
 }

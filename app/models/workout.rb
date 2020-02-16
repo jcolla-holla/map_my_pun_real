@@ -1,5 +1,5 @@
 class Workout < ApplicationRecord
-    validates :route_completed_id, :avg_pace, :user_id, :completed_date, :name, :notes, :duration, presence: true
+    validates :route_completed_id, :avg_pace, :user_id, :completed_date, :name, :notes, :route, :duration, presence: true
 
     has_one :route,
         foreign_key: :route_completed_id,

@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import {createRoute} from '../actions/routes_actions'
 
 const mapStateToProps = (state) => ({
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    errors: state.errors.routes
 });
 
 const mapDispatchToProps = dispatch => ({

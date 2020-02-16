@@ -24,9 +24,10 @@ class FeedIndex extends React.Component {
     };
 
     //TO DO: combine this.props.routes and this.props.workouts into a single array before mapping and passing to FeedIndexItem
+        // better to create another column 'create_timestamp'? to use for this?  Or the 'created_at' column in the DB
 
-    //TO DO: move the navbar into a separate component and render in app
     render() { 
+        
         return (
             
 

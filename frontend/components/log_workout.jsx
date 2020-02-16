@@ -45,11 +45,24 @@ class LogWorkout extends React.Component {
 
     render() { 
         let possibleRoutes = [
-            <option value="" disabled selected>Completed Route</option>,
-            <option key="1" value="1">Route 1</option>,
-            <option key="2" value="2">Route 2</option>,
-            <option key="3" value="3">Route 3</option>
+            <option key="1"  value="" disabled selected>Completed Route</option>,
+            <option key="2" value="1">Route 1</option>,
+            <option key="3" value="2">Route 2</option>,
+            <option key="4" value="3">Route 3</option>
         ]
+
+        let renderErrors = (this.props.errors) ?
+            (
+                <ul>
+                    {this.props.errors.map((error, i) => (
+                        <li className="sessionError" key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul>
+            )
+            :
+            ("")
 
         return ( 
             <div id = "createWorkoutFormContainer" >
@@ -65,6 +78,9 @@ class LogWorkout extends React.Component {
                     <textarea className="regularFields" placeholder="How Did It Go?" value={this.state.notes} onChange={this.update("notes")} />
                     <input className="regularFields" placeholder="Duration" type="time" value={this.state.duration} onChange={this.update("duration")} />
                     <input className="createWorkoutButton" type="submit" value="Create Workout" />
+                    <div className="sessionErrors">
+                        {renderErrors}
+                    </div>
                 </form>
             </div>
          );

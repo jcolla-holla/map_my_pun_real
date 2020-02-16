@@ -1,4 +1,13 @@
+
+//IMPROVEMENT: infinite scrolling
+
 #feedIndexContainer {
+    width: 50%;
     height: 800px;
-    width: 100%;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    overflow: scroll;
 }

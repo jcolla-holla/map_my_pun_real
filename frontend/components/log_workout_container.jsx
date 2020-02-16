@@ -3,9 +3,12 @@ import { connect } from "react-redux";
 import { createWorkout } from '../actions/workouts_actions'
 import {getRoute} from '../actions/routes_actions';
 
-const mapStateToProps = (state) => ({
-    currentUser: state.entities.users[state.session.id]
-});
+const mapStateToProps = (state) => {
+    return {
+    currentUser: state.entities.users[state.session.id],
+    errors: state.errors.workouts
+    }
+};
 
 const mapDispatchToProps = dispatch => ({
     createWorkout: (workout) => dispatch(createWorkout(workout)),

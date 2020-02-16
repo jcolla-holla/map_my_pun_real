@@ -38,6 +38,6 @@ class Api::WorkoutsController < ApplicationController
 
     private
     def workout_params
-        params.require(:workout).permit(route_completed_id, avg_page)
+        params.require(:workout).permit(:route_completed_id, :avg_pace, :route, :user_id, :completed_date, :name, :notes, :duration)
     end
 end
