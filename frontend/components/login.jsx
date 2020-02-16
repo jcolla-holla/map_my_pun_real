@@ -60,7 +60,7 @@ class Login extends React.Component {
 
                     <p className="forgotPassword">Forgot Password?</p>
 
-                    <input className="loginButton" type="submit" value="Log In"/>
+                    <input className="loginButton" type="submit" value="LOG IN"/>
                 </form>
             </div>
         );

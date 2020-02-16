@@ -1,17 +1,35 @@
-.logo {
-    width: 163px;
-    height: 100%;
-    display: flex;
-    color: #0075bf;
-    font-family: Roboto;
-    align-items: center;
+#header .logo {
+   height: 64px;
+   width: 60px;
+   left: 100px;
+    position: relative;
+   background-image: asset-data-url("mapmypun_white_background");
+   background-size: cover;
+ }
+
+.legal .logo {
+      height: 64px;
+   width: 152px;
+   right: 56px;
+    position: relative;
+   background-image: asset-data-url("mapmypun_white_background");
+   background-size: cover;
+}
+
+.activitiesSection .logo {
+   height: 64px;
+   width: 161px;
+   left: 100px;
     left: 40px;
     position: relative;
-    font-size: 20px;
-    text-decoration: none;
+   background-image: asset-data-url("mapmypun_gray_background");
+   background-size: cover;
  }
 
  .logo:hover {
     cursor: pointer;
     text-decoration: none;
  }
+
+//  logo link:
+//  logomakr.com/3Hoq8A

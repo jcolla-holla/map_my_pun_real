@@ -24,7 +24,8 @@ class NavBar extends React.Component {
 
         return (  
             <div id="header">
-                <a className="logo" href="#">Map My Pun</a>
+                    <a className="logo" href="#"></a>
+                
 
                 {/* might eventually bring these back */}
                 {/* <ul className="navOptions">
