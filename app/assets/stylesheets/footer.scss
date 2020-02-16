@@ -51,10 +51,12 @@
     background-color: lightgray;
     align-items: center;
     justify-content: center;
+    height: 80px;
 }
 
 #footer .activitiesList {
     display: flex;
+    padding-left: 40px;
 }
 
 
@@ -74,14 +76,16 @@
 }
 
 
-#footer .activitiesSection .logo {
-    border-right: 1px rgb(146, 151, 163) solid;
+#footer .activitiesSection .activitiesList {
+    border-left: 1px rgb(146, 151, 163) solid;
 }
 
 #footer .lists {
     display: flex;
     background-image: asset-data-url("1fb53630c0234d4396417e96ffc2ec85.png");
     justify-content: center;
+    height: 106px;
+    // align-items: center;
 }
 
 #footer .lists ul {
@@ -89,6 +93,7 @@
     font-weight: none;
     font-size: 14px;
     padding-left: 120px;
+    padding-top: 14px;
 }
 
 #footer .lists li {
@@ -96,6 +101,7 @@
     color:rgb(146, 151, 163);
     font-weight: lighter;
     font-size: 12px;
+    padding-top: 2px;
 }
 
 #footer .lists li:hover {   
@@ -104,14 +110,17 @@
 }
 
 #footer .legal {
-    height: 50px;
+    height: 66px;
     background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #footer .legal ul {
     display: flex;
+    padding-top: 18px;
+    padding-bottom: 6px;
 }
 
 #footer .legal li {

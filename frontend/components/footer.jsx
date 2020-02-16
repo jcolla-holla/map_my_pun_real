@@ -9,7 +9,7 @@ class Footer extends React.Component {
         return (  
             <div id="footer">
                 <section className="activitiesSection">
-                    <a className="logo" href="#">Map My Pun</a>
+                    <a className="logo" href="#"></a>
                     <ul className="activitiesList">
                         <li>RIDE</li>
                         <li>WALK</li>
@@ -48,7 +48,7 @@ class Footer extends React.Component {
                 </section>
 
                 <section className="legal">
-                    <a className="logo" href="#">Map My Pun</a>
+                    <a className="logo" href="#"></a>
                     <ul>
                         <li className="firstLi">All Rights Reserved</li>
                         <li>Privacy Policy</li>

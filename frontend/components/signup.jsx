@@ -98,7 +98,7 @@ class SignUp extends React.Component {
                         <input type="checkbox" value={this.state.subscribed} onChange={this.update("subscribed")}/>
                     </label> */}
 
-                    <input className="signupButton" type="submit" value="Sign Up" />
+                    <input className="signupButton" type="submit" value="SIGN UP" />
                 </form>
             </div>
         );

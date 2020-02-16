@@ -30,7 +30,8 @@
 }
 
 #signupFormContainer p {
-    color: gray
+    color: gray;
+    padding: 10px;
 }
 
 //TO DO: figure out the line under the OR
@@ -49,13 +50,13 @@
 }
 
 #signupFormContainer select {
-    height: 50px;
+    height: 56px;
     font-size: 18px;
-    width: 356px;
+    width: 358px;
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 12px;
-    line-height: 50px;
+    line-height: 56px;
     color: gray;
     border: .5px solid lightgray;
     background-color: white;
@@ -90,6 +91,7 @@
     width: 200px;
     height: 60px;
     line-height: 30px;
+    margin-top: 10px;
     color: white;
     text-align: center;
     align-self: center;

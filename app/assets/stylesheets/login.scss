@@ -31,7 +31,8 @@
 }
 
 #loginFormContainer p {
-    color: gray
+    color: gray;
+    padding: 10px;
 }
 
 
@@ -68,6 +69,8 @@
     border: none;
     transition: background-color 0.5s;
     border-radius: 4px;
+        margin-top: 10px;
+
 }
 
 #loginFormContainer .forgotPassword:hover {
