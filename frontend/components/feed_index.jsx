@@ -30,12 +30,12 @@ class FeedIndex extends React.Component {
         
         return (
             
-
+            
                 <div id="feedIndexContainer">
                     <h1 className="activityFeedTitle">Activity Feed</h1>
                     <ul className="activitiesIndex">
                         {this.props.routes.map(route => <FeedIndexItem itemType="route" item={route} key={Math.floor(Math.random() * 10000000000)}/>)}
-                        {this.props.workouts.map(workouts => <FeedIndexItem itemType="workout" item={workouts} key={Math.floor(Math.random() * 10000000000)}/>)}
+                        {this.props.workouts.map(workout => <FeedIndexItem itemType="workout" item={workout} key={Math.floor(Math.random() * 10000000000)}/>)}
                     </ul>
                 </div>
         );
