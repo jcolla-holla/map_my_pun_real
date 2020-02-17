@@ -163,7 +163,9 @@ class CreateRoute extends React.Component {
 
 
         //totalDistance heere is always 0 b/c can't access the variable inside of the callback function
-        this.state.distance = totalDistance * 0.00062137;
+        debugger
+        this.setState({distance: totalDistance * 0.00062137});
+        debugger
     }
             
     update(field) {
