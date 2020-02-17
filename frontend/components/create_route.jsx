@@ -38,8 +38,9 @@ class CreateRoute extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createRoute(this.state);
-        //redirect back to /Home to see feed
+        
+        //redirects to the home screen
+        this.props.createRoute(this.state).then(() => this.props.history.push("/home")).then(alert("New Route Successfully Created!"));
     }
 
     updateCoords (coords) {
@@ -147,6 +148,18 @@ class CreateRoute extends React.Component {
 
         // func(totalDistance);
         // // this.addToDistance(totalDistance);
+
+
+        // this.directionsService.route(request, (response, status) => {
+        //     if (status == 'OK') {
+        //         this.directionsDisplay.setDirections(response);
+
+        //         let distanceInMeters = 0;
+        //         response.routes[0].legs.forEach((leg) => distanceInMeters += leg.distance.value);
+
+        //         this.setState({ distance: (distanceInMeters / 1609.344).toFixed(2) });
+        //     }
+
 
 
         //totalDistance heere is always 0 b/c can't access the variable inside of the callback function

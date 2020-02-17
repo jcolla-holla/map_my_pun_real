@@ -1,1 +1,1 @@
-json.extract! @workout, :route_completed_id, :avg_pace
+json.extract! @workout, :id, :user_id, :created_at, :route, :route_completed_id, :avg_pace, :name, :notes, :duration
