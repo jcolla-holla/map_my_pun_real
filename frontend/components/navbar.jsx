@@ -7,6 +7,7 @@ class NavBar extends React.Component {
     }
     render() { 
         let userExists = this.props.currentUser;
+        let logoRedirect = (userExists) ? "/home/feed" : "/"
         let greetingButtons = (userExists) ?
                 (
                     <section className="headerButtons">
@@ -24,7 +25,7 @@ class NavBar extends React.Component {
 
         return (  
             <div id="header">
-                    <a className="logo" href="#"></a>
+                    <Link className="logo" to={logoRedirect}></Link>
                 
 
                 {/* might eventually bring these back */}

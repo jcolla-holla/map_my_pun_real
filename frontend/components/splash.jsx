@@ -17,17 +17,17 @@ class Splash extends React.Component {
                     <div className="featuresDiv">
                         <div className="featureContainer">
                             <h3 className="featureDesc">Create Running Routes</h3>
-                            <a href="#">Learn More</a>
+                            <Link className="learnMoreButton" to="/signup">Learn More</Link>
                         </div>
 
                         <div className="featureContainer">
                             <h3 className="featureDesc">Follow Your Friends</h3>
-                            <a href="#">Learn More</a>
+                            <Link className="learnMoreButton" to="/signup">Learn More</Link>
                         </div>
 
                         <div className="featureContainer">
                             <h3 className="featureDesc">Share Your Workouts</h3>
-                            <a href="#">Learn More</a>
+                            <Link className="learnMoreButton" to="/signup">Learn More</Link>
                         </div>
 
                         

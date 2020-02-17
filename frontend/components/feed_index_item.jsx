@@ -11,10 +11,9 @@ class FeedIndexItem extends React.Component {
 
     
     render() { 
-        let date = new Date(this.props.item.created_at.slice(0, 4), this.props.item.created_at.slice(5, 7), this.props.item.created_at.slice(8, 10));
+        let date = new Date(this.props.item.updated_at.slice(0, 4), this.props.item.updated_at.slice(5, 7) - 1, this.props.item.updated_at.slice(8, 10));
         let createdDaysAgo = distanceFromToday(date);
 
-        debugger
         const card = (this.props.itemType === "route") ?
         ( 
             <li className="routeCard">
@@ -41,7 +40,7 @@ class FeedIndexItem extends React.Component {
                         <button className="likeButton">Like</button>
                         <button className="commentButton">Comment</button>
                     </div>
-                    <div className="daysAgo">{createdDaysAgo} days ago</div>
+                    <div className="daysAgo">{createdDaysAgo}</div>
                 </footer>
                 
             </li>
@@ -73,7 +72,7 @@ class FeedIndexItem extends React.Component {
                         <button className="likeButton">Like</button>
                         <button className="commentButton">Comment</button>
                     </div>
-                        <div className="daysAgo">{createdDaysAgo} days ago</div>
+                        <div className="daysAgo">{createdDaysAgo}</div>
                 </footer>
             </li>
         )

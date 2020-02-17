@@ -112,13 +112,10 @@ class CreateRoute extends React.Component {
         }
 
         let totalDistance = undefined;
-        debugger
         if (this.coords.length >= 2) {
-            debugger
             totalDistance = 0;
         }
 
-        debugger
         service.getDistanceMatrix(
             {
                 origins: originsArr,
@@ -126,47 +123,22 @@ class CreateRoute extends React.Component {
                 travelMode: 'WALKING',
             }, callback.bind(this));
 
-
-        // does it make sense to declare the callback here?  or as its own function??
         function callback(response, status) {
-            debugger
             if (status == 'OK') {
                 var origins = response.originAddresses;
                 // var destinations = response.destinationAddresses;
                 for (var i = 0; i < origins.length; i++) {
                     var results = response.rows[i].elements;
                     for (var j = 0; j < results.length; j++) {
-                        debugger
                         var element = results[j];
-                        // meters to miles
+                        
                         totalDistance += element.duration.value;
-                        debugger
                     }
                 }
-                this.setState({ distance: totalDistance * 0.00062137 });
+                // meters to miles
+                this.setState({ distance: (totalDistance * 0.00062137).toFixed(2) });
             }
         }
-        //STOP HERE WORKS - BELOW SOME EXPERIMENTS:
-
-        // func(totalDistance);
-        // // this.addToDistance(totalDistance);
-
-
-        // this.directionsService.route(request, (response, status) => {
-        //     if (status == 'OK') {
-        //         this.directionsDisplay.setDirections(response);
-
-        //         let distanceInMeters = 0;
-        //         response.routes[0].legs.forEach((leg) => distanceInMeters += leg.distance.value);
-
-        //         this.setState({ distance: (distanceInMeters / 1609.344).toFixed(2) });
-        //     }
-
-
-
-        //totalDistance heere is always 0 b/c can't access the variable inside of the callback function
-        // debugger
-        // debugger
     }
             
     update(field) {

@@ -7,7 +7,7 @@ class FeedIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {loaded: false}
-        //binding necessary?
+        this.workoutOrRoute = this.workoutOrRoute.bind(this);
     };
 
     //first fetch - routes - happens once
@@ -28,15 +28,29 @@ class FeedIndex extends React.Component {
 
     // merge and use callback to calculate when create first
 
+    workoutOrRoute(item) {
+        //hacky way of testing if the item is a route or workout by checking if the item has a key that only workouts have
+        return item.route_completed_id ? "workout" : "route"
+    }
+
+
     render() { 
-        
+        let mergedIndex = [];
+        mergedIndex = mergedIndex.concat(this.props.routes).concat(this.props.workouts);
+        mergedIndex.sort((a, b) => a.updated_at < b.updated_at ? 1 : -1);
+
+
         return (
                 <div id="homeFeed">
                     <div id="feedIndexContainer">
                         <h1 className="activityFeedTitle">Activity Feed</h1>
                         <ul className="activitiesIndex">
-                            {this.props.routes.map(route => <FeedIndexItem itemType="route" item={route} key={Math.floor(Math.random() * 10000000000)}/>)}
-                            {this.props.workouts.map(workout => <FeedIndexItem itemType="workout" item={workout} key={Math.floor(Math.random() * 10000000000)}/>)}
+                        {mergedIndex.map(item => { 
+                            debugger
+                            <FeedIndexItem itemType={this.workoutOrRoute(item)} item={item} key={this.workoutOrRoute(item)} />})}
+
+                            {/* {this.props.routes.map(route => <FeedIndexItem itemType="route" item={route} key={Math.floor(Math.random() * 10000000000)}/>)}
+                            {this.props.workouts.map(workout => <FeedIndexItem itemType="workout" item={workout} key={Math.floor(Math.random() * 10000000000)}/>)} */}
                         </ul>
                     </div>
 
