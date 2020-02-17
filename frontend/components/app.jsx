@@ -56,8 +56,8 @@ class App extends React.Component {
                     <ProtectedRoute path="/logWorkout" component={LogWorkoutContainer} />
                     <ProtectedRoute path="/importWorkout" component={importWorkout} />
                     <ProtectedRoute path="/createGoal" component={createGoal} />
-                    <ProtectedRoute path="/routes/show" component={RouteShowContainer} />
-                    <ProtectedRoute path="/workouts/show" component={WorkoutShowContainer} />
+                    <ProtectedRoute path="/routes/:id" component={RouteShowContainer} />
+                    <ProtectedRoute path="/workouts/:id" component={WorkoutShowContainer} />
 
                 </div>
                 

@@ -104,6 +104,7 @@ class CreateRoute extends React.Component {
         const originsArr = [this.coords[0]];
         const destinationsArr = [this.coords.slice(-1)[0]];
 
+
         // for loop excludes iterating through the first and last element
         for (let index = 1; index < this.coords.length - 1; index++) {
             originsArr.push(this.coords[index]);
@@ -123,7 +124,7 @@ class CreateRoute extends React.Component {
                 origins: originsArr,
                 destinations: destinationsArr,
                 travelMode: 'WALKING',
-            }, callback);
+            }, callback.bind(this));
 
 
         // does it make sense to declare the callback here?  or as its own function??
@@ -142,6 +143,7 @@ class CreateRoute extends React.Component {
                         debugger
                     }
                 }
+                this.setState({ distance: totalDistance * 0.00062137 });
             }
         }
         //STOP HERE WORKS - BELOW SOME EXPERIMENTS:
@@ -163,9 +165,8 @@ class CreateRoute extends React.Component {
 
 
         //totalDistance heere is always 0 b/c can't access the variable inside of the callback function
-        debugger
-        this.setState({distance: totalDistance * 0.00062137});
-        debugger
+        // debugger
+        // debugger
     }
             
     update(field) {

@@ -63,6 +63,18 @@
     height: 65%;
 }
 
+
+//THESE AREN"T SELECTING WHAT I WANT
+#feedIndexContainer header .link {
+    color: #0075bf;
+    text-decoration: none;
+}
+
+#feedIndexContainer  header .link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 #feedIndexContainer li section .sectionLink {
     display: flex;
     justify-content: space-around;

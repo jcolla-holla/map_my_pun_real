@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {distanceFromToday} from '../util/date_util';
+import {getRoute} from '../actions/routes_actions';
 
 class FeedIndexItem extends React.Component {
     constructor(props) {
@@ -18,11 +19,11 @@ class FeedIndexItem extends React.Component {
         ( 
             <li className="routeCard">
                 <header>
-                    <h3>User #{this.props.item.user_id} created the route <Link to={`/routes/show/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
+                    <h3>User #{this.props.item.user_id} created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
                 </header>
 
                 <section>
-                    <Link className="sectionLink" to={`/workouts/show/${this.props.item.id}`}>
+                        <Link className="sectionLink" to={`/routes/${this.props.item.id}`}>
                         <div className="mapInCard">map placeholder</div>
                         <div className="distanceInCard">
                                 <h1 className="distanceTitle">Distance</h1> 
@@ -56,7 +57,14 @@ class FeedIndexItem extends React.Component {
                 <section>
                     <Link className="sectionLink" to={`/workouts/show/${this.props.item.id}`}>
                         <div className="mapInCard">map placeholder</div>
-                        <div className="distanceInCard">Distance X miles</div>
+                        <div className="distanceInCard">
+                            <h1 className="distanceTitle">Distance</h1>
+                            <span className="distanceContainer">
+                                <div className="distanceValue">{this.props.item.distance}</div>
+                                <p className="mileTag">mi</p>
+                            </span>
+
+                        </div>
                     </Link>
                 </section>
 

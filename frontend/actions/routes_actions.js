@@ -16,7 +16,7 @@ const receiveRoutes = (routes) => ({
 })
 
 const removeRoute = (routeId) => ({
-    type: RECEIVE_ROUTES,
+    type: REMOVE_ROUTE,
     routeId
 })
 
@@ -46,7 +46,7 @@ export const updateRoute = (route) => dispatch => {
 }
 
 export const deleteRoute = (routeId) => dispatch => {
-    return util.getRoute(routeId)
+    return util.deleteRoute(routeId)
         .then((route) => dispatch(removeRoute(route.id), errors => dispatch(receiveErrors(errors.responseJSON))))
 }
 

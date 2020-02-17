@@ -26,6 +26,8 @@ class FeedIndex extends React.Component {
     //TO DO: combine this.props.routes and this.props.workouts into a single array before mapping and passing to FeedIndexItem
         // better to create another column 'create_timestamp'? to use for this?  Or the 'created_at' column in the DB
 
+    // merge and use callback to calculate when create first
+
     render() { 
         
         return (
