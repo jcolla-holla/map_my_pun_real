@@ -40,7 +40,9 @@ class CreateRoute extends React.Component {
         e.preventDefault();
         
         //redirects to the home screen
-        this.props.createRoute(this.state).then(() => this.props.history.push("/home/feed")).then(alert("New Route Successfully Created!"));
+        this.props.createRoute(this.state).then(() => this.props.history.push("/home/feed"))
+
+            // .then(alert("New Route Successfully Created!"));
     }
 
     updateCoords (coords) {
@@ -169,9 +171,9 @@ class CreateRoute extends React.Component {
                 <form className="createRouteForm" onSubmit={this.handleSubmit}>
 
 
-                    <input className="regularFields" type="text" value={this.state.activity_type} placeholder="Activity Type (ex: run, swim, bike)" onChange={this.update("activity_type")}/>
-                    <input className="regularFields" type="text" value={this.state.name} placeholder="Route Name" onChange={this.update("name")}/>
-                    <input className="regularFields" type="text" value={this.state.city} placeholder="City" onChange={this.update("city")}/>
+                    <input required className="regularFields" type="text" value={this.state.activity_type} placeholder="Activity Type (ex: run, swim, bike)" onChange={this.update("activity_type")}/>
+                    <input required className="regularFields" type="text" value={this.state.name} placeholder="Route Name" onChange={this.update("name")}/>
+                    <input required className="regularFields" type="text" value={this.state.city} placeholder="City" onChange={this.update("city")}/>
 
                     <div className="sessionErrors">
                         {renderErrors}
@@ -180,7 +182,7 @@ class CreateRoute extends React.Component {
                     <input className="createRouteButton" type="submit" value="Create Route" />
                     <div id="mapInputContainer">
                         <div className="createRouteMapContainer">
-                            <h1>Click to make a start point and an end point for your route</h1>
+                            <h1>Click on map to make your route</h1>
                             <div id='map' ref='map' />
                         </div>
                     </div>

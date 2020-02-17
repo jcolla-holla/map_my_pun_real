@@ -17,7 +17,7 @@ class RouteShow extends React.Component {
     handleDelete() {
         this.props.deleteRoute(this.props.routeId).then(() => this.props.history.push("/home/feed")).then(alert("Route Successfully Deleted!"));
 
-        // this.props.createRoute(this.state).then(() => this.props.history.push("/home/feed")).then(alert("New Route Successfully Created!"));
+        //need to get user to pause for a second for card to be deleted from feed
     }
 
     render() { 

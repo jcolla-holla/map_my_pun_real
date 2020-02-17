@@ -14,6 +14,16 @@ Route.delete_all
 
 demo_user = User.create!(email: "demo_user@fake.com", password: "password", first_name:"Demo", last_name:"User", country:"United States", gender:"Female")
 
+w1 = Workout.create(
+        route_completed_id: 3,
+        avg_pace: 9.21,
+        user_id: 1,
+        completed_date: Date.new(2017,8,20),
+        name: "brutal bike",
+        notes: "biked all the way up bear mountain",
+        duration: Time.new(2016, 2, 3, 1, 2, 1),
+)
+
 r1 = Route.create(
         distance: 5.8,
         name: "downhill fun",
@@ -27,17 +37,6 @@ r1 = Route.create(
         end_loc_long: -115.810867
 )
 
-
-w1 = Workout.create(
-        route_completed_id: 3,
-        avg_pace: 9.21,
-        user_id: 1,
-        completed_date: Date.new(2017,8,20),
-        name: "brutal bike",
-        notes: "biked all the way up bear mountain",
-        duration: Time.new(2016, 2, 3, 1, 2, 1),
-)
-
 w2 = Workout.create(
         route_completed_id: 2,
         avg_pace: 5.17,
@@ -48,3 +47,21 @@ w2 = Workout.create(
         duration: Time.new(2016, 2, 3, 1, 2, 1),
 )
 
+w3 = Workout.create(
+        route_completed_id: 2,
+        avg_pace: 18.2,
+        user_id: 1,
+        completed_date: Date.new(2018,9,20),
+        name: "tough run",
+        notes: "ran around the world",
+        duration: Time.new(2016, 2, 3, 1, 2, 1),
+)
+
+r1 = Route.create(
+        distance: 6.2,
+        name: "around the world",
+        activity_type: "boat",
+        city: "world",
+        user_id: 2,
+        users_completed: true
+)

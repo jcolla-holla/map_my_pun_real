@@ -6,6 +6,7 @@ import {getRoute} from '../actions/routes_actions';
 class FeedIndexItem extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         //find the owning user's name and save in state
     }
 

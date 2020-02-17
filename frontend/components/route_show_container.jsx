@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => {
         route: (state.entities.routes[ownProps.match.params.id]) ? (state.entities.routes[ownProps.match.params.id]) : { activity_type: "", name: "", city: "", user_id: undefined, distance: undefined }
     }
 
-
     //comments:
     //likes: 
 };
