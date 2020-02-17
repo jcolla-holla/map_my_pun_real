@@ -40,7 +40,7 @@ class CreateRoute extends React.Component {
         e.preventDefault();
         
         //redirects to the home screen
-        this.props.createRoute(this.state).then(() => this.props.history.push("/home")).then(alert("New Route Successfully Created!"));
+        this.props.createRoute(this.state).then(() => this.props.history.push("/home/feed")).then(alert("New Route Successfully Created!"));
     }
 
     updateCoords (coords) {

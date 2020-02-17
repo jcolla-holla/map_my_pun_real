@@ -29,15 +29,32 @@ class FeedIndex extends React.Component {
     render() { 
         
         return (
-            
-            
-                <div id="feedIndexContainer">
-                    <h1 className="activityFeedTitle">Activity Feed</h1>
-                    <ul className="activitiesIndex">
-                        {this.props.routes.map(route => <FeedIndexItem itemType="route" item={route} key={Math.floor(Math.random() * 10000000000)}/>)}
-                        {this.props.workouts.map(workout => <FeedIndexItem itemType="workout" item={workout} key={Math.floor(Math.random() * 10000000000)}/>)}
-                    </ul>
-                </div>
+                <div id="homeFeed">
+                    <div id="feedIndexContainer">
+                        <h1 className="activityFeedTitle">Activity Feed</h1>
+                        <ul className="activitiesIndex">
+                            {this.props.routes.map(route => <FeedIndexItem itemType="route" item={route} key={Math.floor(Math.random() * 10000000000)}/>)}
+                            {this.props.workouts.map(workout => <FeedIndexItem itemType="workout" item={workout} key={Math.floor(Math.random() * 10000000000)}/>)}
+                        </ul>
+                    </div>
+
+                    <div id="profileOverview">
+                        <div className="flexedTop">
+                            <div className="profilePic"></div>
+                            <div className="info">
+                                <h1>Hello, {this.props.currentUser.name}</h1>
+                                <div className="statsCount">
+                                    <div className="routesCount">?? Routes</div>
+                                <div className="workoutsCount">?? Workouts</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="actionLinks">
+                            <Link className="createRouteButton" to="/createRoute">Create Route</Link>
+                            <Link className="logWorkoutButton" to="/logWorkout">Log Workout</Link>
+                        </div>
+                    </div>
+                 </div>
         );
     };
 }

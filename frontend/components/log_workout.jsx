@@ -30,7 +30,7 @@ class LogWorkout extends React.Component {
         this.state.avg_pace = (5.2);
 
         debugger;
-        this.props.createWorkout(this.state);
+        this.props.createWorkout(this.state).then(() => this.props.history.push("/home/feed")).then(alert("New Workout Successfully Logged!"));;
 
         //redirect back to /Home to see feed
     }

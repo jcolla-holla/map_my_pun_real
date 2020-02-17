@@ -1,6 +1,13 @@
  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 
+#homeFeed {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
 #feedIndexContainer .activityFeedTitle{
     color: #0075bf;
     padding-top: 15px;
@@ -11,13 +18,215 @@
 }
 
 #feedIndexContainer li {  
-    padding: 10px;
-    width: 100%;
+    width: 500px;
     border: .5px lightgray solid;
     box-shadow: 1px 1px 1px lightgray;
-    height: 180px;
-
-
-    //this made the index items go under the footer
-    margin-bottom: 10px;
+    height: 236px;
+    margin-bottom: 20px;
 }
+
+#feedIndexContainer li header {
+    height: 20%;
+    color: rgb(34, 38, 40);
+    text-decoration: none;
+    border-bottom: .5px solid lightgray;
+}
+
+#feedIndexContainer .routeCard header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 15px;
+}
+
+#feedIndexContainer .workoutCard header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15px;
+}
+
+#feedIndexContainer .workoutCard header .workoutTitle {
+    margin: 2.5px;
+}
+
+
+#feedIndexContainer .workoutCard header .workoutNotes {
+    font-size: 12px;
+    margin: 2.5px;
+}
+
+#feedIndexContainer li section {
+    background-color: #f0f2f4;
+    border-bottom: .5px solid lightgray;
+    height: 65%;
+}
+
+#feedIndexContainer li section .sectionLink {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(34, 38, 40);
+    border-left: .5px solid lightgray;
+}
+
+#feedIndexContainer li section .sectionlink div {
+    background-color: #f0f2f4;
+    width: 50%;
+}
+
+#feedIndexContainer li section .sectionlink .distanceInCard {
+    display: block;
+    border-left: .5px solid lightgray;
+}
+
+
+#feedIndexContainer .distanceContainer {
+    display: flex;
+}
+
+#feedIndexContainer .distanceTitle {
+    font-size: 16px;
+}
+
+#feedIndexContainer .distanceValue {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#feedIndexContainer .mileTag {
+    font-size: 12px;
+    font-weight: lighter;
+    align-self: center;
+    margin-left: 4px;
+}
+
+#feedIndexContainer li footer {
+    background-color: #f0f2f4;
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+    align-items: center;
+    border-left: .5px solid lightgray;
+}
+
+.daysAgo {
+    font-size: 12px;
+    margin-right: 15px;
+    color: #0075bf
+}
+
+#feedIndexContainer .leftSideFooter {
+    margin-left: 15px
+}
+
+#feedIndexContainer .leftSideFooter button {
+    border-radius: 4px;
+    color: rgb(34, 38, 40);
+    transition: background-color 0.5s;
+    border: none;
+}
+
+#feedIndexContainer .likeButton {
+    margin-right: 10px;
+}
+
+#profileOverview {
+    box-shadow: 1px 1px 1px lightgrey;
+    height: 130px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    border: .5px solid lightgray;
+    background-color: #f0f2f4;
+    color: rgb(34, 38, 40);
+    font-family: Roboto;
+}
+
+#profileOverview .flexedTop {
+    display: flex;
+}
+
+#profileOverview .profilePic {
+    background-image: asset-data-url("profile_pic_stand_in.png");
+    background-size: cover;
+    height: 100%;
+    width: 25%;
+}
+
+#profileOverview .profilePic h1 {
+    padding: 10px;
+}
+
+#profileOverview .info {
+    display: block;
+    padding: 10px;
+    width: -webkit-fill-available
+}
+
+#profileOverview .statsCount {
+    height: 37.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 25%;
+    margin-top: 20px;
+}
+
+#profileOverview .statsCount .workoutsCount {
+    margin-left: 60px;
+}
+
+#profileOverview .statsCount .routesCount {
+    margin-left: 20px;
+}
+
+#profileOverview .actionLinks {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    text-decoration: none;
+    border-top: .5px solid lightgray;
+}
+
+#profileOverview .createRouteButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #0075bf;
+    text-decoration: none;
+        width: 70%;
+        text-align: center;
+}
+
+#profileOverview .logWorkoutButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #0075bf;
+    text-decoration: none;
+    border-left: .5px solid lightgray;
+        width:30%;
+        text-align: center;
+}
+
+#profileOverview .createRouteButton {
+    color: #0075bf;
+    text-decoration: none;
+}
+
+#profileOverview .logWorkoutButton:hover {  
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#profileOverview .createRouteButton:hover {  
+    font-weight: bold;
+    text-decoration: underline;
+}
+

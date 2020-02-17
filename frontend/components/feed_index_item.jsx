@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {distanceFromToday} from '../util/date_util';
 
 class FeedIndexItem extends React.Component {
     constructor(props) {
@@ -9,15 +10,8 @@ class FeedIndexItem extends React.Component {
 
     
     render() { 
-        let yrStr = this.props.item.created_at.slice(0, 4);
-        let monthStr = this.props.item.created_at.slice(5, 7);
-        let dayStr = this.props.item.created_at.slice(8, 10);
-        let hoursStr = this.props.item.created_at.slice(11, 13);
-        let minStr = this.props.item.created_at.slice(15, 17);
-        let secStr = this.props.item.created_at.slice(19, 21);
         let date = new Date(this.props.item.created_at.slice(0, 4), this.props.item.created_at.slice(5, 7), this.props.item.created_at.slice(8, 10));
-        let now = new Date();
-
+        let createdDaysAgo = distanceFromToday(date);
 
         debugger
         const card = (this.props.itemType === "route") ?
@@ -27,15 +21,26 @@ class FeedIndexItem extends React.Component {
                     <h3>User #{this.props.item.user_id} created the route <Link to={`/routes/show/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
                 </header>
 
-                <body>
-                    <Link to={`/workouts/show/${this.props.item.id}`}>
-                        <div className="mapInCard"></div>
-                        <div className="distanceInCard">Distance {this.props.item.distance} miles</div>
+                <section>
+                    <Link className="sectionLink" to={`/workouts/show/${this.props.item.id}`}>
+                        <div className="mapInCard">map placeholder</div>
+                        <div className="distanceInCard">
+                                <h1 className="distanceTitle">Distance</h1> 
+                                <span className="distanceContainer">
+                                    <div className="distanceValue">{this.props.item.distance}</div> 
+                                    <p className="mileTag">mi</p>
+                                </span> 
+                                
+                        </div>
                     </Link>
-                </body>
+                </section>
 
                 <footer>
-                    <p>Made {this.props.item.created_at}</p>
+                    <div className="leftSideFooter">
+                        <button className="likeButton">Like</button>
+                        <button className="commentButton">Comment</button>
+                    </div>
+                    <div className="daysAgo">{createdDaysAgo} days ago</div>
                 </footer>
                 
             </li>
@@ -44,18 +49,23 @@ class FeedIndexItem extends React.Component {
         (
             <li className="workoutCard">
                 <header>
-                        <h3>User #{this.props.item.user_id} completed a {this.props.item.activity_type} workout of X miles</h3>
+                        <h3 className="workoutTitle">User #{this.props.item.user_id} completed a {this.props.item.activity_type} workout of X miles</h3>
+                        <h3 className="workoutNotes">{this.props.item.notes}</h3>
                 </header>
 
-                <body>
-                    <Link to={`/workouts/show/${this.props.item.id}`}>
-                        <div className="mapInCard"></div>
+                <section>
+                    <Link className="sectionLink" to={`/workouts/show/${this.props.item.id}`}>
+                        <div className="mapInCard">map placeholder</div>
                         <div className="distanceInCard">Distance X miles</div>
                     </Link>
-                </body>
+                </section>
 
                 <footer>
-                    <p>Made {this.props.item.created_at}</p>
+                    <div className="leftSideFooter">
+                        <button className="likeButton">Like</button>
+                        <button className="commentButton">Comment</button>
+                    </div>
+                        <div className="daysAgo">{createdDaysAgo} days ago</div>
                 </footer>
             </li>
         )

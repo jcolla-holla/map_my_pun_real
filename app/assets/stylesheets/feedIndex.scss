@@ -2,7 +2,7 @@
 //IMPROVEMENT: infinite scrolling
 
 #feedIndexContainer {
-    width: 50%;
+    width: 66%;
     height: 800px;
     font-family: Roboto;
     display: flex;
@@ -10,4 +10,10 @@
     align-items: center;
     padding-bottom: 20px;
     overflow: scroll;
+}
+
+#feedIndexContainer .activityFeedTitle{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
