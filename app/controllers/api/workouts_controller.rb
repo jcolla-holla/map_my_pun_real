@@ -16,6 +16,7 @@ class Api::WorkoutsController < ApplicationController
     end
 
     def index
+        # need to render error here?
         @workouts = Workout.all
         render :index
     end

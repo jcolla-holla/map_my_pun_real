@@ -10,18 +10,13 @@ class FeedIndex extends React.Component {
         this.workoutOrRoute = this.workoutOrRoute.bind(this);
     };
 
-    //first fetch - routes - happens once
+    //fetch all necessary data - routes - happens once.
     componentDidMount () {
-        this.props.getRoutes();
+            this.props.getUsers();
+            this.props.getRoutes();
+            this.props.getWorkouts();
     };
     
-    //second fetch - workouts - happens once
-    componentDidUpdate() {
-        if (!this.state.loaded) {
-            this.setState({loaded: true});
-            this.props.getWorkouts();
-        }
-    };
 
     //hacky way of testing if the item is a route or workout by checking if the item has a key that only workouts have
     workoutOrRoute(item) {
@@ -35,24 +30,22 @@ class FeedIndex extends React.Component {
 
         const itemsLis = mergedIndex.map(item => {
             let completedRoute = undefined;
-            debugger
+            // let that = this; // ran into google chrome browser bug of 'this' being undefined, that = this is for debuggering
+            let that = this;
             if (this.workoutOrRoute(item) === "workout") {
-                let that = this;
-                //attempting bound function approach
-                debugger
                 //terrible N query here bc entities.routes is an array, can potentially fix later with following line:
                                     // completedRoute = this.props.routesObj[item.route_completed_id];
 
-                
+
                 for (let index = 0; index < this.props.routesArr.length; index++) {
                     if (this.props.routesArr[index].id === item.route_completed_id) {
-                        completedRoute = that.props.routesArr[index];
+                        completedRoute = this.props.routesArr[index];
                     }
-                }
-
-                debugger
+                }   
             }
-            return <FeedIndexItem completedRoute={completedRoute} itemType={this.workoutOrRoute(item)} item={item} key={this.workoutOrRoute(item) + item.id.toString()} />
+            //added item.user_id here
+
+            return <FeedIndexItem user={this.props.users[item.user_id]} completedRoute={completedRoute} itemType={this.workoutOrRoute(item)} item={item} key={this.workoutOrRoute(item) + item.id.toString()} />
         })
 
         return (
@@ -68,7 +61,8 @@ class FeedIndex extends React.Component {
                         <div className="flexedTop">
                             <div className="profilePic"></div>
                             <div className="info">
-                                <h1>Hello, {this.props.currentUser.name}</h1>
+                            <h1>Hello, {this.props.currentUser.first_name} {this.props.currentUser.last_name}</h1>
+                            {/* <h1>Hello, NAME PLACEHOLDER</h1> */}
                                 <div className="statsCount">
                                     <div className="routesCount">?? Routes</div>
                                 <div className="workoutsCount">?? Workouts</div>

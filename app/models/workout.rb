@@ -1,12 +1,14 @@
 class Workout < ApplicationRecord
     validates :route_completed_id, :avg_pace, :user_id, :completed_date, :name, :notes, :duration, presence: true
 
-    has_one :route,
-        foreign_key: :route_completed_id,
-        class_name: "Workout"
+    belongs_to :route,
+        class_name: :Route,
+         primary_key: :id,
+        foreign_key: :route_completed_id
 
-    has_one :owner,
-        foreign_key: :user_id,
-        class_name: "User"
+    belongs_to :owner,
+    class_name: :User,
+        primary_key: :id,
+        foreign_key: :user_id
 end
  

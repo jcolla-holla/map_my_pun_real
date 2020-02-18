@@ -5,19 +5,17 @@ import {distanceFromToday} from '../util/date_util';
 class FeedIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        // debugger
         //find the owning user's name and save in state
     }
     
     render() { 
         let date = new Date(this.props.item.updated_at.slice(0, 4), this.props.item.updated_at.slice(5, 7) - 1, this.props.item.updated_at.slice(8, 10));
         let createdDaysAgo = distanceFromToday(date);
-        // debugger
         const card = (this.props.itemType === "route") ?
         ( 
             <li className="routeCard">
                 <header>
-                    <h3>User #{this.props.item.user_id} created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
+                    <h3>{this.props.user.first_name} created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
                 </header>
 
                 <section>
@@ -48,7 +46,7 @@ class FeedIndexItem extends React.Component {
         (
             <li className="workoutCard">
                 <header>
-                        <h3 className="workoutTitle">User #{this.props.item.user_id} completed a {this.props.item.activity_type} workout of X miles</h3>
+                        <h3 className="workoutTitle">{this.props.user.first_name} {this.props.user.last_name} completed a {this.props.item.activity_type} workout of {this.props.completedRoute.distance} miles</h3>
                         <h3 className="workoutNotes">{this.props.item.notes}</h3>
                 </header>
 
@@ -58,9 +56,7 @@ class FeedIndexItem extends React.Component {
                         <div className="distanceInCard">
                             <h1 className="distanceTitle">Distance</h1>
                             <span className="distanceContainer">
-                                {/* ONCE this.props.completedRoute is defined:: */}
                                 <div className="distanceValue">{this.props.completedRoute.distance}</div>
-                                {/* <div className="distanceValue">distance placeholder</div> */}
                                 <p className="mileTag">mi</p>
                             </span>
                         </div>

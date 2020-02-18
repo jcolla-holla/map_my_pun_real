@@ -5,12 +5,14 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_many :routes,
+    primary_key: :id,
     foreign_key: :user_id,
-    class_name: "Route"
+    class_name: :Route
 
   has_many :workouts,
+    primary_key: :id,
     foreign_key: :user_id,
-    class_name: "Workout"
+    class_name: :Workout
 
   attr_reader :password
 
