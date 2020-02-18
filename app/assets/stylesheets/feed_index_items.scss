@@ -39,6 +39,8 @@
     padding-left: 15px;
 }
 
+//WORKOUT CARDs:
+
 #feedIndexContainer .workoutCard header {
     display: flex;
     flex-direction: column;
@@ -106,6 +108,32 @@
 }
 
 #feedIndexContainer .distanceValue {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#feedIndexContainer .mileTag {
+    font-size: 12px;
+    font-weight: lighter;
+    align-self: center;
+    margin-left: 4px;
+}
+
+#feedIndexContainer li section .sectionlink .avgPaceInCard {
+    display: block;
+    border-left: .5px solid lightgray;
+}
+
+
+#feedIndexContainer .avgPaceContainer {
+    display: flex;
+}
+
+#feedIndexContainer .avgPaceTitle {
+    font-size: 16px;
+}
+
+#feedIndexContainer .avgPaceValue {
     font-size: 40px;
     font-weight: bold;
 }

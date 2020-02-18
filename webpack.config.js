@@ -21,6 +21,12 @@ module.exports = {
     },
     devtool: 'source-map',
     resolve: {
-        extensions: ['.js', '.jsx', '*'],
+        extensions: ['.js', '.jsx', '*']//,
+        // added to resolve "Error: Can't resolve 'module'": https://stackoverflow.com/questions/38149017/webpack-2-cannot-resolve-module
+        // modules: ['node_modules', path.resolve(__dirname, 'core')]
     }
+    //possible to add below to resolve fs doesn't exist error:
+    // node: {
+    //     fs: 'empty'
+    // }
 };

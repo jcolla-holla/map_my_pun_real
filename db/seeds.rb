@@ -15,7 +15,7 @@ Route.delete_all
 demo_user = User.create!(email: "demo_user@fake.com", password: "password", first_name:"Demo", last_name:"User", country:"United States", gender:"Female")
 
 w1 = Workout.create(
-        route_completed_id: 3,
+        route_completed_id: 47,
         avg_pace: 9.21,
         user_id: 1,
         completed_date: Date.new(2017,8,20),
@@ -38,7 +38,7 @@ r1 = Route.create(
 )
 
 w2 = Workout.create(
-        route_completed_id: 2,
+        route_completed_id: 48,
         avg_pace: 5.17,
         user_id: 1,
         completed_date: Date.new(2016,2,3),
@@ -48,7 +48,7 @@ w2 = Workout.create(
 )
 
 w3 = Workout.create(
-        route_completed_id: 2,
+        route_completed_id: 47,
         avg_pace: 18.2,
         user_id: 1,
         completed_date: Date.new(2018,9,20),

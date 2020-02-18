@@ -28,18 +28,32 @@ class FeedIndex extends React.Component {
         return item.route_completed_id ? "workout" : "route"
     }
 
-
     render() { 
         let mergedIndex = [];
-        mergedIndex = mergedIndex.concat(this.props.routes).concat(this.props.workouts);
+        mergedIndex = mergedIndex.concat(this.props.routesArr).concat(this.props.workoutsArr);
         mergedIndex.sort((a, b) => a.updated_at < b.updated_at ? 1 : -1);
 
         const itemsLis = mergedIndex.map(item => {
-            return <FeedIndexItem itemType={this.workoutOrRoute(item)} item={item} key={this.workoutOrRoute(item) + item.id.toString()} />
+            let completedRoute = undefined;
+            debugger
+            if (this.workoutOrRoute(item) === "workout") {
+                let that = this;
+                //attempting bound function approach
+                debugger
+                //terrible N query here bc entities.routes is an array, can potentially fix later with following line:
+                                    // completedRoute = this.props.routesObj[item.route_completed_id];
+
+                
+                for (let index = 0; index < this.props.routesArr.length; index++) {
+                    if (this.props.routesArr[index].id === item.route_completed_id) {
+                        completedRoute = that.props.routesArr[index];
+                    }
+                }
+
+                debugger
+            }
+            return <FeedIndexItem completedRoute={completedRoute} itemType={this.workoutOrRoute(item)} item={item} key={this.workoutOrRoute(item) + item.id.toString()} />
         })
-        debugger
-
-
 
         return (
                 <div id="homeFeed">

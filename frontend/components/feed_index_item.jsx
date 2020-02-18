@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {distanceFromToday} from '../util/date_util';
-import {getRoute} from '../actions/routes_actions';
 
 class FeedIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        debugger
+        // debugger
         //find the owning user's name and save in state
     }
-
     
     render() { 
         let date = new Date(this.props.item.updated_at.slice(0, 4), this.props.item.updated_at.slice(5, 7) - 1, this.props.item.updated_at.slice(8, 10));
         let createdDaysAgo = distanceFromToday(date);
-
+        // debugger
         const card = (this.props.itemType === "route") ?
         ( 
             <li className="routeCard">
@@ -56,15 +54,26 @@ class FeedIndexItem extends React.Component {
 
                 <section>
                     <Link className="sectionLink" to={`/workouts/show/${this.props.item.id}`}>
-                        <div className="mapInCard">map placeholder</div>
+
                         <div className="distanceInCard">
                             <h1 className="distanceTitle">Distance</h1>
                             <span className="distanceContainer">
-                                <div className="distanceValue">{this.props.item.distance}</div>
+                                {/* ONCE this.props.completedRoute is defined:: */}
+                                <div className="distanceValue">{this.props.completedRoute.distance}</div>
+                                {/* <div className="distanceValue">distance placeholder</div> */}
                                 <p className="mileTag">mi</p>
                             </span>
-
                         </div>
+
+                        <div className="avgPaceInCard">
+                            <h1 className="avgPaceTitle">Avg Pace</h1>
+                            <span className="avgPaceContainer">
+                                <div className="avgPaceValue">{this.props.item.avg_pace}</div>
+                                <p className="mileTag">mi/hr</p>
+                            </span>
+                        </div>
+                        <div className="mapInCard">map placeholder</div>
+
                     </Link>
                 </section>
 

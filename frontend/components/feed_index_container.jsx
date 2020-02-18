@@ -6,8 +6,9 @@ import {getWorkouts} from '../actions/workouts_actions';
 
 const mapStateToProps = (state) => {
     return {
-    routes: Object.values(state.entities.routes),
-    workouts: Object.values(state.entities.workouts),
+    routesArr: Object.values(state.entities.routes),
+    routesObj: state.entities.routes,
+    workoutsArr: Object.values(state.entities.workouts),
     currentUser: state.entities.users[state.session.id]
 }};
 
