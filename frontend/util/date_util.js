@@ -1,7 +1,9 @@
 export const distanceFromToday = (date) => {
-    let now = new Date();
+    //does this work now to get EST??
+    let now = new Date() - 5;
     let daysAgo = Math.abs(Math.floor((now - date)/1000/60/60/24));
-    return daysAgo === 0 ? "Today" : `${daysAgo} Ago`;
+    debugger
+    return daysAgo <= 1 ? "Today" : `${daysAgo} Day(s) Ago`;
 }
 
 // NOTE: 
@@ -10,17 +12,17 @@ export const distanceFromToday = (date) => {
 
 //duration is a string like "01:13"
 export const calculateAvgPace = (duration, distance) => {
-
+    debugger
     var parts = duration.split(':');
-   
     let hrs = parts[0] % 12;
-    let min = parts[1];
-
+    if (parts[1]) {
+        let min = parts[1];
+    } else {
+        let min = 0;
+    }
     let minInHrs = min/ 60;
-
-    let durationInHrs = parseFloat(hrs + minInHrs.toFixed(2));
-
-    return distance/durationInHrs;
+    let durationInHrs = parseFloat(hrs + minInHrs);
+    return (distance / durationInHrs).toFixed(2);
 }
 
 

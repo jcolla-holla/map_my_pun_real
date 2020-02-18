@@ -9,8 +9,7 @@ class LogWorkout extends React.Component {
         //need to add route, user_id, start_time, end_time
         this.state = this.props.workout;
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.fetchRoute = this.fetchRoute.bind(this);
-
+        this.updateAvgPace = this.updateAvgPace.bind(this);
         this.possibleRoutes = [];
     }
 
@@ -25,18 +24,12 @@ class LogWorkout extends React.Component {
         // delete this.state.route;
         // this.props.getRoute(this.state.route_completed_id)
 
-        let chosenRoute = undefined;
-        for (let index = 0; index < this.props.routes.length; index++) {
-            if (this.props.routes[index].id.toString() === this.state.route_completed_id) {
-                chosenRoute = this.props.routes[index];
-            }
-        }
+        
+        // debugger;
 
-        let routeDistance = parseFloat(chosenRoute.distance); // ex: -> 5.8
-        let avgPace = calculateAvgPace(this.state.duration, routeDistance);
-        this.setState({avg_pace: avgPace})
+        // this.setState({avg_pace: avgPace});
 
-        debugger;
+        // debugger;
 
         //AJAX REQUEST TO ADD WORKOUT TO DATABASE
         this.props.createWorkout(this.state).then(() => this.props.history.push("/home/feed"))
@@ -48,6 +41,29 @@ class LogWorkout extends React.Component {
         return e => {
             this.setState({ [field]: e.target.value })
         }
+    }
+
+
+    // NEED THIS:
+    updateAvgPace () {
+        // only can update avg_pace if a route has been selected
+        return e => {
+            debugger
+            this.setState({distance: state.distance});
+            debugger
+            if (this.state.route_completed_id) {
+                let chosenRoute = undefined;
+                for (let index = 0; index < this.props.routes.length; index++) {
+                    if (this.props.routes[index].id.toString() === this.state.route_completed_id) {
+                        chosenRoute = this.props.routes[index];
+                    }
+                }
+                debugger
+                let routeDistance = parseFloat(chosenRoute.distance); // ex: -> 5.8
+                let avgPace = calculateAvgPace(e.currentTarget.value, routeDistance);
+                this.setState({avg_pace: avgPace})
+            }
+        } 
     }
 
 // //HANDLE ERRORS - refer to 'signup.jsx' for inspiration
@@ -90,8 +106,8 @@ class LogWorkout extends React.Component {
                     <select required placeholder="Completed Route" type="text" value={this.state.route_completed_id} onChange={this.update("route_completed_id")}>{possibleRoutes}</select>
                     <textarea required className="regularFields" placeholder="How Did It Go?" value={this.state.notes} onChange={this.update("notes")} />
 
-                    <label >Start Time:
-                        <input required className="startTime" placeholder="Duration" type="time" value={this.state.duration} onChange={this.update("duration")} />
+                    <label >Duration:
+                        <input required className="startTime" placeholder="Duration" type="time" value={this.state.duration} onChange={this.updateAvgPace()} />
                     </label>
                     <input className="createWorkoutButton" type="submit" value="Create Workout" />
                     <div className="sessionErrors">
