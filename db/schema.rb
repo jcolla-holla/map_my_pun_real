@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_14_155755) do
+ActiveRecord::Schema.define(version: 2020_02_18_203401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,14 +20,10 @@ ActiveRecord::Schema.define(version: 2020_02_14_155755) do
     t.string "name", null: false
     t.string "city", null: false
     t.integer "user_id", null: false
-    t.boolean "users_completed"
     t.decimal "distance", null: false
-    t.decimal "start_loc_lat"
-    t.decimal "start_loc_long"
-    t.decimal "end_loc_lat"
-    t.decimal "end_loc_long"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "maps_api_static_img", null: false
   end
 
   create_table "users", force: :cascade do |t|

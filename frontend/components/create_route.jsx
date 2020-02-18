@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {generateGoogleMapsAPIURL} from '../util/maps_util';
 
+//starts w New York as center
 const mapCenter = { lat: 40.7128, lng: -74.0060 };
-
 const getCoordsObj = latLng => ({
     lat: latLng.lat(),
     lng: latLng.lng()
@@ -11,7 +12,7 @@ const getCoordsObj = latLng => ({
 class CreateRoute extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { activity_type: "", name: "", city: "", user_id: this.props.currentUser.id}
+        this.state = { activity_type: "", name: "", city: "", user_id: this.props.currentUser.id, maps_api_static_img:""};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateCoords = this.updateCoords.bind(this);
 
@@ -66,6 +67,10 @@ class CreateRoute extends React.Component {
         this.updateCoords(coords)
         if (this.coords.length > 1) {
             this.makeAPIDirectionRequest();
+            debugger
+        
+            this.setState({maps_api_static_img: generateGoogleMapsAPIURL(this.coords)});
+            debugger
         }
     }
 

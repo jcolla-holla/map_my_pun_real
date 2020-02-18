@@ -12,9 +12,15 @@ User.destroy_all
 Workout.destroy_all
 Route.destroy_all
 
+# CURRENTLY HAS MY KEY IN THIS FILE THIS IS A PROBLEM FIGURE OUT HOW TO HIDE
+# will this work?: ENV['google_api_key']
+# stored via figaro gem already: https://open.appacademy.io/learn/swe-in-person-nyc/react/google-maps-api-key
+
+
 demo_user = User.create!(email: "demo_user@fake.com", password: "password", first_name:"Demo", last_name:"User", country:"United States", gender:"Female")
 user_1 = User.create!(email: "jesse@fake.com", password: "password", first_name:"Jesse", last_name:"Colligan", country:"United States", gender:"Male")
 user_2 = User.create!(email: "wonder@fake.com", password: "password", first_name:"Wonder", last_name:"Woman", country:"United States", gender:"Female")
+
 
 
 # verified works
@@ -24,7 +30,7 @@ r1 = Route.create!(
         activity_type: "swim",
         city: "Seattle",
         owner: user_2,
-        users_completed: true
+        maps_api_static_img: "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8"
 )
 
 # verified works
@@ -34,8 +40,9 @@ r2 = Route.create!(
         activity_type: "boat",
         city: "world",
         owner: user_1,
+        maps_api_static_img: "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8"
 )
-# Route.create!(distance: 6.2,name: "around the world",activity_type: "boat",city: "world",user_id: 1,users_completed: true)
+# Route.create!(distance: 6.2,name: "around the world",activity_type: "boat",city: "world",user_id: 1)
 
 # verified works
 w2 = Workout.create!(

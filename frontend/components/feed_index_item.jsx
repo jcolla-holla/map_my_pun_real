@@ -15,12 +15,22 @@ class FeedIndexItem extends React.Component {
         ( 
             <li className="routeCard">
                 <header>
-                    <h3>{this.props.user.first_name} created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
+                        <h3>{this.props.user.first_name} {this.props.user.last_name} created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
                 </header>
 
                 <section>
                         <Link className="sectionLink" to={`/routes/${this.props.item.id}`}>
-                        <div className="mapInCard">map placeholder</div>
+                        <div className="mapInCard">
+                                <img src={`${this.props.item.maps_api_static_img}`}/>
+
+                                {/* PLACEHOLDER BELOW: */}
+                                {/* <img className="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8"/> */}
+                                
+                            
+                                {/* {ENV['google_api_key']} DOES THAT GIVE THE API KEY???*/}
+                       
+                        
+                        </div>
                         <div className="distanceInCard">
                                 <h1 className="distanceTitle">Distance</h1> 
                                 <span className="distanceContainer">
@@ -68,7 +78,11 @@ class FeedIndexItem extends React.Component {
                                 <p className="mileTag">mi/hr</p>
                             </span>
                         </div>
-                        <div className="mapInCard">map placeholder</div>
+                        <div className="mapInCard">
+                                <img src={`${this.props.completedRoute.maps_api_static_img}`}/>
+                            {/* img placeholder */}
+                            {/* <img className="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8" /> */}
+                        </div>
 
                     </Link>
                 </section>
