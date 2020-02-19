@@ -33,7 +33,6 @@ class Api::RoutesController < ApplicationController
         else
             render json: @route.errors.full_messages, status: 400
         end
-        render :show
     end
 
     private

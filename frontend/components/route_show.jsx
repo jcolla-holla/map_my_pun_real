@@ -8,9 +8,7 @@ class RouteShow extends React.Component {
     }
 
     componentDidMount () {
-        debugger
         this.props.getRoute(this.props.routeId);
-        debugger
         //need to create 'get user' to get the user's name
     }
 
@@ -21,7 +19,6 @@ class RouteShow extends React.Component {
     }
 
     render() { 
-        debugger
         return (  
             <div id="routeShowContainer">
                 <section className="routeShowInfoCard">
@@ -40,7 +37,7 @@ class RouteShow extends React.Component {
                     </div>
                 
                     <div className="actionButtons">
-                        <Link className="editButton" to="routes_edit/:id">Edit</Link>
+                        <Link className="editButton" to={`/route_edit/${this.props.route.id}`}>Edit</Link>
                         <button onClick={() => this.handleDelete()} className="deleteButton">Delete</button>
                     </div>
                 </section>

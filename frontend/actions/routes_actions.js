@@ -41,7 +41,7 @@ export const getRoute = (routeId) => dispatch => {
 }
 
 export const updateRoute = (route) => dispatch => {
-    return util.getRoute(route)
+    return util.updateRoute(route)
         .then((route) => dispatch(receiveRoute(route), errors => dispatch(receiveErrors(errors.responseJSON))))
 }
 

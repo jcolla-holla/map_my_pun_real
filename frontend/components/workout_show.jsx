@@ -36,7 +36,7 @@ class WorkoutShow extends React.Component {
                 </div>
 
                 <div className="actionButtons">
-                    <Link className="editButton" to="workouts_edit/:id">Edit</Link>
+                    <Link className="editButton" to={`/workout_edit/${this.props.workout.id}`}>Edit</Link>
                     <button onClick={() => this.handleDelete()} className="deleteButton">Delete</button>
                 </div>
             </section>

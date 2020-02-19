@@ -13,6 +13,7 @@ import importWorkout from './import_workout';
 import createGoal from './create_goal';
 import RouteShowContainer from './route_show_container';
 import WorkoutShowContainer from './workout_show_container';
+import RouteEditContainer from './edit_route_container';
 
 import {
     Route,
@@ -59,6 +60,9 @@ class App extends React.Component {
                     <ProtectedRoute path="/createGoal" component={createGoal} />
                     <ProtectedRoute path="/routes/:id" component={RouteShowContainer} />
                     <ProtectedRoute path="/workouts/:id" component={WorkoutShowContainer} />
+                    {/* <ProtectedRoute path="/workout_edit/:id" component={WorkoutEditContainer} /> */}
+                    <ProtectedRoute path="/route_edit/:id" component={RouteEditContainer} />
+                    
 
                 </div>
                 

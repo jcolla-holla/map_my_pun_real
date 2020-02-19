@@ -2,7 +2,6 @@ import { RECEIVE_WORKOUT, RECEIVE_WORKOUTS, REMOVE_WORKOUT} from '../actions/wor
 
 export const workoutsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
-    debugger
     let newState = Object.assign({}, oldState);
     switch (action.type) {
         case RECEIVE_WORKOUTS:

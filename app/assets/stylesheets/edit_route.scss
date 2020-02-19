@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-#workoutShowContainer {
+
+#routeEditContainer {
     width: 100%;
     height: 600px;
     display: flex;
@@ -9,7 +10,7 @@
     align-items: center;
 }
 
-#workoutShowContainer .workoutShowInfoCard {
+#routeEditContainer .routeEditInfoCard {
     border: .5px lightgray solid;
     box-shadow: 1px 1px 1px lightgray;
     height: 80%;
@@ -21,14 +22,14 @@
     align-items: center;
 }
 
-#workoutShowContainer .workoutShowInfoTitle {
+#routeEditContainer .routeEditInfoTitle {
     font-size: 24px;
     display: flex;
     height: 5%;
     margin-top: 20px;
 }
 
-#workoutShowContainer .workoutShowInfoBody {
+#routeEditContainer .routeEditInfoBody {
     color: rgb(34, 38, 40);
     height: 66%;
     width: 100%;
@@ -38,17 +39,21 @@
     display: flex;
 }
 
-#workoutShowContainer .workoutShowInfoBody {
-    color: rgb(34, 38, 40);
-    height: 66%;
-    width: 100%;
-    padding: 20px;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
+#routeEditContainer input {
+    height: 40px;
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 30px;
+    line-height: 56px;
+    margin-left: 5px;
+    color: gray;
+    border: .5px solid lightgray;
+    background-color: white;
+    border-radius: 0;
 }
 
-#workoutShowContainer .workoutShowInfo {
+#routeEditContainer .routeEditInfo {
     // font-weight: bold;
     height: 100%;
     width: 50%;
@@ -58,21 +63,7 @@
     justify-content: center;
 }
 
-#workoutContainer input {
-    height: 40px;
-    font-size: 14px;
-    /* width: 339px; */
-    padding-left: 16px;
-    padding-right: 16px;
-    /* margin-bottom: 12px; */
-    line-height: 56px;
-    color: gray;
-    border: .5px solid lightgray;
-    background-color: white;
-    border-radius: 0;
-}
-
-#workoutShowContainer .workoutShowMap {
+#routeEditContainer .routeEditMap {
     height: 100%;
     width: 50%;
     display: flex;
@@ -81,19 +72,19 @@
     justify-content: center;
 }
 
-#workoutShowContainer .mapImage {
+#routeEditContainer .mapImage {
     height: 100%;
     width: 100%;
 }
 
-#workoutShowContainer .workoutShowInfo h2 {
+#routeEditContainer .routeEditInfo h2 {
     margin-bottom: 10px;
-    width: 50%;
+    width: 90%;
     height: 100%;
 }
 
 
-#workoutShowContainer .actionButtons {
+#routeEditContainer .actionButtons {
     justify-content: center;
     display: flex;
     width: 100%;
@@ -102,7 +93,7 @@
     margin-bottom: 10px;
 }
 
-#workoutShowContainer .editButton {
+#routeEditContainer .homeButton {
     width: 120px;
    font-size: 15px;
    height: 46px;
@@ -118,13 +109,13 @@
     font-weight: bold;
 }
 
-#workoutShowContainer .deleteButton {
+#routeEditContainer .updateButton {
     width: 120px;
    font-size: 15px;
    height: 46px;
    border: none;
    color: white;
-   background-color: red;
+   background-color: rgb(29, 221, 124);
    transition: background-color 0.5s;
    text-decoration: none;
    border-radius: 4px;
@@ -134,12 +125,13 @@
     font-weight: bold;
 }
 
-// #workoutShowContainer .editButton:hover {
+#routeEditContainer .updateButton:hover {
+       cursor: pointer;
 //     color: #0075bf;
 //    background-color: white;
-// }
+}
 
-#workoutShowContainer .deleteButton:hover {
+#routeEditContainer .homeButton:hover {
     cursor: pointer;
 //     color: white;
 //    background-color: red;
