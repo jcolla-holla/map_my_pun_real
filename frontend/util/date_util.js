@@ -3,7 +3,15 @@ export const distanceFromToday = (date) => {
     let now = new Date() - 5;
     let daysAgo = Math.abs(Math.floor((now - date)/1000/60/60/24));
     // debugger
-    return daysAgo <= 1 ? "Today" : `${daysAgo} Day(s) Ago`;
+    let finalMsg = ""
+    if (daysAgo === 1) {
+        finalMsg = `${daysAgo} Day Ago`;
+    } else if (daysAgo > 1) {
+        finalMsg = `${daysAgo} Days Ago`;
+    } else if (daysAgo < 1) {
+        finalMsg = "Today";
+    }
+    return finalMsg;
 }
 
 // NOTE: 
@@ -12,7 +20,7 @@ export const distanceFromToday = (date) => {
 
 //duration is a string like "01:13"
 export const calculateAvgPace = (duration, distance) => {
-    // debugger
+    debugger
     var parts = duration.split(':');
     let hrs = parts[0] % 12;
     if (parts[1]) {
@@ -20,6 +28,7 @@ export const calculateAvgPace = (duration, distance) => {
     } else {
         let min = 0;
     }
+    debugger
     let minInHrs = min/ 60;
     let durationInHrs = parseFloat(hrs + minInHrs);
     return (distance / durationInHrs).toFixed(2);

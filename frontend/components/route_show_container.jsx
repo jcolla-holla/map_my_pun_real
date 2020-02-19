@@ -6,6 +6,7 @@ import RouteShow from './route_show';
 
 //I dont think .id here is going to work yet...
 const mapStateToProps = (state, ownProps) => {
+    debugger
     return {
         routeId: ownProps.match.params.id,
         route: (state.entities.routes[ownProps.match.params.id]) ? (state.entities.routes[ownProps.match.params.id]) : { activity_type: "", name: "", city: "", user_id: undefined, distance: undefined }

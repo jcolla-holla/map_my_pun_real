@@ -52,7 +52,7 @@ class FeedIndexItem extends React.Component {
                 </header>
 
                 <section className="workoutCardSection">
-                    <Link className="sectionLink" to={`/workouts/show/${this.props.item.id}`}>
+                    <Link className="sectionLink" to={`/workouts/${this.props.item.id}`}>
 
                         <div className="distanceInCard">
                             <h1 className="distanceTitle">Distance</h1>

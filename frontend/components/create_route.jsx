@@ -68,10 +68,7 @@ class CreateRoute extends React.Component {
             this.updateCoords(coords)
             if (this.coords.length > 1) {
                 this.makeAPIDirectionRequest();
-                debugger
-
                 this.setState({ maps_api_static_img: generateGoogleMapsAPIURL(this.coords) });
-                debugger
             }
 
             if (this.coords.length === 7) {

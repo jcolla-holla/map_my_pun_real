@@ -48,9 +48,9 @@ class LogWorkout extends React.Component {
     updateAvgPace () {
         // only can update avg_pace if a route has been selected
         return e => {
-            debugger
+            // debugger
             this.setState({distance: state.distance});
-            debugger
+            // debugger
             if (this.state.route_completed_id) {
                 let chosenRoute = undefined;
                 for (let index = 0; index < this.props.routes.length; index++) {
@@ -58,7 +58,7 @@ class LogWorkout extends React.Component {
                         chosenRoute = this.props.routes[index];
                     }
                 }
-                debugger
+                // debugger
                 let routeDistance = parseFloat(chosenRoute.distance); // ex: -> 5.8
                 let avgPace = calculateAvgPace(e.currentTarget.value, routeDistance);
                 this.setState({avg_pace: avgPace})

@@ -1,0 +1,121 @@
+#workoutShowContainer {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto;
+    align-items: center;
+}
+
+#workoutShowContainer .workoutShowInfoCard {
+    border: .5px lightgray solid;
+    box-shadow: 1px 1px 1px lightgray;
+    height: 80%;
+    width: 70%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#workoutShowContainer .workoutShowInfoTitle {
+    font-size: 24px;
+    display: flex;
+    height: 5%;
+    margin-top: 20px;
+}
+
+#workoutShowContainer .workoutShowInfoBody {
+    color: rgb(34, 38, 40);
+    height: 66%;
+    width: 100%;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+
+#workoutShowContainer .workoutShowInfo {
+    // font-weight: bold;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#workoutShowContainer .workoutShowMap {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#workoutShowContainer .mapImage {
+    height: 100%;
+    width: 100%;
+}
+
+#workoutShowContainer .workoutShowInfo h2 {
+    margin-bottom: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+
+#workoutShowContainer .actionButtons {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#workoutShowContainer .editButton {
+    width: 120px;
+   font-size: 15px;
+   height: 46px;
+   border: none;
+   color: white;
+   background-color: #0075bf;
+   transition: background-color 0.5s;
+   text-decoration: none;
+   border-radius: 4px;
+   line-height: 46px;
+   text-align: center;
+   margin: 18px;
+    font-weight: bold;
+}
+
+#workoutShowContainer .deleteButton {
+    width: 120px;
+   font-size: 15px;
+   height: 46px;
+   border: none;
+   color: white;
+   background-color: red;
+   transition: background-color 0.5s;
+   text-decoration: none;
+   border-radius: 4px;
+   line-height: 46px;
+   text-align: center;
+   margin: 18px;
+    font-weight: bold;
+}
+
+// #workoutShowContainer .editButton:hover {
+//     color: #0075bf;
+//    background-color: white;
+// }
+
+#workoutShowContainer .deleteButton:hover {
+    cursor: pointer;
+//     color: white;
+//    background-color: red;
+
+}

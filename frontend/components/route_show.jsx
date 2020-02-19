@@ -5,23 +5,23 @@ class RouteShow extends React.Component {
     constructor(props) {
         super(props);
         this.handleDelete = this.handleDelete.bind(this);
-        debugger
-
     }
 
     componentDidMount () {
+        debugger
         this.props.getRoute(this.props.routeId);
-
+        debugger
         //need to create 'get user' to get the user's name
     }
 
     handleDelete() {
-        this.props.deleteRoute(this.props.routeId).then(() => this.props.history.push("/home/feed")).then(alert("Route Successfully Deleted!"));
+        this.props.deleteRoute(this.props.routeId).then(() => this.props.history.push("/home/feed")).then(alert("Route (and associated workouts) Successfully Deleted !"));
 
         //need to get user to pause for a second for card to be deleted from feed
     }
 
     render() { 
+        debugger
         return (  
             <div id="routeShowContainer">
                 <section className="routeShowInfoCard">

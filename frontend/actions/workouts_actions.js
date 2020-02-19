@@ -15,7 +15,7 @@ const receiveWorkouts = (workouts) => ({
 })
 
 const removeWorkout = (workoutId) => ({
-    type: RECEIVE_WORKOUTS,
+    type: REMOVE_WORKOUT,
     workoutId
 })
 

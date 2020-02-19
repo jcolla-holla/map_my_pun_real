@@ -15,7 +15,6 @@ class FeedIndex extends React.Component {
             this.props.getUsers();
             this.props.getRoutes();
             this.props.getWorkouts();
-            debugger
     };
     
 
