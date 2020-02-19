@@ -12,7 +12,7 @@ const getCoordsObj = latLng => ({
 class CreateRoute extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { activity_type: "", name: "", city: "", user_id: this.props.currentUser.id, maps_api_static_img:""};
+        this.state = { activity_type: "", name: "", city: "", user_id: this.props.currentUser.id, maps_api_static_img:"", distance:0};
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateCoords = this.updateCoords.bind(this);
 
@@ -53,25 +53,31 @@ class CreateRoute extends React.Component {
     handleMapClick(coords) {
         //possible fun thing: add custom markers - https://developers.google.com/maps/documentation/javascript/custom-markers
 
-        //coords should be in format of object {lat: x, lng: y}
-        this.markerCount += 1;
-        if (this.markerCount === 1) {
-            const marker = new google.maps.Marker({
-                position: coords,
-                map: this.map,
-                num: this.markerCount,
-            });
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
+        if (this.coords.length <= 10) {
+            //coords should be in format of object {lat: x, lng: y}
+            this.markerCount += 1;
+            if (this.markerCount === 1) {
+                const marker = new google.maps.Marker({
+                    position: coords,
+                    map: this.map,
+                    num: this.markerCount,
+                });
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
 
-        this.updateCoords(coords)
-        if (this.coords.length > 1) {
-            this.makeAPIDirectionRequest();
-            debugger
-        
-            this.setState({maps_api_static_img: generateGoogleMapsAPIURL(this.coords)});
-            debugger
-        }
+            this.updateCoords(coords)
+            if (this.coords.length > 1) {
+                this.makeAPIDirectionRequest();
+                debugger
+
+                this.setState({ maps_api_static_img: generateGoogleMapsAPIURL(this.coords) });
+                debugger
+            }
+
+            if (this.coords.length === 7) {
+                alert("Don't get too crazy - there is a maximum of 10 points in a route");
+            }
+        } 
     }
 
     makeAPIDirectionRequest () {
@@ -171,29 +177,28 @@ class CreateRoute extends React.Component {
             ("")
 
         return ( 
-            <div id="createRouteFormContainer">
-                <h1>Make a new route</h1>
-                <form className="createRouteForm" onSubmit={this.handleSubmit}>
+            <div id="createRouteContainer">
 
+                <div id="createRouteFormContainer">
+                    <h1 className="createRouteTitle">Make a new route</h1>
+                    <form className="createRouteForm" onSubmit={this.handleSubmit}>
+                        <input required className="regularFields" type="text" value={this.state.activity_type} placeholder="Activity Type (ex: run, swim, bike)" onChange={this.update("activity_type")}/>
+                        <input required className="regularFields" type="text" value={this.state.name} placeholder="Route Name" onChange={this.update("name")}/>
+                        <input required className="regularFields" type="text" value={this.state.city} placeholder="City" onChange={this.update("city")}/>
 
-                    <input required className="regularFields" type="text" value={this.state.activity_type} placeholder="Activity Type (ex: run, swim, bike)" onChange={this.update("activity_type")}/>
-                    <input required className="regularFields" type="text" value={this.state.name} placeholder="Route Name" onChange={this.update("name")}/>
-                    <input required className="regularFields" type="text" value={this.state.city} placeholder="City" onChange={this.update("city")}/>
-
-                    <div className="sessionErrors">
-                        {renderErrors}
-                    </div>
-
-                    <input className="createRouteButton" type="submit" value="Create Route" />
-                    <div id="mapInputContainer">
-                        <div className="createRouteMapContainer">
-                            <h1>Click on map to make your route</h1>
-                            <div id='map' ref='map' />
+                        <input className="createRouteButton" type="submit" value="Create Route" />
+                        <div className="mileCounter">{this.state.distance} miles</div>
+                        <div className="sessionErrors">
+                            {renderErrors}
                         </div>
-                    </div>
-                    <input className="createRouteButton" type="submit" value="Create Route" />
+                    </form>
+                </div>
 
-                </form>
+                <div id="mapInputContainer">
+                    <div className="createRouteMapContainer">
+                        <div id='map' ref='map' />
+                    </div>
+                </div>
             </div>
          )
     }

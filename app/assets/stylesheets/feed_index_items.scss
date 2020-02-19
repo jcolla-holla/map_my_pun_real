@@ -40,7 +40,6 @@
 }
 
 //WORKOUT CARDs:
-
 #feedIndexContainer .workoutCard header {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,6 @@
 #feedIndexContainer .workoutCard header .workoutTitle {
     margin: 2.5px;
 }
-
 
 #feedIndexContainer .workoutCard header .workoutNotes {
     font-size: 12px;
@@ -72,8 +70,9 @@
 }
 
 #feedIndexContainer .routeCard .mapImage {
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    //99.7% to maintain inside of border
+    height: 99.7%;
 }
 
 #feedIndexContainer .workoutCard .mapInCard {
@@ -82,10 +81,10 @@
 }
 
 #feedIndexContainer .workoutCard .mapImage {
-    width: 100%;
-    height: 100%;
-}
-
+    //this maintains the border at the bottom and fills whole right side of card.  might have some unforeseen consequences across different screens etc
+    width: 117.5%;
+    height: 99.4%;
+}   
 
 
 
@@ -100,7 +99,18 @@
     text-decoration: underline;
 }
 
-#feedIndexContainer li section .sectionLink {
+#feedIndexContainer li .routeCardSection .sectionLink {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(34, 38, 40);
+    border-left: .5px solid lightgray;
+}
+
+#feedIndexContainer li .workoutCardSection .sectionLink {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -111,16 +121,19 @@
     border-left: .5px solid lightgray;
 }
 
+#feedIndexContainer .routeCardSection .distanceInCard {
+    display: block; 
+    margin-left: 80px;
+}
+
+#feedIndexContainer .workoutCardSection .distanceInCard {
+    display: block; 
+}
+
 #feedIndexContainer li section .sectionlink div {
     background-color: #f0f2f4;
     width: 50%;
 }
-
-#feedIndexContainer li section .sectionlink .distanceInCard {
-    display: block;
-    border-left: .5px solid lightgray;
-}
-
 
 #feedIndexContainer .distanceContainer {
     display: flex;
@@ -196,100 +209,5 @@
 
 #feedIndexContainer .likeButton {
     margin-right: 10px;
-}
-
-#profileOverview {
-    box-shadow: 1px 1px 1px lightgrey;
-    height: 130px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
-    border: .5px solid lightgray;
-    background-color: #f0f2f4;
-    color: rgb(34, 38, 40);
-    font-family: Roboto;
-}
-
-#profileOverview .flexedTop {
-    display: flex;
-}
-
-#profileOverview .profilePic {
-    background-image: asset-data-url("profile_pic_stand_in.png");
-    background-size: cover;
-    height: 100%;
-    width: 25%;
-}
-
-#profileOverview .profilePic h1 {
-    padding: 10px;
-}
-
-#profileOverview .info {
-    display: block;
-    padding: 10px;
-    width: -webkit-fill-available
-}
-
-#profileOverview .statsCount {
-    height: 37.5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 25%;
-    margin-top: 20px;
-}
-
-#profileOverview .statsCount .workoutsCount {
-    margin-left: 60px;
-}
-
-#profileOverview .statsCount .routesCount {
-    margin-left: 20px;
-}
-
-#profileOverview .actionLinks {
-    height: 25%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    text-decoration: none;
-    border-top: .5px solid lightgray;
-}
-
-#profileOverview .createRouteButton {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #0075bf;
-    text-decoration: none;
-        width: 70%;
-        text-align: center;
-}
-
-#profileOverview .logWorkoutButton {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #0075bf;
-    text-decoration: none;
-    border-left: .5px solid lightgray;
-        width:30%;
-        text-align: center;
-}
-
-#profileOverview .createRouteButton {
-    color: #0075bf;
-    text-decoration: none;
-}
-
-#profileOverview .logWorkoutButton:hover {  
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-#profileOverview .createRouteButton:hover {  
-    font-weight: bold;
-    text-decoration: underline;
 }
 

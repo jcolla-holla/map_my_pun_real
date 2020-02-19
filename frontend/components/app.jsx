@@ -44,7 +44,8 @@ class App extends React.Component {
                 <div id="homeContainer">
                     <Switch>
                         <ProtectedRoute path="/home" component={homeHeader} />
-                        <ProtectedRoute path="/createRoute" component={homeHeader} />
+                        {/* uncomment to unhide permanently the homeHeader */}
+                        {/* <ProtectedRoute path="/createRoute" component={homeHeader} /> */}
                         <ProtectedRoute path="/logWorkout" component={homeHeader} />
                         <ProtectedRoute path="/importWorkout" component={homeHeader} />
                         <ProtectedRoute path="/createGoal" component={homeHeader} />

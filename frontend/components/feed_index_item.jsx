@@ -5,7 +5,6 @@ import {distanceFromToday} from '../util/date_util';
 class FeedIndexItem extends React.Component {
     constructor(props) {
         super(props);
-        //find the owning user's name and save in state
     }
     
     render() { 
@@ -18,18 +17,10 @@ class FeedIndexItem extends React.Component {
                         <h3>{this.props.user.first_name} {this.props.user.last_name} created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
                 </header>
 
-                <section>
+                    <section className="routeCardSection">
                         <Link className="sectionLink" to={`/routes/${this.props.item.id}`}>
                         <div className="mapInCard">
-                                <img src={`${this.props.item.maps_api_static_img}`}/>
-
-                                {/* PLACEHOLDER BELOW: */}
-                                {/* <img className="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8"/> */}
-                                
-                            
-                                {/* {ENV['google_api_key']} DOES THAT GIVE THE API KEY???*/}
-                       
-                        
+                                <img className="mapImage" src={`${this.props.item.maps_api_static_img}`}/>
                         </div>
                         <div className="distanceInCard">
                                 <h1 className="distanceTitle">Distance</h1> 
@@ -60,7 +51,7 @@ class FeedIndexItem extends React.Component {
                         <h3 className="workoutNotes">{this.props.item.notes}</h3>
                 </header>
 
-                <section>
+                <section className="workoutCardSection">
                     <Link className="sectionLink" to={`/workouts/show/${this.props.item.id}`}>
 
                         <div className="distanceInCard">
@@ -79,9 +70,7 @@ class FeedIndexItem extends React.Component {
                             </span>
                         </div>
                         <div className="mapInCard">
-                                <img src={`${this.props.completedRoute.maps_api_static_img}`}/>
-                            {/* img placeholder */}
-                            {/* <img className="mapImage" src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8" /> */}
+                                <img className="mapImage" src={`${this.props.completedRoute.maps_api_static_img}`}/>
                         </div>
 
                     </Link>
@@ -101,7 +90,6 @@ class FeedIndexItem extends React.Component {
             card
         )
     }
-    //explore how to get '5 days ago' - https://www.toptal.com/software/definitive-guide-to-datetime-manipulation
 }
 
 export default FeedIndexItem;

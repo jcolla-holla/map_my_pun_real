@@ -10,7 +10,6 @@
     font-family: Roboto;
     justify-content: space-between;
     align-items: center;
-    
  }
 
  #header .logo {
@@ -34,7 +33,6 @@
     color:#0483c9;
    cursor: pointer;
   } 
-
 
 // 
 
@@ -97,7 +95,9 @@
    background-size: cover;
    height: 40px;
    width: 40px;
-   background-image: asset-data-url("profile_pic_stand_in.png");
+   background-image: asset-data-url("user.png");
+   //hardcoding Jesse's face:
+   // background-image: asset-data-url("profile_pic_stand_in.png");
    border-radius: 50%
 }
 

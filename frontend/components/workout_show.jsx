@@ -16,7 +16,7 @@ class WorkoutShow extends React.Component {
         return (  
             <div className="workoutShowContainer">
                 <h1>WorkoutShow rendered!</h1>
-                <h1>Name: {this.props.workout.name}</h1>
+                {/* <h1>Name: {this.props.workout.name}</h1>
                 <h2>Duration: {this.props.workout.duration}</h2>
                 <h2>Average Page: {this.props.workout.avg_pace}</h2>
 
@@ -24,7 +24,7 @@ class WorkoutShow extends React.Component {
                     <div>{this.props.route.name}</div>
                     <div>Distance: {this.props.route.distance}</div>
                     <div>map of the route</div>
-                </Link>
+                </Link> */}
             </div>
         );
     }

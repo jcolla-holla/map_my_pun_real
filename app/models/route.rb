@@ -11,5 +11,6 @@ class Route < ApplicationRecord
     has_many :workouts,
           primary_key: :id,
         foreign_key: :route_completed_id,
-        class_name: :Workout
+        class_name: :Workout,
+        dependent: :destroy
 end

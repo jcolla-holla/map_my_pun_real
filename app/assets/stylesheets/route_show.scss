@@ -1,6 +1,6 @@
 #routeShowContainer {
     width: 100%;
-    height: 400px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     font-family: Roboto;
@@ -11,7 +11,7 @@
     border: .5px lightgray solid;
     box-shadow: 1px 1px 1px lightgray;
     height: 80%;
-    width: 60%;
+    width: 70%;
     margin-bottom: 20px;
     margin-top: 20px;
     display: flex;
@@ -22,12 +22,13 @@
 #routeShowContainer .routeShowInfoTitle {
     font-size: 24px;
     display: flex;
-    margin-top: 24px;
+    height: 5%;
+    margin-top: 20px;
 }
 
 #routeShowContainer .routeShowInfoBody {
     color: rgb(34, 38, 40);
-    height: 100%;
+    height: 66%;
     width: 100%;
     padding: 20px;
     justify-content: space-around;
@@ -54,6 +55,11 @@
     justify-content: center;
 }
 
+#routeShowContainer .mapImage {
+    height: 100%;
+    width: 100%;
+}
+
 #routeShowContainer .routeShowInfo h2 {
     margin-bottom: 10px;
     width: 50%;
@@ -65,7 +71,9 @@
     justify-content: center;
     display: flex;
     width: 100%;
+    height: 15%;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 #routeShowContainer .editButton {

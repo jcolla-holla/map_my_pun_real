@@ -13,20 +13,15 @@ export function generateGoogleMapsAPIURL(coordsArr) {
         inputCoordsStr += lngStr;
         inputCoordsStr += "|";
     }
-    debugger
 
-    // stand-in example for now
-    // return "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%|59.900503,-135.478011|59.900603,-135.479011|&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8"
-
-   return `https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%${inputCoordsStr}&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8`
-
-
-
-    // return `https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8`
+    //Google Static Maps API requires a "|" to close the marker final coordinate pair but returns nothing when you close the path final coordinate pair w "|".  to work must not have "|" w final coordinate pair with path to work 
+    let pathInputStr = inputCoordsStr.slice(0, inputCoordsStr.length - 1);
+    debugger;
+    return `https://maps.googleapis.com/maps/api/staticmap?size=800x400&maptype=roadmap\&markers=size:mid%7Ccolor:red%${inputCoordsStr}&path=color:0x0000ff${pathInputStr}&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8`;
 }
 
-
-    //to update: color to be brand colors
+// return `https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8`
+//to update: color to be brand colors
 
     // 1)
     // CENTER: format:

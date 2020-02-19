@@ -5,6 +5,7 @@ class RouteShow extends React.Component {
     constructor(props) {
         super(props);
         this.handleDelete = this.handleDelete.bind(this);
+        debugger
 
     }
 
@@ -27,7 +28,9 @@ class RouteShow extends React.Component {
                     
                     <title className="routeShowInfoTitle">{this.props.route.name}</title>
                     <div className="routeShowInfoBody"> 
-                        <section className="routeShowMap">map image goes here!</section>
+                        <section className="routeShowMap">
+                            <img className="mapImage" src={this.props.route.maps_api_static_img}/>
+                        </section>
                         
                         <div className="routeShowInfo">
                             <h2>Activity Type: {this.props.route.activity_type}</h2>
