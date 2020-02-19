@@ -30,7 +30,8 @@ r1 = Route.create!(
         activity_type: "swim",
         city: "Seattle",
         owner: user_2,
-        maps_api_static_img: "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap&markers=size:mid%7Ccolor:red%|40.73595686396483,-73.95510240173341|40.71032772401275,-73.94119783020021|40.71858279938749,-73.93305588348389|40.72899047137957,-73.94380123809815|40.7196886918097,-73.95856411651611|40.71051573421715,-73.95026109527589|&key=#{ENV['MAPS_API_KEY']}"
+        maps_api_static_img: 'placeholder'
+        # maps_api_static_img: "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap&markers=size:mid%7Ccolor:red%|40.73595686396483,-73.95510240173341|40.71032772401275,-73.94119783020021|40.71858279938749,-73.93305588348389|40.72899047137957,-73.94380123809815|40.7196886918097,-73.95856411651611|40.71051573421715,-73.95026109527589|&key=#{ENV['MAPS_API_KEY']}"
 )
 
 # verified works
@@ -40,7 +41,8 @@ r2 = Route.create!(
         activity_type: "boat",
         city: "world",
         owner: user_1,
-        maps_api_static_img: "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap&markers=size:mid%7Ccolor:red%|40.74480117938022,-73.97762200092596|40.73569671923887,-73.9796819374494|40.74681556134285,-73.98691205032351|40.7451694559253,-73.9940436164856|40.74911578897213,-73.99107294448852|&key=#{ENV['MAPS_API_KEY']}"
+        maps_api_static_img: 'placeholder'
+        # maps_api_static_img: "https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap&markers=size:mid%7Ccolor:red%|40.74480117938022,-73.97762200092596|40.73569671923887,-73.9796819374494|40.74681556134285,-73.98691205032351|40.7451694559253,-73.9940436164856|40.74911578897213,-73.99107294448852|&key=#{ENV['MAPS_API_KEY']}"
 )
 # Route.create!(distance: 6.2,name: "around the world",activity_type: "boat",city: "world",user_id: 1)
 

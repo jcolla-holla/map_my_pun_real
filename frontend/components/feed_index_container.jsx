@@ -6,6 +6,7 @@ import {getUsers} from '../actions/users_actions';
 
 
 const mapStateToProps = (state) => {
+    debugger
     return {
     routesArr: Object.values(state.entities.routes),
     routesObj: state.entities.routes,
