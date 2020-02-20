@@ -2,6 +2,7 @@ import React from 'react';
 import FeedIndexItem from './feed_index_item';
 import { Link } from 'react-router-dom';
 import {getTodaysDate} from '../util/date_util';
+import ProfileOverviewContainer from './profile_overview_container';
  
 
 class FeedIndex extends React.Component {
@@ -62,35 +63,22 @@ class FeedIndex extends React.Component {
         })
 
         return (
-                <div id="homeFeed">
-                    <div id="feedIndexContainer">
-                        <h1 className="activityFeedTitle">Activity Feed</h1>
-                        <div className="activityFeedDateContainer">
-                            <h2 className="activityFeedDate">Today: {getTodaysDate()}</h2>
+                <div id="feedIndexContainer">
+                    <form className="statusForm">
+                        <div className="statusProfPic"></div>
+                        <div className="statusFormFields">
+                            <textarea className="statusText" placeholder="Add a status update here..."></textarea>
+                            <button type="submit" className="statusSubmit">POST</button>
                         </div>
-                        <ul className="activitiesIndex">
-                        {itemsLis}
-                        </ul>
+                    </form>
+                
+                    <div className="activityFeedDateContainer">
+                        <h2 className="activityFeedDate">Today: {getTodaysDate()}</h2>
                     </div>
-
-                    <div id="profileOverview">
-                        <div className="flexedTop">
-                            <div className="profilePic"></div>
-                            <div className="info">
-                            <h1>Hello, {this.props.currentUser.first_name} {this.props.currentUser.last_name}</h1>
-                            {/* <h1>Hello, NAME PLACEHOLDER</h1> */}
-                                <div className="statsCount">
-                                    <div className="routesCount">?? Routes</div>
-                                <div className="workoutsCount">?? Workouts</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="actionLinks">
-                            <Link className="createRouteButton" to="/createRoute">Create Route</Link>
-                            <Link className="logWorkoutButton" to="/logWorkout">Log Workout</Link>
-                        </div>
-                    </div>
-                 </div>
+                    <ul className="activitiesIndex">
+                    {itemsLis}
+                    </ul>
+                </div>
         );
     };
 }

@@ -14,7 +14,8 @@ import createGoal from './create_goal';
 import RouteShowContainer from './route_show_container';
 import WorkoutShowContainer from './workout_show_container';
 import RouteEditContainer from './edit_route_container';
-
+import MyDashboardContainer from './my_dashboard_container';
+import Home from './home';
 import {
     Route,
     Redirect,
@@ -53,7 +54,12 @@ class App extends React.Component {
                         <ProtectedRoute path="/routes/" component={homeHeader} />
                         <ProtectedRoute path="/workouts/" component={homeHeader} />
                     </Switch>
-                    <ProtectedRoute path="/home/feed" component={FeedIndexContainer}/>
+                    {/* loggedInNavOptions */}
+
+
+                    <ProtectedRoute path="/home" component={Home} />
+                    {/* <ProtectedRoute path="/home/my_dashboard" component={MyDashboardContainer} />
+                    <ProtectedRoute path="/home/feed" component={FeedIndexContainer}/> */}
                     <ProtectedRoute path="/createRoute" component={CreateRouteContainer}/>
                     <ProtectedRoute path="/logWorkout" component={LogWorkoutContainer} />
                     <ProtectedRoute path="/importWorkout" component={importWorkout} />

@@ -1,0 +1,128 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+#myDashboardContainer {
+    width: 95%;
+    height: 600px;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    overflow: scroll;
+    margin-left: 50px;
+    color:#444444
+}
+
+#myDashboardContainer .dashboardWorkouts {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#myDashboardContainer .dashboardRoutes{
+    margin-top: 20px;
+    width: 100%;
+}
+
+#myDashboardContainer .dashboardWorkouts ul {
+    list-style: none;
+    display: flex;
+}
+
+#myDashboardContainer .dashboardWorkouts ul {
+    list-style: none;
+    display: flex;
+}
+
+
+
+
+#myDashboardContainer h1 {
+    list-style: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-bottom: .5px solid lightgray;
+     width: 90%;
+     margin-bottom: 10px;
+}
+
+#myDashboardContainer li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin: 0px;
+}
+
+// MY DASHBOARD WORKOUT:
+
+#myDashboardContainer .dashboardRoutes ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#myDashboardContainer .workoutItem {
+    display: flex;
+}
+
+// MYDASHBOARROUTE:
+
+#myDashboardContainer .routeItem {
+    display: flex;
+    margin-right: 10px;
+    width: 138px;
+}
+
+
+#myDashboardContainer .routeItemContent {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+
+#myDashboardContainer .routeItemContent ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#myDashboardContainer .routeItemContent ul {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#myDashboardContainer .routeItemMap {
+    width: 138px;
+    height: 135px;
+}
+
+#myDashboardContainer .routeItemMapOverlay {
+    display: block;
+    width: 120.5px;
+    height: 40px;
+    color: #444444;
+    background-color: lightcoral;
+    opacity: .5px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+    bottom: 10px;
+}
+
+#myDashboardContainer .routeItemMapOverlay p {
+    font-weight: bold;
+}
+
+#myDashboardContainer .routeItemMapOverlay .routeTitle {
+    padding-left: 5px;
+}
+
+#myDashboardContainer .routeItemMapOverlay .distanceCount {
+    display: flex;
+    padding-left: 5px;
+}
+
+

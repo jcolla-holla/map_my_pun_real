@@ -7,18 +7,12 @@
     justify-content: center;
 }
 
-
-#feedIndexContainer .activityFeedTitle{
-    color: #0075bf;
-    padding-top: 15px;
-}
-
 #feedIndexContainer ul {
     list-style: none;
 }
 
 #feedIndexContainer li {  
-    width: 500px;
+    width: 600px;
     border: .5px lightgray solid;
     box-shadow: 1px 1px 1px lightgray;
     height: 236px;
@@ -87,16 +81,26 @@
 }   
 
 
-
-//THESE AREN"T SELECTING WHAT I WANT
 #feedIndexContainer header .link {
-    color: #0075bf;
+    color: #2f98d9;
     text-decoration: none;
 }
 
 #feedIndexContainer  header .link:hover {
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+    color: #92BFDD
+}
+
+#feedIndexContainer header .userName {
+    color: #2f98d9;
+    text-decoration: none;
+}
+
+#feedIndexContainer  header .userName:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #92BFDD
 }
 
 #feedIndexContainer li .routeCardSection .sectionLink {

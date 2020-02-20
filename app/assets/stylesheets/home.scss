@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto;
+}
+
+#appContent {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#appContent .profileOverviewContainer {
+    width: 40%;
+}
+
+#appContent .everyFeedContainer {
+    width: 60%;
+}
+
+#home .homeNav {
+    height: 53px;
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+    border-bottom: .5px solid lightgray;
+}
+
+#home .homeNav .activityFeedButton {
+    color: #0075bf;
+    font-size: 18px;
+    border-top: .5px solid lightgray;
+    border-left: .5px solid lightgray;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 260px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    background-color: #f0f2f4;
+    letter-spacing: .5px;
+}
+
+#home .homeNav .myDashboardButton {
+    color: #0075bf;
+    font-size: 18px;
+    border-top: .5px solid lightgray;
+    border-right: .5px solid lightgray;
+    border-left: .5px solid lightgray;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 260px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    background-color: #f0f2f4;
+    letter-spacing: .5px;
+}
+
+#home .homeNav .myDashboardButton:hover {
+    color: #a5d6f5;
+    background-color: #ffffff;
+}
+
+#home .homeNav .activityFeedButton:hover {
+    color: #a5d6f5;
+    background-color: #ffffff;
+}
+
+#home .activityFeedButton.active {
+    color: #a5d6f5;
+    background-color: #ffffff;
+    border-bottom: 1px solid white;
+    border-top: 3px solid #2BA5EF;
+}
+
+#home .myDashboardButton.active {
+    color: #a5d6f5;
+    background-color: #ffffff;
+    border-bottom: 1px solid white;
+    border-top: 3px solid #2BA5EF;
+}

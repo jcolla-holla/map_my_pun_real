@@ -17,7 +17,27 @@
 /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); */
 
 
+/* color palette: 
+  
+  BORDERS:
+  LIGHT GRAY BORDER  border-left: .5px solid lightgray;
+  
+  COLORS:
+   GRAY - color: #6d717a;
+  MID-LEVEL GRAY - #444444
+  DARKEST GRAY - color:rgb(34, 38, 40);
 
+  WHITE - color: white;
+  ORANGE  background-color: #ff8714;
+  GRAY - (home header -- color: #6d717a;)
+
+  BLUE (light - links) - color: #0075bf;
+  BLUE (lighter - links/highlights) - color: #2f98d9;
+  BLUE (lighter - highlights) - #2BA5EF;
+  BLUE (darker - headers) - color: #046AB2
+
+
+*/
 
 
 html, body, div, span, applet, object, iframe,

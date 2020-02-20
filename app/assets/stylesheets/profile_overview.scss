@@ -1,11 +1,12 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 
 #profileOverview {
     box-shadow: 1px 1px 1px lightgrey;
     height: 130px;
-    width: 40%;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    margin: 30px;
     border: .5px solid lightgray;
     background-color: #f0f2f4;
     color: rgb(34, 38, 40);
@@ -14,15 +15,17 @@
 
 #profileOverview .flexedTop {
     display: flex;
+    border-bottom: .5px solid lightgray;
+    align-items: center;
 }
 
 #profileOverview .profilePic {
     background-image: asset-data-url("user-2.png");
     // hardcoded Jesse's face:
-    // backg    round-image: asset-data-url("profile_pic_stand_in.png");
+    // background-image: asset-data-url("profile_pic_stand_in.png");
     background-size: cover;
-    height: 100%;
-    width: 25%;
+    height: 99%;
+    width: 140px;
     border-left: .5px solid lightgray;
 }
 
@@ -43,6 +46,7 @@
     align-items: flex-start;
     width: 25%;
     margin-top: 20px;
+    color: #6d717a;
 }
 
 #profileOverview .statsCount .workoutsCount {
@@ -53,6 +57,15 @@
     margin-left: 20px;
 }
 
+#profileOverview .numMyRoutes {
+    font-size: 22px;
+}
+
+#profileOverview .numMyWorkouts {
+    font-size: 22px;
+}
+
+
 #profileOverview .actionLinks {
     height: 25%;
     width: 100%;
@@ -60,39 +73,33 @@
     justify-content: space-around;
     align-items: flex-end;
     text-decoration: none;
-    border-top: .5px solid lightgray;
 }
 
 #profileOverview .createRouteButton {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #0075bf;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    line-height: 5px;
+    color: #2f98d9;
     text-decoration: none;
-        width: 70%;
-        text-align: center;
+    width: 50%;
+    text-align: center;
 }
 
 #profileOverview .logWorkoutButton {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #0075bf;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    line-height: 5px;
+    color: #2f98d9;
     text-decoration: none;
     border-left: .5px solid lightgray;
-        width:30%;
-        text-align: center;
-}
-
-#profileOverview .createRouteButton {
-    color: #0075bf;
-    text-decoration: none;
+    width:50%;
+    text-align: center;
 }
 
 #profileOverview .logWorkoutButton:hover {  
-    font-weight: bold;
-    text-decoration: underline;
+    color: #92BFDD;
 }
 
 #profileOverview .createRouteButton:hover {  
-    font-weight: bold;
-    text-decoration: underline;
+    color: #92BFDD;
 }

@@ -5,7 +5,7 @@ export const distanceFromToday = (date) => {
     // debugger
     let finalMsg = ""
     if (daysAgo === 1) {
-        finalMsg = `${daysAgo} Day Ago`;
+        finalMsg = `Yesterday`;
     } else if (daysAgo > 1) {
         finalMsg = `${daysAgo} Days Ago`;
     } else if (daysAgo < 1) {
