@@ -84,13 +84,13 @@
     background-color:rgb(50, 180, 124);
 }
 
-.sessionErrors {
+#loginFormContainer .sessionErrors {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.sessionError {
+#loginFormContainer .sessionError {
     color: red;
     list-style: none;
 }
