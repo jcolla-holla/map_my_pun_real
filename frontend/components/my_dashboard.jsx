@@ -32,7 +32,7 @@ class MyDashboard extends React.Component {
                 } 
             }
 
-            route_completed ? route_completed : { distance: undefined, maps_api_static_img: undefined }
+            route_completed ? null : route_completed = { distance: undefined, maps_api_static_img: undefined }
             return <MyDashboardWorkout key={idx} workout={myWorkout} route_completed_distance={route_completed.distance} route_completed_map_url={route_completed.maps_api_static_img}/>
         })
 
