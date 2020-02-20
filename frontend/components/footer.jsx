@@ -1,10 +1,13 @@
-import React from 'react';
+import React from 'react'; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 
 class Footer extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {  }
     }
+
     render() { 
         return (  
             <div id="footer">
@@ -37,12 +40,20 @@ class Footer extends React.Component {
                         <li>Shop Under Armour</li>
                     </ul>
 
-                    <ul className="otherAppsList">Fitness Community
+                    <ul className="otherAppsList">Created by Jesse Colligan
                         {/* make these my github etc links */}
-                        <div>
-                            <li className="dot appR"></li> 
-                            <li className="dot appS"></li>
-                            <li className="dot appEAT"></li>
+                        <div className="icons">
+                            <li className="githubIcon">
+                                <a title="GitHub" href="http://github.com/jcolla-holla/">
+                                    <FontAwesomeIcon icon={faGithub} size="5x" color="white" />
+                                </a>
+
+                            </li> 
+                            <li className="linkedinIcon">
+                                <a title="LinkedIn" href="https://www.linkedin.com/in/jessecolligan/">
+                                    <FontAwesomeIcon icon={faLinkedin} size="5x" color="white" />
+                                </a>
+                            </li>
                         </div>
                     </ul>
                 </section>
@@ -58,7 +69,6 @@ class Footer extends React.Component {
                         <li>Ad Choices</li>
                         <li>Do Not Sell My Personal Information</li>
                     </ul>
-
                 </section>
             </div>
         );

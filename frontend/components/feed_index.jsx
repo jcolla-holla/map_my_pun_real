@@ -1,7 +1,8 @@
 import React from 'react';
 import FeedIndexItem from './feed_index_item';
 import { Link } from 'react-router-dom';
-
+import {getTodaysDate} from '../util/date_util';
+ 
 
 class FeedIndex extends React.Component {
     constructor(props) {
@@ -64,6 +65,9 @@ class FeedIndex extends React.Component {
                 <div id="homeFeed">
                     <div id="feedIndexContainer">
                         <h1 className="activityFeedTitle">Activity Feed</h1>
+                        <div className="activityFeedDateContainer">
+                            <h2 className="activityFeedDate">Today: {getTodaysDate()}</h2>
+                        </div>
                         <ul className="activitiesIndex">
                         {itemsLis}
                         </ul>

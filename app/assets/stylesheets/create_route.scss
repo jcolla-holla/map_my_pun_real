@@ -89,20 +89,21 @@
    text-align: center;
 }
 
-#createRouteFormContainer .sessionErrors {
-    height: 100px;
-    width: 200px;
-}
 
 #createRouteFormContainer .sessionErrors {
     color: red;
     height: 100px;
-    width: 200px;
+    width: 100%;
+    padding: 10px;
+    display: block;
 }
 
-
-
-
+#createRouteFormContainer .jokes {
+    margin-top: 30px;
+    padding: 10px;
+    color: #0075bf;
+    font-weight: bold;
+}
 
 
 

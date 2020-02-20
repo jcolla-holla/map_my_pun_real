@@ -23,24 +23,27 @@
   display: inline-block;
 }
 
-.appR {
-    background-color: red;
-    color: white;
+#footer .icons {
+    display: flex;
 }
 
-.appS {
-    background-color: skyblue;
-    color: rgb(146, 151, 163);
-}
 
-.appEAT {
-    background-color: green;
-    color: whitesmoke;
-}
+//REPLACED BY GITHUB AND LINKEDIN ICONS
+// .appR {
+//     background-color: red;
+//     color: white;
+// }
 
-#footer .otherAppsList div {
-    display: block;
-}
+// .appS {
+//     background-color: skyblue;
+//     color: rgb(146, 151, 163);
+// }
+
+// .appEAT {
+//     background-color: green;
+//     color: whitesmoke;
+// }
+
 
 #footer .otherAppsList li {
     margin: 5px;
@@ -91,7 +94,7 @@
 #footer .lists ul {
     color: white;
     font-weight: none;
-    font-size: 14px;
+    font-size: 16px;
     padding-left: 120px;
     padding-top: 14px;
 }

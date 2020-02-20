@@ -35,3 +35,10 @@ export const calculateAvgPace = (duration, distance) => {
 }
 
 
+export const getTodaysDate = () => {
+    let day = new Date().getDate();
+    let month = new Date().getMonth() + 1;
+    let year = new Date().getYear() + 1900;
+    return  month + "/" + day + "/" + year;
+}
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {generateGoogleMapsAPIURL} from '../util/maps_util';
+import { getRandomDadJoke, getJokeTest } from '../util/jokes_util';
 
 //starts w New York as center
 const mapCenter = { lat: 40.7128, lng: -74.0060 };
@@ -28,6 +29,8 @@ class CreateRoute extends React.Component {
             center: mapCenter,
             zoom: 13
         };
+
+     
 
         // this line actually creates the map and renders it into the DOM
         this.map = new google.maps.Map(map, options);
@@ -69,12 +72,15 @@ class CreateRoute extends React.Component {
             if (this.coords.length > 1) {
                 this.makeAPIDirectionRequest();
                 this.setState({ maps_api_static_img: generateGoogleMapsAPIURL(this.coords) });
-            }
+                getRandomDadJoke().then(response => { window.joke = response.joke }); 
+            } 
+
 
             if (this.coords.length === 7) {
                 alert("Don't get too crazy - there is a maximum of 10 points in a route");
             }
-        } 
+        }
+        
     }
 
     makeAPIDirectionRequest () {
@@ -160,6 +166,7 @@ class CreateRoute extends React.Component {
     //HANDLE ERRORS - refer to 'signup.jsx' for inspiration
 
     render() { 
+
         let renderErrors = (this.props.errors) ?
             (
                 <ul>
@@ -187,6 +194,7 @@ class CreateRoute extends React.Component {
                         <div className="mileCounter">{this.state.distance} miles</div>
                         <div className="sessionErrors">
                             {renderErrors}
+                            <p className="jokes">{window.joke}</p>
                         </div>
                     </form>
                 </div>
