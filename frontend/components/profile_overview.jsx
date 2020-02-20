@@ -20,6 +20,14 @@ class ProfileOverview extends React.Component {
                 numMyRoutes += 1;
             }
         }
+
+        //handles the 's' plural or not question
+        let routesPlural;
+        if (numMyRoutes === 1) {
+            routesPlural = "Route";
+        } else {
+            routesPlural = "Routes";
+        }
         
         //Calculate the current user's number of made Workouts
         let numMyWorkouts = 0;
@@ -27,6 +35,13 @@ class ProfileOverview extends React.Component {
             if (this.props.workouts[index].user_id === this.props.currentUser.id) {
                 numMyWorkouts += 1;
             }
+        }
+
+        let workoutsPlural;
+        if (numMyWorkouts === 1) {
+            workoutsPlural = "Route";
+        } else {
+            workoutsPlural = "Routes";
         }
 
         return (  
@@ -39,10 +54,10 @@ class ProfileOverview extends React.Component {
                         <div className="statsCount">
                             <div className="routesCount">
                                 <p className="numMyRoutes">{numMyRoutes}</p> 
-                                Routes</div>
+                                {routesPlural}</div>
                             <div className="workoutsCount">
                                 <p className="numMyWorkouts">{numMyWorkouts}</p>
-                                 Workouts</div>
+                                {workoutsPlural}</div>
                         </div>
                     </div>
                 </div>

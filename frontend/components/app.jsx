@@ -49,8 +49,8 @@ class App extends React.Component {
                         {/* uncomment to SHOw permanently the homeHeader */}
                         {/* <ProtectedRoute path="/createRoute" component={homeHeader} /> */}
                         {/* <ProtectedRoute path="/logWorkout" component={homeHeader} /> */}
-                        {/* <ProtectedRoute path="/importWorkout" component={homeHeader} /> */}
-                        {/* <ProtectedRoute path="/createGoal" component={homeHeader} /> */}
+                        <ProtectedRoute path="/importWorkout" component={homeHeader} />
+                        <ProtectedRoute path="/createGoal" component={homeHeader} />
                         <ProtectedRoute path="/routes/" component={homeHeader} />
                         <ProtectedRoute path="/workouts/" component={homeHeader} />
                     </Switch>

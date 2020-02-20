@@ -5,7 +5,7 @@ const MyDashboardRoute = (props) => {
     return (
         <li className={`routeItem div${props.gridDivNum}`}>
                 <Link to={`/routes/${props.route.id}`} className="routeItemContent">
-                    <img className="routeItemMap" src={`${props.route.maps_api_static_img}}`} />
+                    <img className="routeItemMap" src={`${props.route.maps_api_static_img}`} />
                     
                     <div className="routeItemMapOverlay">
                         <div className="routeTitle">{props.route.name}</div>
