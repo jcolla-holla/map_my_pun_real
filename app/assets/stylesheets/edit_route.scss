@@ -98,8 +98,8 @@
    font-size: 15px;
    height: 46px;
    border: none;
-   color: white;
-   background-color: #0075bf;
+   color: #0075bf;
+   background-color: white;
    transition: background-color 0.5s;
    text-decoration: none;
    border-radius: 4px;
@@ -114,8 +114,24 @@
    font-size: 15px;
    height: 46px;
    border: none;
-   color: white;
-   background-color: rgb(29, 221, 124);
+   color: rgb(29, 221, 124);
+   background-color: white;
+   transition: background-color 0.5s;
+   text-decoration: none;
+   border-radius: 4px;
+   line-height: 46px;
+   text-align: center;
+   margin: 18px;
+    font-weight: bold;
+}
+
+#routeEditContainer .backButton {
+    width: 120px;
+   font-size: 15px;
+   height: 46px;
+   border: none;
+   color: #ff8714;
+   background-color:  white;
    transition: background-color 0.5s;
    text-decoration: none;
    border-radius: 4px;
@@ -127,13 +143,19 @@
 
 #routeEditContainer .updateButton:hover {
        cursor: pointer;
-//     color: #0075bf;
-//    background-color: white;
+        color: white;
+    background-color: rgb(29, 221, 124);
 }
 
 #routeEditContainer .homeButton:hover {
     cursor: pointer;
-//     color: white;
-//    background-color: red;
+    color: white;
+   background-color:  #0075bf;
+}
 
+
+#routeEditContainer .backButton:hover {
+    cursor: pointer;
+    color:  white;
+   background-color: #ff8714;
 }

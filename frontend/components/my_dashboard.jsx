@@ -32,8 +32,8 @@ class MyDashboard extends React.Component {
                 } 
             }
 
-            route_completed ? null : route_completed = { distance: undefined, maps_api_static_img: undefined }
-            return <MyDashboardWorkout key={idx} workout={myWorkout} route_completed_distance={route_completed.distance} route_completed_map_url={route_completed.maps_api_static_img}/>
+            route_completed ? null : route_completed = { distance: undefined, maps_api_static_img: undefined, activity_type: undefined }
+            return <MyDashboardWorkout key={idx} workout={myWorkout} route_completed_distance={route_completed.distance} route_completed_map_url={route_completed.maps_api_static_img} route_activity_type={route_completed.activity_type}/>
         })
 
 
@@ -60,7 +60,7 @@ class MyDashboard extends React.Component {
                 </div>
 
                 <div className="dashboardRoutes">
-                    <h1>RECENT ROUTES:</h1>
+                    <h1>RECENT ROUTES</h1>
                     <ul className="parent">
                         {myRoutesToRender}
                     </ul>

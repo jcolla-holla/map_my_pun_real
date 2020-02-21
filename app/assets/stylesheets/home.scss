@@ -37,6 +37,7 @@
     font-size: 18px;
     border-top: .5px solid lightgray;
     border-left: .5px solid lightgray;
+    border-bottom: 1px solid lightgray;
     padding-top: 16px;
     padding-bottom: 16px;
     width: 260px;
@@ -50,9 +51,7 @@
 #home .homeNav .myDashboardButton {
     color: #0075bf;
     font-size: 18px;
-    border-top: .5px solid lightgray;
-    border-right: .5px solid lightgray;
-    border-left: .5px solid lightgray;
+    border: .5px solid lightgray;
     padding-top: 16px;
     padding-bottom: 16px;
     width: 260px;
@@ -85,4 +84,6 @@
     background-color: #ffffff;
     border-bottom: 1px solid white;
     border-top: 3px solid #2BA5EF;
+    border-right: .5px solid lightgray;
+    border-left: .5px solid lightgray;
 }

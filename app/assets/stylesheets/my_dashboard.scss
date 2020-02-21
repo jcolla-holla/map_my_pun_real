@@ -44,6 +44,7 @@
     border-bottom: .5px solid lightgray;
      width: 90%;
      margin-bottom: 10px;
+     padding-bottom: 7px;
 }
 
 #myDashboardContainer li {
@@ -63,24 +64,115 @@
 #myDashboardContainer .workoutItem {
     display: flex;
     padding-top: 10px;
-    padding-right: 10px;
 }
 
 #myDashboardContainer .workoutItem div {
-    
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+#myDashboardContainer .workoutMap {
+    padding-right: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid lightgray;
+}
+
+#myDashboardContainer .adjacentRightOfMap{
+    display: flex;
+    flex-direction: column;
+    border-right: .5px solid lightgray;
+}
+
+#myDashboardContainer .distanceNumberAndMi {
+    display: flex;
+}
+
+#myDashboardContainer .distanceMi {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+#myDashboardContainer .workoutName {
+    color: #2f98d9;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#myDashboardContainer .workoutName:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #92BFDD
+}
+
+#myDashboardContainer .distanceNumber {
+    color:rgb(34, 38, 40);
+    font-size: 58px;
+}
+
+#myDashboardContainer .distanceTitle {
+    color: #444444  ;
+    margin-bottom: 5px;
+}
+
+#myDashboardContainer .workoutDuration {
+    display: block;
+    flex-direction: column;
+    border-right: .5px solid lightgray;
+}
+
+#myDashboardContainer .durationTitle {
+    color: #6d717a;
+    margin-bottom: 5px;
+}
+
+#myDashboardContainer .durationValue {
+    color: #444444; 
+    font-size: 20px;
+    color:rgb(34, 38, 40);
+}
+
+#myDashboardContainer .dateAndActivity {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#myDashboardContainer .completedDate {
+    padding-bottom: 20px;
+    border-bottom: .5px solid lightgray;
+    font-size: 24px;
+}
+
+.activityTypeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+#myDashboardContainer .activityType {
+    margin-top: 5px;
+    color: #444444; 
+    font-size: 24px;
+}
+
+#myDashboardContainer .activityTypeTitle {
+    margin-top: 10px;
+    color: #6d717a; 
+    font-size: 20px;
 }
 
 
 
 
-
-
-
-
-
-
-
-
+//********
 
 // MYDASHBOARROUTE:
 

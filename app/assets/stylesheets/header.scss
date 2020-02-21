@@ -95,9 +95,9 @@
    background-size: cover;
    height: 40px;
    width: 40px;
-   background-image: asset-data-url("user-2.png");
+   // background-image: asset-data-url("user-2.png");
    //hardcoding Jesse's face:
-   // background-image: asset-data-url("profile_pic_stand_in.png");
+   background-image: asset-data-url("profile_pic_stand_in.png");
    border-radius: 50%
 }
 

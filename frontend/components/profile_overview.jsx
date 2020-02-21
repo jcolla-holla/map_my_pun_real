@@ -39,9 +39,9 @@ class ProfileOverview extends React.Component {
 
         let workoutsPlural;
         if (numMyWorkouts === 1) {
-            workoutsPlural = "Route";
+            workoutsPlural = "Workout";
         } else {
-            workoutsPlural = "Routes";
+            workoutsPlural = "Workouts";
         }
 
         return (  

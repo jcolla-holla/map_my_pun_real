@@ -53,6 +53,7 @@ class EditRoute extends React.Component {
                     </div>
 
                     <div className="actionButtons">
+                        <Link className="backButton" to={`/routes/${this.props.routeId}`}>Back</Link>
                         <Link className="homeButton" to="/home/feed">Home</Link>
                         <button onClick={() => this.handleSubmit()} className="updateButton">Update</button>
                     </div>

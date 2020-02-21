@@ -20,13 +20,14 @@
 }
 
 #profileOverview .profilePic {
-    background-image: asset-data-url("user-2.png");
+    // background-image: asset-data-url("user-2.png");
     // hardcoded Jesse's face:
-    // background-image: asset-data-url("profile_pic_stand_in.png");
+    background-image: asset-data-url("profile_pic_stand_in.png");
     background-size: cover;
     height: 99%;
     width: 140px;
     border-left: .5px solid lightgray;
+    border-right: .5px solid lightgray;
 }
 
 #profileOverview .profilePic h1 {
