@@ -9,7 +9,7 @@ import { getRandomDadJoke, getJokeTest } from './util/jokes_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     window.getRandomDadJoke = getRandomDadJoke;
-    window.getJokeTest = getJokeTest;
+    // window.getJokeTest = getJokeTest;
     const root = document.getElementById('root');
     let store;
     if (window.currentUser) {

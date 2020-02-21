@@ -53,6 +53,8 @@ class App extends React.Component {
                         <ProtectedRoute path="/createGoal" component={homeHeader} />
                         <ProtectedRoute path="/routes/" component={homeHeader} />
                         <ProtectedRoute path="/workouts/" component={homeHeader} />
+                        <ProtectedRoute path="/routes/:id" component={RouteShowContainer} />
+                        <ProtectedRoute path="/workouts/:id" component={WorkoutShowContainer} />
                     </Switch>
                     {/* loggedInNavOptions */}
 

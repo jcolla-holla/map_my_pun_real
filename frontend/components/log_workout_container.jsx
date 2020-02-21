@@ -8,10 +8,8 @@ const mapStateToProps = (state) => {
     currentUser: state.entities.users[state.session.id],
     errors: state.errors.workouts,
     routes: state.entities.routes,
-    workout: { route_completed_id: "", route: undefined, avg_pace: undefined, user_id: state.entities.users[state.session.id].id, completed_date: undefined, name: "", notes: "", duration: undefined }
+    workout: { route_completed_id: "", route: undefined, avg_pace: undefined, user_id: state.entities.users[state.session.id].id, completed_date: undefined, name: "", notes: "", duration: "", hoursDuration: undefined, minutesDuration:undefined, secondsDuration: undefined }
     }
-
-    
 };
 
 const mapDispatchToProps = dispatch => {
@@ -24,3 +22,6 @@ const mapDispatchToProps = dispatch => {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(LogWorkout);
+
+
+//     { route_completed_id: "", route: undefined, avg_pace: undefined, completed_date: undefined, name: "", notes: "", duration: undefined, hoursDuration: undefined, minutesDuration:undefined, secondsDuration: undefined }

@@ -15,7 +15,7 @@ export function generateGoogleMapsAPIURL(coordsArr) {
 
     //Google Static Maps API requires a "|" to close the marker final coordinate pair but returns nothing when you close the path final coordinate pair w "|".  to work must not have "|" w final coordinate pair with path to work 
     let pathInputStr = inputCoordsStr.slice(0, inputCoordsStr.length - 1);
-    return `https://maps.googleapis.com/maps/api/staticmap?size=800x400&maptype=roadmap\&markers=size:mid%7Ccolor:red%${inputCoordsStr}&path=color:0x0000ff${pathInputStr}&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8`;
+    return `https://maps.googleapis.com/maps/api/staticmap?size=800x400&maptype=roadmap\&markers=size:mid%7Ccolor:red%${inputCoordsStr}&path=color:0x0000ff${pathInputStr}&key=AIzaSyDE9VpHgGqCN8qKXC1wvVlGRxn4JrvnzXs`;
     // return 'placeholder';
 }
 

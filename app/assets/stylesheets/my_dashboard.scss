@@ -27,15 +27,11 @@
 #myDashboardContainer .dashboardWorkouts ul {
     list-style: none;
     display: flex;
-}
-
-#myDashboardContainer .dashboardWorkouts ul {
-    list-style: none;
-    display: flex;
+    flex-wrap: wrap;
 }
 
 
-
+// ******
 
 #myDashboardContainer h1 {
     list-style: none;
@@ -43,8 +39,6 @@
     font-weight: bold;
     border-bottom: .5px solid lightgray;
      width: 90%;
-     margin-bottom: 10px;
-     padding-bottom: 7px;
 }
 
 #myDashboardContainer li {
@@ -58,12 +52,13 @@
 #myDashboardContainer .dashboardRoutes ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
 }
 
 #myDashboardContainer .workoutItem {
     display: flex;
-    padding-top: 10px;
+    border-bottom: 2px solid lightgray;
+    margin-top: 10px;
+    padding: 20px
 }
 
 #myDashboardContainer .workoutItem div {
@@ -196,6 +191,7 @@
 #myDashboardContainer .routeItemContent ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 
