@@ -190,8 +190,8 @@ class CreateRoute extends React.Component {
                         <input required className="regularFields" type="text" value={this.state.name} placeholder="Route Name" onChange={this.update("name")}/>
                         <input required className="regularFields" type="text" value={this.state.city} placeholder="City" onChange={this.update("city")}/>
 
-                        <input className="createRouteButton" type="submit" value="Create Route" />
                         <div className="mileCounter">{this.state.distance} miles</div>
+                        <input className="createRouteButton" type="submit" value="Create Route" />
                         <div className="sessionErrors">
                             {renderErrors}
                             <p className="jokes">{window.joke}</p>

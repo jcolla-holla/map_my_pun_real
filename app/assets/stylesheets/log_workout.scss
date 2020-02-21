@@ -7,7 +7,15 @@
     flex-direction: column;
     font-family: Roboto;
     align-items: center;
+    box-shadow: inset 0px 8px 8px -8px #CCC;
 }
+
+#createWorkoutFormContainer h1 {
+    font-size: 30px;
+    margin: 10px;
+    margin-top: 40px;
+}
+
 
 #createWorkoutFormContainer .createWorkoutForm{
     width: 80%;
@@ -19,11 +27,12 @@
 }
 
 .createWorkoutForm .regularFields {
-    width: 20%;
+    width: 200px;
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
-
+    font-size: 14px;
+    border-radius: 4;
 }
 
 #createWorkoutFormContainer .dateInputContainer {
@@ -31,33 +40,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
 }
-
+;
 #createWorkoutFormContainer .dateInput {
-    width: 20%;
+    width: 200px;
     padding: 10px;
-    margin-top: 2px;
-    margin-bottom: 10px;
+    padding-left: 14px;
+    margin: 10px;
     text-align: center;
+    font-size: 14px;
+    color: gray;
+    font-family: Roboto;
+    border-radius: 4;
+
 }
 
 #createWorkoutFormContainer textarea {
     border: .3px lightgray solid;
     text-align: center;
-    height: 30px;
+    height: 50px;
     line-height: 30px;
+    width: 60%;
+    border-radius: 4;
 }
 
 #createWorkoutFormContainer .dateInput {
     border: .5px solid lightgray;
     background-color: white;
-    border-radius: 0;
+    border-radius: 4;
 }
 
-#createWorkoutFormContainer select {
-    height: 40px;
-    width: 20%;
+#createWorkoutFormContainer .dateInputTitle {
+    font-weight: bold;
+    font-size: 15px;
+    color: #0075bf;
+    // color: #ff8714;
+}
 
+#createWorkoutFormContainer .completedRoute {
+    height: 40px;
+    width: 200px;
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 12px;
@@ -65,8 +88,45 @@
     line-height: 50px;
     border: .5px solid lightgray;
     background-color: white;
-    border-radius: 0;
+    border-radius: 4;
+    text-align: center;
+    font-size: 14px;
+    color: gray
 }
+
+
+#createWorkoutFormContainer .durationSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#createWorkoutFormContainer .durationSectionTitle {
+    font-weight: bold;
+    font-size: 15px;
+    color: #0075bf;
+}
+
+#createWorkoutFormContainer .durationFields {
+    display: flex;
+}
+
+#createWorkoutFormContainer .durationField {
+    height: 40px;
+    width: 120px;
+    padding: 10px;
+    margin: 10px;
+    line-height: 40px;
+    text-align: center;
+    border: .5px solid lightgray;
+    background-color: white;
+    border-radius: 0;
+    font-size: 14px;
+    color: gray;
+    border-radius: 4;
+}
+
 
 #createWorkoutFormContainer .createWorkoutButton {
     margin-top: 16px;
@@ -87,3 +147,28 @@
 #createWorkoutFormContainer .startTime {
     width: 200px;
 }
+
+#createWorkoutFormContainer .part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#createWorkoutFormContainer .part3 {
+    display: flex;    
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+//these down here adjust the date input to no longer have the click dropdown to select a date (b/c it messes up the centering option)
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    display: none;
+}
+

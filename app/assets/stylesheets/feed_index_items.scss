@@ -15,7 +15,7 @@
     width: 600px;
     border: .5px lightgray solid;
     box-shadow: 1px 1px 1px lightgray;
-    height: 236px;
+    height: 250px;
     margin-bottom: 20px;
 }
 
@@ -77,9 +77,9 @@
 
 #feedIndexContainer .workoutCard .mapImage {
     //this maintains the border at the bottom and fills whole right side of card.  might have some unforeseen consequences across different screens etc
-    width: 117.5%;
+    width: 112.5%;
     height: 99.4%;
-    border-right: .5px solid lightgray;
+    border-left: .5px solid lightgray;
 }   
 
 
@@ -127,13 +127,26 @@
     border-left: .5px solid lightgray;
 }
 
+#feedIndexContainer .workoutCardSection .avgPaceInCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #feedIndexContainer .routeCardSection .distanceInCard {
     display: block; 
     margin-left: 114px;
 }
 
 #feedIndexContainer .workoutCardSection .distanceInCard {
-    display: block; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: .5px solid lightgray;
+    padding-right: 45px;
+    padding-left: 44px;
 }
 
 #feedIndexContainer li section .sectionlink div {

@@ -37,7 +37,7 @@ class Footer extends React.Component {
                     <ul className="aboutUsList">About Us
                         <li>Advertise</li>
                         <li>Join Our Team</li>
-                        <li>Shop Under Armour</li>
+                        <li>Shop MayMyPun</li>
                     </ul>
 
                     <ul className="otherAppsList">Created by Jesse Colligan
@@ -67,7 +67,7 @@ class Footer extends React.Component {
                         <li>Cookie Policy</li>
                         <li>Cookie References</li>
                         <li>Ad Choices</li>
-                        <li>Do Not Sell My Personal Information</li>
+                        <li>This is obviously a fake company</li>
                     </ul>
                 </section>
             </div>

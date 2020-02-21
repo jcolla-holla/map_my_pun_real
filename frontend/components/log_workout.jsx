@@ -104,7 +104,7 @@ class LogWorkout extends React.Component {
 
         if (this.props.routes.length > 0) {
             let allRoutes = Object.values(this.props.routes).map((route, idx) => {
-                return <option key={idx} value={route.id}>{route.name}</option>
+            return <option key={idx} value={route.id}>{route.name} - Distance: {route.distance} - Activity: { route.activity_type}</option>
             });
             possibleRoutes = possibleRoutes.concat(allRoutes);
         }
@@ -127,20 +127,28 @@ class LogWorkout extends React.Component {
                 <h1>Log your completed workout</h1>
                 <form className="createWorkoutForm" onSubmit={this.handleSubmit}>
 
-                    <input required className="regularFields" type="text" placeholder="Workout Name" value={this.state.name} onChange={this.update("name")}/>
+                    <section className="part1">
+                        <input required className="regularFields" type="text" placeholder="Workout Name" value={this.state.name} onChange={this.update("name")}/>
+                        <select className="completedRoute" required placeholder="Completed Route" type="text" alue={this.state.route_completed_id} onChange={this.update("route_completed_id")}>{possibleRoutes}</select>
+                    </section>
 
-                    <label className="dateInputContainer" >Date:    
-                        <input required className="dateInput" type="date" value={this.state.completed_date} onChange={this.update("completed_date")} />
-                    </label>
 
-                    <select required placeholder="Completed Route" type="text" alue={this.state.route_completed_id} onChange={this.update("route_completed_id")}>{possibleRoutes}</select>
-                    <textarea required className="regularFields" placeholder="How Did It Go?" value={this.state.notes} onChange={this.update("notes")} />
+                    <textarea required className="regularFields part2" placeholder="How Did It Go?" value={this.state.notes} onChange={this.update("notes")} />
 
-                    <label >Duration:
-                        <select required placeholder="Completed Route" type="text" placeholder="Hours" value={this.state.hoursDuration} onChange={this.update("hoursDuration")}>{hoursPicklist}</select>
-                        <select required placeholder="Completed Route" type="text" placeholder="Minutes" value={this.state.minutesDuration} onChange={this.update("minutesDuration")}>{minutesPicklist}</select>
-                        <select required placeholder="Completed Route" type="text" placeholder="Seconds" value={this.state.secondsDuration} onChange={this.update("secondsDuration")}>{secondsPicklist}</select>
-                    </label>
+                    <section className="part3">
+                        <label className="dateInputContainer" >
+                            <p className="dateInputTitle"> Workout Date:</p>
+                            <input required className="dateInput" type="date" value={this.state.completed_date} onChange={this.update("completed_date")} />
+                        </label>
+                        <section className="durationSection">
+                            <label className="durationSectionTitle">Duration:</label> 
+                            <div className="durationFields">
+                                <select className="durationField" required type="text" placeholder="Hours" value={this.state.hoursDuration} onChange={this.update("hoursDuration")}>{hoursPicklist}</select>
+                                <select className="durationField" required type="text" placeholder="Minutes" value={this.state.minutesDuration} onChange={this.update("minutesDuration")}>{minutesPicklist}</select>
+                                <select className="durationField"  required type="text" placeholder="Seconds" value={this.state.secondsDuration} onChange={this.update("secondsDuration")}>{secondsPicklist}</select>
+                            </div>
+                        </section>
+                    </section>
                     <input className="createWorkoutButton" type="submit" value="Create Workout" />
                     <div className="sessionErrors">
                         {renderErrors}
