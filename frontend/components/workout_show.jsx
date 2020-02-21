@@ -29,6 +29,8 @@ class WorkoutShow extends React.Component {
                     <section className="workoutShowMap">
                         <img className="mapImage" src={this.props.route.maps_api_static_img} />
                         {/* <img className="mapImage" /> */}
+                        {/* the below to test if route props is */}
+                            <div>{this.props.route.name}</div>
                     </section>
 
                     <div className="workoutShowInfo">
@@ -45,12 +47,6 @@ class WorkoutShow extends React.Component {
 
                
             </div>
-    
-
-
-
-
-            
 
         );
     }

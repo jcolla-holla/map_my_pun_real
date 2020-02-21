@@ -4,7 +4,6 @@ import Splash from './splash';
 import SignUpContainer from './signup_container';
 import LoginContainer from './login_container';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
-import FeedIndexContainer from './feed_index_container';
 import NavBarContainer from './navbar_container';
 import CreateRouteContainer from './create_route_container'
 import homeHeader from './home_header';
@@ -14,7 +13,11 @@ import createGoal from './create_goal';
 import RouteShowContainer from './route_show_container';
 import WorkoutShowContainer from './workout_show_container';
 import RouteEditContainer from './edit_route_container';
-import MyDashboardContainer from './my_dashboard_container';
+import WorkoutEditContainer from './edit_workout_container';
+
+// import FeedIndexContainer from './feed_index_container';
+// import MyDashboardContainer from './my_dashboard_container';
+
 import Home from './home';
 import {
     Route,
@@ -68,7 +71,7 @@ class App extends React.Component {
                     <ProtectedRoute path="/createGoal" component={createGoal} />
                     <ProtectedRoute path="/routes/:id" component={RouteShowContainer} />
                     <ProtectedRoute path="/workouts/:id" component={WorkoutShowContainer} />
-                    {/* <ProtectedRoute path="/workout_edit/:id" component={WorkoutEditContainer} /> */}
+                    <ProtectedRoute path="/workout_edit/:id" component={WorkoutEditContainer} />
                     <ProtectedRoute path="/route_edit/:id" component={RouteEditContainer} />
                     
 

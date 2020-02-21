@@ -10,12 +10,10 @@ import WorkoutShow from './workout_show';
 const mapStateToProps = (state, ownProps) => {
     let fetchedWorkout = state.entities.routes[state.entities.workouts[ownProps.match.params.id]];
     return {
-    workoutId: ownProps.match.params.id,
-    workout: (state.entities.workouts[ownProps.match.params.id]) ? (state.entities.workouts[ownProps.match.params.id]) : {route_completed_id: undefined, avg_pace: undefined, user_id: undefined, completed_date: undefined, name: undefined, notes: undefined, duration: undefined},
-    route: fetchedWorkout ? state.entities.routes[fetchedWorkout.route_completed_id] : {maps_api_static: ""}
+        workoutId: ownProps.match.params.id,
+        workout: (state.entities.workouts[ownProps.match.params.id]) ? (state.entities.workouts[ownProps.match.params.id]) : {route_completed_id: undefined, avg_pace: undefined, user_id: undefined, completed_date: undefined, name: undefined, notes: undefined, duration: undefined},
+        route: fetchedWorkout ? state.entities.routes[fetchedWorkout.route_completed_id] : {maps_api_static: ""}
     
-    //user will ALWAYS be undefined currently
-    // user: state.entities.users[ownProps.match.params.user_id]
     }
     //comments:
     //likes: 

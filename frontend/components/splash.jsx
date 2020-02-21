@@ -11,7 +11,7 @@ class Splash extends React.Component {
             <div id="splash">
                 <div className="anchorDiv">
                     <h1>Own Every Mile</h1>
-                    <h2>Run Your Routes with Friends</h2>
+                    <h2>Create and Run Routes with Friends</h2>
 
                     <Link to="/signup" className="signupButton">SIGN UP</Link>
                     <div className="featuresDiv">
