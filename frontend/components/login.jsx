@@ -49,7 +49,7 @@ class Login extends React.Component {
                     {this.renderErrors()}
                 </div>
                 <div className="signupLinkContainer">
-                    <Link to="/signup" className="signupLink">SIGNUP</Link>
+                    <Link to="/signup" className="signupLink">SIGN UP</Link>
                 </div>
                 <a className="facebookSignIn" onClick={this.demoLogin}>DEMO USER</a>
                 <p>OR</p>

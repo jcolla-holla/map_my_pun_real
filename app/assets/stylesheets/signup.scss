@@ -26,7 +26,7 @@
 
 #signupFormContainer .loginLink:hover { 
     cursor: pointer;
-    text-decoration: underline;
+     color: #9297A3;
 }
 
 #signupFormContainer p {
@@ -41,7 +41,7 @@
 
 #signupFormContainer input {
     height: 50px;
-    font-size: 18px;
+    font-size: 16px;
     width: 320px;
     padding-left: 16px;
     padding-right: 16px;
@@ -51,7 +51,7 @@
 
 #signupFormContainer select {
     height: 56px;
-    font-size: 18px;
+    font-size: 16px;
     width: 358px;
     padding-left: 16px;
     padding-right: 16px;
@@ -75,7 +75,7 @@
     color: white;
     width: 320px;
     height: 40px;
-    font-size: 18px;
+    font-size: 14px;
     padding-left: 18px;
     padding-right: 18px;
     text-decoration: none;
@@ -88,9 +88,9 @@
 }   
 
 #signupFormContainer .signupButton {
-    width: 200px;
-    height: 60px;
-    line-height: 30px;
+    width: 120px;
+    height: 46px;
+    line-height: 23px;
     margin-top: 10px;
     color: white;
     text-align: center;
