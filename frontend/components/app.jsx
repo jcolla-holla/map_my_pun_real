@@ -73,8 +73,6 @@ class App extends React.Component {
                     <ProtectedRoute path="/workouts/:id" component={WorkoutShowContainer} />
                     <ProtectedRoute path="/workout_edit/:id" component={WorkoutEditContainer} />
                     <ProtectedRoute path="/route_edit/:id" component={RouteEditContainer} />
-                    
-
                 </div>
                 
                 {/* possible cool thing to implement - a blacklist Route path -- doesnt render when path is X*/}
