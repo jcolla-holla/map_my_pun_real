@@ -67,6 +67,7 @@
     width: 110.5%;
     //99.7% to maintain inside of border
     height: 99.7%;
+    border-right: .5px solid lightgray;
 }
 
 #feedIndexContainer .workoutCard .mapInCard {
@@ -78,6 +79,7 @@
     //this maintains the border at the bottom and fills whole right side of card.  might have some unforeseen consequences across different screens etc
     width: 117.5%;
     height: 99.4%;
+    border-right: .5px solid lightgray;
 }   
 
 
@@ -127,7 +129,7 @@
 
 #feedIndexContainer .routeCardSection .distanceInCard {
     display: block; 
-    margin-left: 80px;
+    margin-left: 114px;
 }
 
 #feedIndexContainer .workoutCardSection .distanceInCard {
@@ -192,6 +194,7 @@
     height: 15%;
     align-items: center;
     border-left: .5px solid lightgray;
+    border-bottom: .5px solid lightgray;
 }
 
 .daysAgo {
@@ -214,4 +217,16 @@
 #feedIndexContainer .likeButton {
     margin-right: 10px;
 }
+
+
+
+// #feedIndexContainer .cardProfilePic{
+//    background-size: cover;
+//    height: 40px;
+//    width: 40px;
+//    background-image: asset-data-url("profile_pic_stand_in.png");
+// //    border-radius: 50%
+// //    //hardcoding Jesse's face:
+// //    // background-image: asset-data-url("user-2.png");
+// }
 

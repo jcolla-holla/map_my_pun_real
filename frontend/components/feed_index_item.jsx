@@ -45,6 +45,7 @@ class FeedIndexItem extends React.Component {
         )
         :
         (
+            
             <li className="workoutCard">
                 <header>
                         <h3 className="workoutTitle"><Link to="/home/feed" className="userName">{this.props.user.first_name} {this.props.user.last_name}</Link> completed a {this.props.item.activity_type} workout of {this.props.completedRoute.distance} miles</h3>
@@ -87,7 +88,7 @@ class FeedIndexItem extends React.Component {
         )
     
         return (
-            card
+                card
         )
     }
 }

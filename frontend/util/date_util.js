@@ -20,7 +20,6 @@ export const distanceFromToday = (date) => {
 
 //duration is a string like "01:13"
 export const calculateAvgPace = (duration, distance) => {
-    debugger
     var parts = duration.split(':');
     let hrs = parts[0] % 12;
     if (parts[1]) {
@@ -28,7 +27,6 @@ export const calculateAvgPace = (duration, distance) => {
     } else {
         let min = 0;
     }
-    debugger
     let minInHrs = min/ 60;
     let durationInHrs = parseFloat(hrs + minInHrs);
     return (distance / durationInHrs).toFixed(2);

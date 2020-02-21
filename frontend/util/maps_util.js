@@ -1,7 +1,6 @@
 // https://docs.google.com/spreadsheets/d/1JRO_lTnAJ5gIVBqyu7RsEPniBxWhTvDUlOBsJx1AwB4/edit#gid=0
 
 export function generateGoogleMapsAPIURL(coordsArr) {
-    debugger
     let coordPair;
     let inputCoordsStr = "|"
     for (let i = 0; i < coordsArr.length; i++) {
@@ -16,9 +15,8 @@ export function generateGoogleMapsAPIURL(coordsArr) {
 
     //Google Static Maps API requires a "|" to close the marker final coordinate pair but returns nothing when you close the path final coordinate pair w "|".  to work must not have "|" w final coordinate pair with path to work 
     let pathInputStr = inputCoordsStr.slice(0, inputCoordsStr.length - 1);
-    debugger;
-    // return 'placeholder';
     return `https://maps.googleapis.com/maps/api/staticmap?size=800x400&maptype=roadmap\&markers=size:mid%7Ccolor:red%${inputCoordsStr}&path=color:0x0000ff${pathInputStr}&key=AIzaSyBrpStMcZ1UILzkqi_eMI2pjTgo7SZmUl8`;
+    // return 'placeholder';
 }
 
 // return `https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\&markers=size:mid%7Ccolor:red%7CSan+Francisco,CA%7COakland,CA%7CSan+Jose,CA&key=${ENV['MAPS_API_KEY']}`
