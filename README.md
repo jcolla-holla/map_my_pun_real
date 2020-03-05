@@ -4,7 +4,7 @@
 
 *MapMyPun* is a clone of [MapMyRun](www.mapmyrun.com).  A user can create an account (or log in with a instant-login demo account) in order to: (1) create new Routes by clicking on a Google Map, (2) 'complete' a Route by creating a Workout, and (3) view their own and other users' activity in a Feed, with cards ordered by most recently updated card.
 
-``Live link:`` https://mapmypun.herokuapp.com/#/
+(``Live link:``)[https://mapmypun.herokuapp.com/#/]
 
 ``Technologies Used:``
 * Javascript 
