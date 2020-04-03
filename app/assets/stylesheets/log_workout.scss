@@ -42,7 +42,7 @@
     align-items: center;
     margin: 10px;
 }
-;
+
 #createWorkoutFormContainer .dateInput {
     width: 200px;
     padding: 10px;
@@ -143,6 +143,11 @@
    line-height: 46px;
    text-align: center;
 }
+
+#createWorkoutFormContainer .createWorkoutButton:hover {
+    cursor: pointer;
+    background-color: rgb(0, 164, 73);
+} 
 
 #createWorkoutFormContainer .startTime {
     width: 200px;
