@@ -1,4 +1,4 @@
-# README
+ # README
 
 ![](app/assets/images/mapmypun_white_background.png)
 
@@ -7,12 +7,13 @@
 # [Live link](https://mapmypun.herokuapp.com/#/)
 
 ## Technologies Used:
-* Javascript 
-* React
-* Redux
-* Ruby
-* Rails
-* PostgreSQL
+* JavaScript (Node.js 12.5.0) 
+* React 16.12.0 
+* Redux 7.2.0
+* Ruby 2.5.1
+* Rails 5.2.4
+* PostgreSQL 12
+* Webpack 4.41.6
 * Heroku - for hosting
 * Google Maps APIs:
     * Maps Static API (to generate static map images)
