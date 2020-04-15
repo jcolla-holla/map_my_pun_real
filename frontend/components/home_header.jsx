@@ -7,8 +7,9 @@ const homeHeader = (props) => {
         <header className="homeHeader">
             <Link id="firstNavButton" className="navButton" to="/createRoute">Create Route</Link>
             <Link className="navButton" to="/logWorkout">Log Workout</Link>
-            <Link className="navButton" to="/importWorkout">Import Workout</Link>
-            <Link className="navButton" to="/createGoal">Create A Goal</Link>
+            {/* commented these two below out bc the feature does not yet exist */}
+            {/* <Link className="navButton" to="/importWorkout">Import Workout</Link> */}
+            {/* <Link className="navButton" to="/createGoal">Create A Goal</Link> */}
         </header>
     )
 }
