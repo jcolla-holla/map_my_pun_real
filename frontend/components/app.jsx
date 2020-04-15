@@ -37,8 +37,8 @@ class App extends React.Component {
         return ( 
             <div id="appContainer">
                 <NavBarContainer />
-                <Route exact path="/" component={Splash}/>
                 <Switch>
+                    <AuthRoute exact path="/" component={Splash}/>
                     <AuthRoute exact path="/signup" component={SignUpContainer}/>
                     <AuthRoute exact path="/login" component={LoginContainer} />
                     <Route path="/" component={Footer}/>

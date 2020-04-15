@@ -25,6 +25,8 @@
 #feedIndexContainer .activityFeedDateContainer {
     display: flex;
     width: 500px;
+    z-index: 2;
+    position: absolute;
 }
 
 #feedIndexContainer .activityFeedDate{
@@ -34,12 +36,16 @@
 }
 
 #feedIndexContainer .statusForm {
-    width: 85%;
+    width: 35%;
     height: 160px;
-    margin-top: 20px;
+    padding-top: 20px;
     border-bottom: .5px solid lightgray;
-    margin-bottom: 50px;
     display: flex;
+    position: absolute;
+    background-color: white;
+    padding-left: 10.5%;
+    padding-right: 10.5%;
+    z-index: 2;
 }
 
 
@@ -64,8 +70,8 @@
 #feedIndexContainer .statusForm .statusSubmit {
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 50px;
-    width: 120px;
+    height: 54px;
+    width: 108px;
     border-left: .5px solid lightgray;
     color: white;
     background-color: #ff8714;

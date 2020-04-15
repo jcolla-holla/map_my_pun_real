@@ -50,6 +50,17 @@
     margin: 5px;
 }
 
+#footer .otherAppsList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#footer .otherAppsList .createdBy {
+    margin: 5px;
+}
+
 #footer .activitiesSection {
     display: flex;
     background-color: #f0f2f4;
@@ -64,15 +75,16 @@
 }
 
 
-#footer .activitiesList li {
+#footer .activitiesLink {
     margin : 10px;
     color: rgb(146, 151, 163);
     font-weight: none;
     padding-left: 40px;
     font-size: 20px;
+    text-decoration: none;
 }
 
-#footer .activitiesList li:hover {
+#footer .activitiesLink:hover {
     //TO DO::
     //to update and have each li hover generate a different color/image
     color: red;
@@ -142,4 +154,12 @@
 
 #footer .legal .firstLi {
     border-left: .5px rgb(146, 151, 163) solid;
+}
+
+#footer .li:hover {
+    color: #0075bf;
+}
+
+#footer .gh:hover {
+    color: #0075bf;
 }

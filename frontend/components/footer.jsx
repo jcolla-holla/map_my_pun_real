@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from 'react-router-dom';
 
 
 class Footer extends React.Component {
@@ -14,15 +15,15 @@ class Footer extends React.Component {
                 <section className="activitiesSection">
                     <a className="logo" href="#"></a>
                     <ul className="activitiesList">
-                        <li>RIDE</li>
-                        <li>WALK</li>
-                        <li>HIKE</li>
-                        <li>FITNESS</li>
+                        <li><Link to="/login" className="activitiesLink">RIDE</Link></li>
+                        <li><Link to="/login" className="activitiesLink">WALK</Link></li>
+                        <li><Link to="/login" className="activitiesLink">HIKE</Link></li>
+                        <li><Link to="/login" className="activitiesLink">FITNESS</Link></li>
                     </ul>
                 </section>
 
                 <section className="lists">
-                    <ul className="socialList">Social
+                    {/* <ul className="socialList">Social
                         <li>Like us on Facebook</li>
                         <li>Follow us on Twitter</li>
                         <li>MapMyPun Blog</li>
@@ -38,27 +39,30 @@ class Footer extends React.Component {
                         <li>Advertise</li>
                         <li>Join Our Team</li>
                         <li>Shop MayMyPun</li>
-                    </ul>
+                    </ul> */}
 
-                    <ul className="otherAppsList">Created by Jesse Colligan
+                    <ul className="otherAppsList">
+                        <div className="createdBy">Created by Jesse Colligan</div> 
                         {/* make these my github etc links */}
                         <div className="icons">
                             <li className="githubIcon">
                                 <a title="GitHub" href="http://github.com/jcolla-holla/">
-                                    <FontAwesomeIcon icon={faGithub} size="5x" color="white" />
+                                    <FontAwesomeIcon className="gh" icon={faGithub} size="5x" color="white" />
                                 </a>
 
                             </li> 
                             <li className="linkedinIcon">
                                 <a title="LinkedIn" href="https://www.linkedin.com/in/jessecolligan/">
-                                    <FontAwesomeIcon icon={faLinkedin} size="5x" color="white" />
+                                    <FontAwesomeIcon className="li"icon={faLinkedin} size="5x" color="white" />
                                 </a>
                             </li>
                         </div>
                     </ul>
                 </section>
 
-                <section className="legal">
+
+                {/* this section commented out but it makes footer look more realistic */}
+                {/* <section className="legal">
                     <a className="logo" href="#"></a>
                     <ul>
                         <li className="firstLi">All Rights Reserved</li>
@@ -69,7 +73,7 @@ class Footer extends React.Component {
                         <li>Ad Choices</li>
                         <li>This is obviously a fake company</li>
                     </ul>
-                </section>
+                </section> */}
             </div>
         );
     }

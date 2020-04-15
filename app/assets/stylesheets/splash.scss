@@ -43,6 +43,12 @@
     position: absolute;
 }
 
+#splash .loginDiv {
+   display: flex;
+   width: 20%;
+   margin-top: 300px;
+}
+
 #splash .featureDesc {
     color: rgb(34, 38, 40);
     height: 36px;
@@ -80,7 +86,7 @@
 
 #splash .signupButton {
     top: 310px;
-    position: absolute;
+   //  position: absolute;
     margin: 0 auto;
     text-align: center;
     height: 40px;
@@ -102,4 +108,8 @@
 
  #splash a:hover {
     background-color: rgb(0, 164, 73);
+ }
+
+ #splash .learnMoreButton:hover {
+    background-color: #0075bf;
  }

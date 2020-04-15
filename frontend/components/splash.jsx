@@ -13,7 +13,10 @@ class Splash extends React.Component {
                     <h1>Own Every Mile</h1>
                     <h2>Create and Run Routes with Friends</h2>
 
-                    <Link to="/signup" className="signupButton">SIGN UP</Link>
+                    <div className="loginDiv">
+                        <Link to="/signup" className="signupButton">SIGN UP</Link>
+                        <Link to="/login" className="signupButton">DEMO LOGIN</Link>
+                    </div>
                     <div className="featuresDiv">
                         <div className="featureContainer">
                             <h3 className="featureDesc">Create Running Routes</h3>
