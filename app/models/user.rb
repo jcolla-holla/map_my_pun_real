@@ -14,6 +14,12 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Workout
 
+  has_many :friendships,
+    primary_key: :id,
+    foreign_key: :starter_user_id,
+    class_name: :Friendship
+    
+
   attr_reader :password
 
   def password=(password)

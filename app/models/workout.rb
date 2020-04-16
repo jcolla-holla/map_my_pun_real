@@ -7,7 +7,7 @@ class Workout < ApplicationRecord
         foreign_key: :route_completed_id
 
     belongs_to :owner,
-    class_name: :User,
+        class_name: :User,
         primary_key: :id,
         foreign_key: :user_id
 end

@@ -42,6 +42,7 @@
             .friendName {
                 text-decoration: none;
                 font-size: 12px;
+                color: #6d717a;
             }
         }
 
@@ -49,6 +50,14 @@
             color: #2f98d9;
             text-decoration: none;
             padding: 10px;
+        }
+
+        .noFriendsLink {
+            color: #2f98d9;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
     }
 
@@ -88,7 +97,7 @@
         text-align: center;
     }
 
-    .seeFriendsButton:hover, .addFriendButton:hover, .viewAllButton:hover {
+    .seeFriendsButton:hover, .addFriendButton:hover, .viewAllButton:hover, .noFriendsLink:hover {
         color: #92BFDD;
     }
 
