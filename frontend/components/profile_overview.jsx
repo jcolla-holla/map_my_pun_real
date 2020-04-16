@@ -50,7 +50,7 @@ class ProfileOverview extends React.Component {
                     <div className="profilePic"></div>
                     <div className="info">
                         <h1>Hello, {this.props.currentUser.first_name} {this.props.currentUser.last_name}</h1>
-                        {/* <h1>Hello, NAME PLACEHOLDER</h1> */}
+
                         <div className="statsCount">
                             <div className="routesCount">
                                 <p className="numMyRoutes">{numMyRoutes}</p> 
