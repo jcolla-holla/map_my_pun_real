@@ -2,20 +2,24 @@ import { connect } from 'react-redux';
 import { getUsers } from '../actions/users_actions';
 import { getRoutes } from '../actions/routes_actions';
 import { getWorkouts } from '../actions/workouts_actions';
-import { createFriendship } from '../actions/friendship_actions';
+import { createFriendship, getFriendships, deleteFriendship } from '../actions/friendship_actions';
 import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => {
     return {
         userId: ownProps.match.params.id,
-        users: state.entities.users
+        users: state.entities.users,
+        friendships: state.entities.friendships,
+        currentUserId: state.session.id
 }};
 
 const mapDispatchToProps = dispatch => ({
     getUsers: () => dispatch(getUsers()),
     getWorkouts: () => dispatch(getWorkouts()),
     getRoutes: () => dispatch(getRoutes()),
-    createFriendship: (friendship) => dispatch(createFriendship(friendship))
+    getFriendships: () => dispatch(getFriendships()),
+    createFriendship: (friendship) => dispatch(createFriendship(friendship)),
+    deleteFriendship: (friendshipId) => dispatch(deleteFriendship(friendshipId)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserShow);

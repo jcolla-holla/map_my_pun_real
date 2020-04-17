@@ -11,6 +11,7 @@ require 'date';
 User.destroy_all
 Workout.destroy_all
 Route.destroy_all
+Friendship.destroy_all
 
 
 demo_user = User.create!(email: "demo_user@fake.com", password: "password", first_name:"Demo", last_name:"User", country:"United States", gender:"Female")
@@ -81,3 +82,18 @@ w3 = Workout.create!(
 # Workout.create!( route_completed_id: 50,avg_pace: 18.2,user_id: 3,completed_date: Date.new(2018,9,20),name: "tough run",notes: "ran around the world",duration: Time.new(2016, 2, 3, 1, 2, 1))
 
 
+# not sure how to make these ids dynamic, be sure to manually reset each time
+f1 = Friendship.create!(
+        starter_user_id: 77,
+        receiver_user_id: 78
+)
+
+f2 = Friendship.create!(
+        starter_user_id: 77,
+        receiver_user_id: 79
+)
+
+f2 = Friendship.create!(
+        starter_user_id: 78,
+        receiver_user_id: 79
+)
