@@ -14,6 +14,7 @@ import RouteShowContainer from './route_show_container';
 import WorkoutShowContainer from './workout_show_container';
 import RouteEditContainer from './edit_route_container';
 import WorkoutEditContainer from './edit_workout_container';
+import UserShowContainer from './user_show_container';
 
 // import FeedIndexContainer from './feed_index_container';
 // import MyDashboardContainer from './my_dashboard_container';
@@ -48,23 +49,21 @@ class App extends React.Component {
                 {/* hacky way of making navbar persist - probably a better way to do this */}
                 <div id="homeContainer">
                     <Switch>
+                        {/* include here to show permanently the homeHeader */}
                         <ProtectedRoute path="/home" component={homeHeader} />
-                        {/* uncomment to SHOw permanently the homeHeader */}
-                        {/* <ProtectedRoute path="/createRoute" component={homeHeader} /> */}
-                        {/* <ProtectedRoute path="/logWorkout" component={homeHeader} /> */}
                         <ProtectedRoute path="/importWorkout" component={homeHeader} />
                         <ProtectedRoute path="/createGoal" component={homeHeader} />
                         <ProtectedRoute path="/routes/" component={homeHeader} />
                         <ProtectedRoute path="/workouts/" component={homeHeader} />
                         <ProtectedRoute path="/routes/:id" component={RouteShowContainer} />
                         <ProtectedRoute path="/workouts/:id" component={WorkoutShowContainer} />
+                        <ProtectedRoute path="/users/:id" component={UserShowContainer} />
                     </Switch>
-                    {/* loggedInNavOptions */}
 
 
+
+                    {/* add here only to have 'create route' and 'log workout' home header appear */}
                     <ProtectedRoute path="/home" component={Home} />
-                    {/* <ProtectedRoute path="/home/my_dashboard" component={MyDashboardContainer} />
-                    <ProtectedRoute path="/home/feed" component={FeedIndexContainer}/> */}
                     <ProtectedRoute path="/createRoute" component={CreateRouteContainer}/>
                     <ProtectedRoute path="/logWorkout" component={LogWorkoutContainer} />
                     <ProtectedRoute path="/importWorkout" component={importWorkout} />
@@ -73,6 +72,8 @@ class App extends React.Component {
                     <ProtectedRoute path="/workouts/:id" component={WorkoutShowContainer} />
                     <ProtectedRoute path="/workout_edit/:id" component={WorkoutEditContainer} />
                     <ProtectedRoute path="/route_edit/:id" component={RouteEditContainer} />
+                    {/* <ProtectedRoute path="/home/my_dashboard" component={MyDashboardContainer} />
+                    <ProtectedRoute path="/home/feed" component={FeedIndexContainer}/> */}
                 </div>
                 
                 {/* possible cool thing to implement - a blacklist Route path -- doesnt render when path is X*/}

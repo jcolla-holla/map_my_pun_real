@@ -16,6 +16,8 @@ class FriendsOverview extends React.Component {
 
     render() { 
         let friendsLis;
+        // reset friendCount to zero so doesn't persist across renders
+        this.friendCount = 0;
         if (Object.values(this.props.friendships).length > 0) {
 
             friendsLis = this.props.friendships.slice(0,5).map((friendship, idx) => {
@@ -31,7 +33,7 @@ class FriendsOverview extends React.Component {
                         }
                         
                         return (
-                            <Link className="friend" key={idx} to={`/user/${otherUserId}`}>
+                            <Link className="friend" key={idx} to={`/users/${otherUserId}`}>
                                 <div className="friendImage"></div>
                                 <div className="friendName">
                                     {this.props.users[otherUserId].first_name}
