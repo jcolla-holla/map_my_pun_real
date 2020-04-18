@@ -10,5 +10,10 @@ class Workout < ApplicationRecord
         class_name: :User,
         primary_key: :id,
         foreign_key: :user_id
+
+    has_many :likes, as: :likeable
+
+    has_many :comments, as: :commentable
+
 end
  
