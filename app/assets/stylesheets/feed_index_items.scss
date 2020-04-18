@@ -9,7 +9,8 @@
 
 #feedIndexContainer ul {
     list-style: none;
-    margin-top: 190px;
+    margin-top: 40px;
+    margin-bottom: 100px;
 }
 
 #feedIndexContainer li {  
@@ -232,6 +233,27 @@
     margin-right: 10px;
 }
 
+#feedIndexContainer {
+
+    .bottomMsg {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+    }
+
+    .partyEmoji {
+        background-image: asset-data-url("party_emoji.png");
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        margin-right: 10px;
+    }
+
+    .madeitMsg {
+        line-height: 31px;
+    }
+}
+
 
 
 // #feedIndexContainer .cardProfilePic{
@@ -239,8 +261,8 @@
 //    height: 40px;
 //    width: 40px;
 //    background-image: asset-data-url("profile_pic_stand_in.png");
-// //    border-radius: 50%
-// //    //hardcoding Jesse's face:
-// //    // background-image: asset-data-url("user-2.png");
+//    border-radius: 50%;
+// //    hardcoding Jesse's face:
+//    c
 // }
 

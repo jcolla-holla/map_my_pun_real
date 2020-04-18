@@ -4,6 +4,7 @@ import ProfileOverviewContainer from './profile_overview_container';
 import FeedIndexContainer from './feed_index_container';
 import MyDashboardContainer from './my_dashboard_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import FriendsOverviewContainer from './friends_overview_container';
 
 
 const Home = (props) => {
@@ -21,6 +22,7 @@ const Home = (props) => {
                 </div>
                 <section className="profileOverviewContainer">
                     <ProfileOverviewContainer />
+                    <FriendsOverviewContainer />
                 </section>
             </div>
 

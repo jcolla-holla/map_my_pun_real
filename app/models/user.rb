@@ -14,6 +14,14 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Workout
 
+
+    # kept getting errors w this validation and not sure why
+  # has_many :friendships,
+  #   primary_key: :id,
+  #   foreign_key: :starter_user_id,
+  #   class_name: :Friendship
+    
+
   attr_reader :password
 
   def password=(password)

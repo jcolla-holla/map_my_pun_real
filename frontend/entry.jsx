@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 // import {login, logout, signup} from './util/session_api_util';
+import { createFriendship, getFriendships} from './util/friendships_api_util'; 
 import {createRoute} from './util/routes_api_util';
 import { getRandomDadJoke, getJokeTest } from './util/jokes_util';
 
@@ -20,13 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
             session: {id: window.currentUser.id}
         };
         store = configureStore(preloadedState);
-        delete window.currentUser;
+        // delete window.currentUser;
     } else {
         store = configureStore();
     }
     window.store = store;
+    window.createFriendship = createFriendship;
+    window.getFriendships = getFriendships;
 
-    window.createRoute = createRoute;
+    // window.createRoute = createRoute;
     ReactDOM.render(<Root store={store} />, root);
 })
 

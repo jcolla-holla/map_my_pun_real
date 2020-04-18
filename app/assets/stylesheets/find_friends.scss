@@ -1,0 +1,32 @@
+#findFriends {
+    margin-left: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    font-family: Roboto;
+
+    h3 {
+        font-size: 24px;
+        text-decoration: underline;
+    }
+
+    .friendsList, .nonFriendsList {
+        list-style: none;
+        margin-top: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        font-size: 18px;
+        text-decoration: none;
+        color: #2f98d9;
+    }
+
+    a:hover{
+        color: #92BFDD;
+    }
+
+}

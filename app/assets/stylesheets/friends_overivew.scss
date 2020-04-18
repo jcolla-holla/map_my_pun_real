@@ -1,0 +1,111 @@
+ @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+#friendsOverview {
+    margin-left: 20px;
+    margin-top: 30px;
+    box-shadow: 1px 1px 1px lightgrey;
+    height: 200px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border: .5px solid lightgray;
+    background-color: #f0f2f4;
+    color: rgb(34, 38, 40);
+    font-family: Roboto;
+    justify-content: space-between;
+
+    // .friendsList {
+    //     width: 100%;
+    //     height: 30%;
+    // }
+
+    .friendsList {
+        display: flex;
+        align-items: center;
+
+        .friend:hover {
+                background-color: #ff8714;
+                border-radius: 4px;
+            }
+   
+        .friend {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 16%;
+            text-decoration: none;
+            padding: 4px;
+            transition: background-color .2s;
+
+            .friendImage {
+                background-image: asset-data-url("user-2.png");
+                background-size: cover;
+                width: 100%;
+                height: 60px;
+                border: .5px solid lightgray;
+            }
+
+            .friendName {
+                text-decoration: none;
+                font-size: 12px;
+                color: #6d717a;
+            }
+        }
+
+        .viewAllButton {
+            color: #2f98d9;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .noFriendsLink {
+            color: #2f98d9;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+ 
+
+    .friendsList, h1 {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .actionLinks {
+        height: 16%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border-top: .5px solid lightgray;
+    }
+
+    .seeFriendsButton {
+        line-height: 35px;
+        color: #2f98d9;
+        text-decoration: none;
+        border-left: .5px solid lightgray;
+        width:50%;
+        text-align: center;
+    }
+
+    .addFriendButton {
+        line-height: 35px;
+        color: #2f98d9;
+        text-decoration: none;
+        width:50%;
+        text-align: center;
+    }
+
+    .seeFriendsButton:hover, .addFriendButton:hover, .viewAllButton:hover, .noFriendsLink:hover {
+        color: #92BFDD;
+    }
+
+}

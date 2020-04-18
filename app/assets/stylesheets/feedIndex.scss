@@ -10,32 +10,63 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
     overflow: scroll;
     margin-left: 30px;
+
+    .scrollDownMsg {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .greetingContainer {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        span {
+            font-size: 20px;
+        }
+
+        .waveEmoji {
+                background-image: asset-data-url("hand_waving_emoji.png");
+                width: 30px;
+                height: 30px;
+                background-size: cover;
+                margin-right: 10px;
+            }
+
+        .scrollDownIcon {
+                background-image: asset-data-url("scroll_down_icon.png");
+                width: 30px;
+                height: 30px;
+                background-size: cover;
+                margin-right: 10px;
+                margin-top: 30px;
+        }
+    }
 }
 
-#feedIndexContainer .activityFeedTitle{
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-
-#feedIndexContainer .activityFeedDateContainer {
-    display: flex;
-    width: 500px;
-    z-index: 2;
+#statusFormContainer .activityFeedDateContainer {
+    width: 34%;
+    z-index: 3;
     position: absolute;
+    margin-left: 10%;
 }
 
-#feedIndexContainer .activityFeedDate{
+#statusFormContainer .activityFeedDate{
     font-size: 16px;
     margin-bottom: 15px;
     color: #6d717a;
 }
 
-#feedIndexContainer .statusForm {
+#statusFormContainer .statusForm {
     width: 48%;
     height: 160px;
     padding-top: 20px;
@@ -43,13 +74,13 @@
     display: flex;
     position: absolute;
     background-color: white;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    margin-left: 3%;
+    padding-right: 4%;
     z-index: 2;
 }
 
 
-#feedIndexContainer .statusFormFields {
+#statusFormContainer .statusFormFields {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -57,7 +88,7 @@
 }
 
 
-#feedIndexContainer .statusForm .statusProfPic {
+#statusFormContainer .statusForm .statusProfPic {
     // hardcoded Jesse's face:
     background-image: asset-data-url("profile_pic_stand_in.png");
     // background-image: asset-data-url("user-2.png");
@@ -67,7 +98,7 @@
     border: .5px solid lightgray;
 }
 
-#feedIndexContainer .statusForm .statusSubmit {
+#statusFormContainer .statusForm .statusSubmit {
     margin-top: 20px;
     margin-bottom: 20px;
     height: 54px;
@@ -81,7 +112,7 @@
     box-shadow: .5px .5px .5px lightgrey;
 }
 
-#feedIndexContainer .statusForm .statusText {
+#statusFormContainer .statusForm .statusText {
     width: 90%;
     border: 1px solid lightgray;
     height: 100px;
@@ -89,5 +120,30 @@
     font-size: 13px;
     border-radius: 4px;
     box-shadow: .5px .5px .5px lightgrey;
+}
+
+#statusFormContainer .collapseContainer {
+    width: 100%;
+}
+
+.collapse{
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-right: 4%;
+  background-image: asset-data-url("compress.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+
+}
+.collapse + input{
+  display: none; /* hide the checkboxes */
+}
+.collapse + input + div{
+  display:block;
+}
+.collapse + input:checked + div{
+  display:none;
 }
 

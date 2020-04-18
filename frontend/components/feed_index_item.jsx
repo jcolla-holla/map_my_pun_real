@@ -14,7 +14,7 @@ class FeedIndexItem extends React.Component {
         ( 
             <li className="routeCard">
                 <header>
-                        <h3><Link to="/home/feed" className="userName">{this.props.user.first_name} {this.props.user.last_name}</Link> created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
+                        <h3><Link to={`/users/${this.props.user.id}`} className="userName">{this.props.user.first_name} {this.props.user.last_name}</Link> created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
                 </header>
 
                     <section className="routeCardSection">
@@ -48,7 +48,7 @@ class FeedIndexItem extends React.Component {
             
             <li className="workoutCard">
                 <header>
-                        <h3 className="workoutTitle"><Link to="/home/feed" className="userName">{this.props.user.first_name} {this.props.user.last_name}</Link> completed a {this.props.item.activity_type} workout of {this.props.completedRoute.distance} miles</h3>
+                        <h3 className="workoutTitle"><Link to={`/users/${this.props.user.id}`} className="userName">{this.props.user.first_name} {this.props.user.last_name}</Link> completed a {this.props.item.activity_type} workout of {this.props.completedRoute.distance} miles</h3>
                         <h3 className="workoutNotes">{this.props.item.notes}</h3>
                 </header>
 
