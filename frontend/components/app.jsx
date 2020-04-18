@@ -43,7 +43,6 @@ class App extends React.Component {
                 <Switch>
                     <AuthRoute exact path="/signup" component={SignUpContainer}/>
                     <AuthRoute exact path="/login" component={LoginContainer} />
-                    <Route path="/" component={Footer}/>
                 </Switch>
 
 
@@ -78,6 +77,7 @@ class App extends React.Component {
                     {/* <ProtectedRoute path="/home/my_dashboard" component={MyDashboardContainer} />
                     <ProtectedRoute path="/home/feed" component={FeedIndexContainer}/> */}
                 </div>
+                <Route path="/" component={Footer} />
             </div>
         );
     }
