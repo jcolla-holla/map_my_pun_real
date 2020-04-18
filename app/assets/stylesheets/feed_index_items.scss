@@ -10,6 +10,7 @@
 #feedIndexContainer ul {
     list-style: none;
     margin-top: 190px;
+    margin-bottom: 100px;
 }
 
 #feedIndexContainer li {  
@@ -230,6 +231,13 @@
 
 #feedIndexContainer .likeButton {
     margin-right: 10px;
+}
+
+#feedIndexContainer .bottomMsg {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    // color: #2f98d9;
 }
 
 

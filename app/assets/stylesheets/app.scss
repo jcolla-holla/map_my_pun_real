@@ -1,14 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-#appContainer {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 1;
-    //don't think min-height is necessary
-    // min-height: 100vh;
-}
+// commented this out to have footer persist to bottom and it doesn't appear to have caused any significant changes
+// #appContainer {
+//     position: relative;
+//     width: 100%;
+//     margin: 0 auto;
+//     z-index: 1;
+//     //don't think min-height is necessary
+//     // min-height: 100vh;
+// }
 
 html, body, #root, #root > div {
     width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#homeContainer {
+  flex: 1 0 auto;
+}
+
+#footer {
+    flex-shrink: 0;
 }

@@ -7,11 +7,13 @@ import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        userId: ownProps.match.params.id,
+        userId: parseInt(ownProps.match.params.id),
         users: state.entities.users,
         friendships: state.entities.friendships,
-        currentUserId: state.session.id
-}};
+        currentUserId: state.session.id,
+        workouts: Object.values(state.entities.workouts),
+        routes: Object.values(state.entities.routes)
+    }};
 
 const mapDispatchToProps = dispatch => ({
     getUsers: () => dispatch(getUsers()),

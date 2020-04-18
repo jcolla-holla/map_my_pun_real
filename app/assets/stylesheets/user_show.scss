@@ -1,6 +1,5 @@
 #userShowContainer {
     width: 100%;
-    height: 1000px;
     display: flex;
     flex-direction: column;
     font-family: Roboto;
@@ -16,5 +15,100 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 30px;
+    }
+
+    .userShowInfo {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .profilePic {
+            background-image: asset-data-url("user-2.png");
+            background-size: cover;
+            height: 99%;
+            width: 140px;
+            border-left: .5px solid lightgray;
+            border-right: .5px solid lightgray;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .alreadyFriendMsg {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .routesAndWorkouts {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            h3 {
+                font-size: 24px;
+                text-decoration: underline;
+            }
+
+            li {
+                margin-top: 10px;
+            }
+
+            a {
+                font-size: 18px;
+                text-decoration: none;
+                color: #2f98d9;
+            }
+
+            a:hover {
+                color: #92BFDD;
+            }
+        }
+
+        .routesList, .workoutsList {
+            list-style: none;
+        }
+    }
+
+    .unfriendButton {
+        width: 120px;
+        font-size: 15px;
+        height: 46px;
+        border: none;
+        color: white;
+        background-color: rgb(187, 25, 25);
+        transition: background-color 0.5s;
+        text-decoration: none;
+        border-radius: 4px;
+        line-height: 46px;
+        text-align: center;
+        margin: 18px;
+    }
+
+    .unfriendButton:hover {
+        background-color: rgb(215, 20, 20);
+        cursor: pointer;
+    }
+
+    .addFriendButton {
+        width: 120px;
+        font-size: 15px;
+        height: 46px;
+        border: none;
+        color: white;
+        background-color: #0075bf;
+        transition: background-color 0.5s;
+        text-decoration: none;
+        border-radius: 4px;
+        line-height: 46px;
+        text-align: center;
+        margin: 18px;
+    }
+    .addFriendButton:hover {
+        cursor: pointer;
+        background-color: #2f98d9;
     }
 }

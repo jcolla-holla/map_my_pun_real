@@ -44,7 +44,7 @@ class FriendsOverview extends React.Component {
                     
                     if (this.friendCount === 0 && idx === this.props.friendships.length - 1) {
                         return (
-                            <Link className="noFriendsLink" key={idx} to={`/users`}>
+                            <Link className="noFriendsLink" key={idx} to={`/find_friends`}>
                                 <div>You don't have any friends yet!  Click here to add some.</div>
                             </Link>
                         )
@@ -55,15 +55,15 @@ class FriendsOverview extends React.Component {
 
         let viewAllMsg;
         let actionLinks;
-        if (this.friendCount > 5) {
-            viewAllMsg = <Link className="viewAllButton" to="/friends"> The rest</Link>;
-        }
+        // if (this.friendCount > 5) {
+        //     viewAllMsg = <Link className="viewAllButton" to="/find_friends"> The rest</Link>;
+        // }
 
         if (this.friendCount > 0) {
             actionLinks = (
                 <div className="actionLinks">
-                    <Link className="addFriendButton" to="/friends">Add Friend</Link>
-                    <Link className="seeFriendsButton" to="/friends">See All Friends</Link>
+                    <Link className="addFriendButton" to="/find_friends">Add Friend</Link>
+                    <Link className="seeFriendsButton" to="/find_friends">See All Friends</Link>
                 </div>
             )
         } else {

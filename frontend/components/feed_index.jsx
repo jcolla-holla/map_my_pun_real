@@ -1,8 +1,6 @@
 import React from 'react';
 import FeedIndexItem from './feed_index_item';
-import { Link } from 'react-router-dom';
 import {getTodaysDate} from '../util/date_util';
-import ProfileOverviewContainer from './profile_overview_container';
  
 
 class FeedIndex extends React.Component {
@@ -77,7 +75,12 @@ class FeedIndex extends React.Component {
                     </div>
                     <ul className="activitiesIndex">
                     {itemsLis}
+                    <div className="bottomMsg"> 
+                        <div>You made it to the bottom of your feed!</div>
+                    </div>
+                    
                     </ul>
+                    
                 </div>
         );
     };
