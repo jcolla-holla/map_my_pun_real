@@ -13,4 +13,8 @@ class Route < ApplicationRecord
         foreign_key: :route_completed_id,
         class_name: :Workout,
         dependent: :destroy
+
+    has_many :likes, as: :likeable
+
+    has_many :comments, as: :commntable
 end

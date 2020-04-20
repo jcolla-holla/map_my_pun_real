@@ -3,5 +3,6 @@ class Like < ApplicationRecord
 
     belongs_to :likeable, polymorphic: true
 
-    belongs_to :liker, class_name: :User
+    # don't think this is necessary
+    # belongs_to :liker, class_name: :User
 end
