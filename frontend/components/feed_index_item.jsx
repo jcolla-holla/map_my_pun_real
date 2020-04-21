@@ -1,35 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {distanceFromToday} from '../util/date_util';
-import { createComment, deleteComment, updateComment } from '../util/comments_api_util';
-import { createLike, deleteLike } from '../util/likes_api_util';
+// import { createComment, deleteComment, updateComment } from '../util/comments_api_util';
+// import { createLike, deleteLike } from '../util/likes_api_util';
 
 
 class FeedIndexItem extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+
+        let itemType = this.props.itemType;
+        let newItemType = itemType.charAt(0).toUpperCase() + itemType.slice(1);
+        this.state = { commntable_id: this.props.item.id, commntable_type: newItemType, user_id: this.props.currentUserId, content: ""};
     }
 
     handleLikeClick() {
         if (this.props.userLiked) {
-            deleteLike(this.props.likeId)
+            this.props.deleteLike(this.props.likeId)
         } else {
             // need to capitalize "workout" to "Workout" (and same for 'route') in order for rails to accept it
             let itemType = this.props.itemType;
             let newItemType = itemType.charAt(0).toUpperCase() + itemType.slice(1);
-            createLike({ likeable_id: this.props.item.id, likeable_type: newItemType, user_id: this.props.currentUserId});
+            this.props.createLike({ likeable_id: this.props.item.id, likeable_type: newItemType, user_id: this.props.currentUserId});
         }
+    }
 
-        // TO DO: need to force re-render instead
-        location.reload();
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.createComment(this.state);
+
+        //reset the comment input text to default 'leave a comment...'
+        this.setState({ ["content"]: "" });
+    }
+
+    update(field) {
+        return e => {
+            this.setState({ [field]: e.target.value })
+        }
     }
 
 
     
-    
     render() { 
-        console.log(this.props.commentsArr.length)
-
         let cardClass;
         
         if (this.props.commentsArr.length > 0) {
@@ -60,13 +74,30 @@ class FeedIndexItem extends React.Component {
             likeBtnText = "Like";
         }
 
+        
+        let commentsList =  this.props.commentsArr.map((comment, idx) => {
+                if (idx <= 1) {
+
+                    if (comment.user_id === this.props.currentUserId) {
+                        return <li className="myComment" key={idx}>
+                            <div>{comment.content}</div>
+                            <button className="commentDeleteBtn" onClick={()=> this.props.deleteComment(comment.id)}>Delete</button>
+                        </li>
+                    } else {
+                        return <li key={idx}>
+                            <div>{comment.content}</div>
+                        </li>
+                    }
+                } else {
+                    return <li key={idx} className="moreComments"> <Link className="moreCommentsLink" to={`/${comment.commntable_type}s/${comment.commntable_id}`}>See All Comments</Link> </li>
+                }
+            })
+
 
         let date = new Date(this.props.item.updated_at.slice(0, 4), this.props.item.updated_at.slice(5, 7) - 1, this.props.item.updated_at.slice(8, 10));
         let createdDaysAgo = distanceFromToday(date);
         const card = (this.props.itemType === "route") ?
         ( 
-
-           
             <li className={cardClass}>
                 <header>
                         <h3><Link to={`/users/${this.props.user.id}`} className="userName">{this.props.user.first_name} {this.props.user.last_name}</Link> created the route <Link className="link" to={`/routes/${this.props.item.id}`}>{this.props.item.name}</Link> </h3> 
@@ -95,16 +126,17 @@ class FeedIndexItem extends React.Component {
                     </div>
                     <div className="daysAgo">{createdDaysAgo}</div>
                 </footer>
-                <ul className="commentsList">
-                    {this.props.commentsArr.map((comment,idx) => {
-                        // if (idx <= 1) {
-                            return <li key={idx}>{comment.content}</li>
-                        // } else {
-                            // not sure why this isn't being triggered
-                            // return <li key={idx} className="moreComments">See All Comments</li>
-                        // }
-                    })}
-                </ul>
+                <div >
+                    <ul className="commentsList">
+                        {commentsList}
+                        <li>
+                            <form className="commentForm" onSubmit={this.handleSubmit}>
+                                <input className="commentInput" placeholder="Leave a comment..." type="text" value={this.state.content} onChange={this.update("content")}/>
+                                <input className="submitComment" type="submit" value="POST" />
+                            </form>
+                        </li>
+                    </ul>
+                </div>
             </li>
         )
         :
@@ -148,11 +180,18 @@ class FeedIndexItem extends React.Component {
                         <div className="daysAgo">{createdDaysAgo}</div>
                 </footer>
 
-                <ul className="commentsList">
-                    {this.props.commentsArr.map((comment,idx) => {
-                        return <li key={idx}>{comment.content}</li>
-                    })}
-                </ul>
+                <div >
+                    <ul className="commentsList">
+                        {commentsList}
+                        <li>
+                            <form className="commentForm" onSubmit={this.handleSubmit}>
+                                <input className="commentInput" placeholder="Leave a comment..." type="text" value={this.state.content} onChange={this.update("content")} />
+                                <input className="submitComment" type="submit" value="POST" />
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                
             </li>
         )
     

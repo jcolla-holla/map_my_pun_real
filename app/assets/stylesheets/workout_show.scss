@@ -38,24 +38,15 @@
     display: flex;
 }
 
-#workoutShowContainer .workoutShowInfoBody {
-    color: rgb(34, 38, 40);
-    height: 66%;
-    width: 100%;
-    padding: 20px;
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-}
-
 #workoutShowContainer .workoutShowInfo {
     // font-weight: bold;
     height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-left: 40px;
+    // align-items: center;
+    // justify-content: center;
 }
 
 #workoutContainer input {
@@ -86,10 +77,24 @@
     width: 100%;
 }
 
-#workoutShowContainer .workoutShowInfo h2 {
+#workoutShowContainer .workoutShowInfo .nonList {
     margin-bottom: 10px;
     width: 50%;
-    height: 100%;
+}
+
+.routeWorkoutsCommentsList {
+    list-style: none;
+    margin-top: 20px;
+
+    h2 {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    li div {
+        margin-top: 6px;
+        font-size: 12px;
+    }
 }
 
 

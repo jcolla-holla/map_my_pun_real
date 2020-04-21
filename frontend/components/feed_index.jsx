@@ -34,7 +34,6 @@ class FeedIndex extends React.Component {
         const itemsLis = mergedIndex.map(item => {
             let completedRoute = undefined;
             // let that = this; // ran into google chrome browser bug of 'this' being undefined, that = this is for debuggering
-            let that = this;
             let itemLikes = [];
             let itemComments =[];
             let userLiked = false;
@@ -84,7 +83,22 @@ class FeedIndex extends React.Component {
                 userThread = { email:"", password_digest:"", first_name:"",last_name:"",session_token:"",created_at:"",updated_at:"" };
             }
 
-            return <FeedIndexItem currentUserId={this.props.currentUser.id} user={userThread} likeId={likeId} userLiked={userLiked} likeCount={itemLikes.length} commentsArr={itemComments} completedRoute={completedRoute} itemType={this.workoutOrRoute(item)} item={item} key={this.workoutOrRoute(item) + item.id.toString()} />
+            return <FeedIndexItem 
+                createComment={this.props.createComment}
+                deleteComment={this.props.deleteComment}
+                createLike={this.props.createLike}
+                deleteLike={this.props.deleteLike}
+                currentUserId={this.props.currentUser.id} 
+                user={userThread} 
+                likeId={likeId} 
+                userLiked={userLiked} 
+                likeCount={itemLikes.length} 
+                commentsArr={itemComments} 
+                completedRoute={completedRoute} 
+                itemType={this.workoutOrRoute(item)} 
+                item={item} 
+                key={this.workoutOrRoute(item) + item.id.toString()} 
+            />
         })
 
         return (

@@ -4,8 +4,8 @@ import {getRoutes} from '../actions/routes_actions';
 import {getWorkouts} from '../actions/workouts_actions';
 import {getUsers} from '../actions/users_actions';
 import { getFriendships } from '../actions/friendship_actions';
-import { getLikes } from '../actions/like_actions';
-import { getComments } from '../actions/comment_actions';
+import { getLikes, createLike, deleteLike } from '../actions/like_actions';
+import { getComments, createComment } from '../actions/comment_actions';
 
 
 const mapStateToProps = (state) => {
@@ -26,7 +26,11 @@ const mapDispatchToProps = dispatch => ({
     getUsers: () => dispatch(getUsers()),
     getFriendships: () => dispatch(getFriendships()),
     getLikes: () => dispatch(getLikes()),
-    getComments: () => dispatch(getComments())
+    getComments: () => dispatch(getComments()),
+    createComment: (comment) => dispatch(createComment(comment)),
+    deleteComment: (commentId) => dispatch(deleteComment(commentId)),
+    createLike: (like) => dispatch(createLike(like)),
+    deleteLike: (likeId) => dispatch(deleteLike(likeId))
 })
  
 export default connect(mapStateToProps, mapDispatchToProps)(FeedIndex);

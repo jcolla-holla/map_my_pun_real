@@ -7,6 +7,7 @@ import configureStore from './store/store';
 // import {createRoute} from './util/routes_api_util';
 import {createComment, getComments, deleteComment, updateComment} from './util/comments_api_util';
 import {createLike, getLikes, deleteLike} from './util/likes_api_util';
+import {deleteWorkout} from './util/workouts_api_util';
 import { getRandomDadJoke } from './util/jokes_util';
 
 
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.deleteLike = deleteLike;
     window.deleteComment = deleteComment;
     window.updateComment = updateComment;
+    window.deleteWorkout = deleteWorkout;
 
     ReactDOM.render(<Root store={store} />, root);
 })

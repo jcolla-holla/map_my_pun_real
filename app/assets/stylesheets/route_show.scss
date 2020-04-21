@@ -37,13 +37,13 @@
 }
 
 #routeShowContainer .routeShowInfo {
-    // font-weight: bold;
     height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-left: 40px;
+    // align-items: center;
+    // justify-content: space-evenly;
 }
 
 #routeShowContainer .routeShowMap {
@@ -60,10 +60,24 @@
     width: 100%;
 }
 
-#routeShowContainer .routeShowInfo h2 {
+#routeShowContainer .routeShowInfo .nonList {
     margin-bottom: 10px;
     width: 50%;
-    height: 100%;
+}
+
+.routeWorkoutsCommentsList {
+    list-style: none;
+    margin-top: 20px;
+
+     h2 {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    li div {
+        margin-top: 6px;
+        font-size: 12px;
+    }
 }
 
 

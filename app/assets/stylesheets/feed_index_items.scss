@@ -16,14 +16,14 @@
 #feedIndexContainer .cardLi {  
     width: 600px;
     border: .5px lightgray solid;
-    box-shadow: 1px 1px 1px lightgray;
+    // box-shadow: 1px 1px 1px lightgray;
     height: 250px;
-    margin-bottom: 20px;
+    margin-bottom: 76px;
 }
 
 // if the card has comments give more space at the bottom
 #feedIndexContainer .withComments {
-    margin-bottom: 90px;
+    margin-bottom: 180px;
 }
 
 #feedIndexContainer .cardLi header {
@@ -120,7 +120,7 @@
     height: 100%;
     text-decoration: none;
     color: rgb(34, 38, 40);
-    border-left: .5px solid lightgray;
+    // border-left: .5px solid lightgray;
 }
 
 #feedIndexContainer li .workoutCardSection .sectionLink {
@@ -270,13 +270,73 @@
 #feedIndexContainer .commentsList {
     list-style: none;
     display: block;
+    // box-shadow: 1px 1px 1px lightgray;
 
     li {
         font-size: 12px;
         color: rgb(34, 38, 40);
         border-bottom: .5px lightgray solid;
-        box-shadow: 1px 1px 1px lightgray;
+        border-left: .5px lightgray solid;
+        border-right: .5px lightgray solid;
         padding: 10px;
+    }
+
+    .commentForm {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .commentInput {
+        width: 85%;
+        padding: 5px;
+    }
+
+    .submitComment {
+        background-color: #ff8714;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        box-shadow: .5px .5px .5px lightgrey;
+        width: 8%;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .submitComment:hover {
+        background-color: rgb(254, 162, 76);
+        cursor: pointer;
+    }
+
+    .moreCommentsLink {
+        color: #2f98d9;
+        text-decoration: none;
+    }
+    .moreCommentsLink:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: #92BFDD
+    }
+
+    .myComment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .commentDeleteBtn {
+        background-color: rgb(187, 25, 25);
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        box-shadow: .5px .5px .5px lightgrey;
+        width: 8%;
+        font-size: 12px;
+    }
+
+    .commentDeleteBtn:hover {
+        background-color: rgb(215, 20, 20);
+        cursor: pointer;
     }
 }
 
