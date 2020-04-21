@@ -20,11 +20,15 @@ class UserShow extends React.Component {
     handleFriending() {
         let friendship = {starter_user_id: this.props.currentUserId, receiver_user_id: this.props.userId};
         this.props.createFriendship(friendship);
+
+        // TO DO: need to force re-render instead
         location.reload();
     }
 
     handleUnfriending() {
         this.props.deleteFriendship(this.friendshipId);
+
+        // TO DO: need to force re-render instead
         location.reload();
     }
 
