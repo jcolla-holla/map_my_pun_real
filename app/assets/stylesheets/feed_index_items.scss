@@ -7,21 +7,26 @@
     justify-content: center;
 }
 
-#feedIndexContainer ul {
+#feedIndexContainer .activitiesIndex {
     list-style: none;
     margin-top: 40px;
     margin-bottom: 100px;
 }
 
-#feedIndexContainer li {  
+#feedIndexContainer .cardLi {  
     width: 600px;
     border: .5px lightgray solid;
-    box-shadow: 1px 1px 1px lightgray;
+    // box-shadow: 1px 1px 1px lightgray;
     height: 250px;
-    margin-bottom: 20px;
+    margin-bottom: 76px;
 }
 
-#feedIndexContainer li header {
+// if the card has comments give more space at the bottom
+#feedIndexContainer .withComments {
+    margin-bottom: 180px;
+}
+
+#feedIndexContainer .cardLi header {
     height: 20%;
     color: rgb(34, 38, 40);
     text-decoration: none;
@@ -53,7 +58,7 @@
     margin: 2.5px;
 }
 
-#feedIndexContainer li section {
+#feedIndexContainer .cardLi section {
     background-color: #f0f2f4;
     border-bottom: .5px solid lightgray;
     height: 65%;
@@ -107,7 +112,7 @@
     color: #92BFDD
 }
 
-#feedIndexContainer li .routeCardSection .sectionLink {
+#feedIndexContainer .cardLi .routeCardSection .sectionLink {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -115,7 +120,7 @@
     height: 100%;
     text-decoration: none;
     color: rgb(34, 38, 40);
-    border-left: .5px solid lightgray;
+    // border-left: .5px solid lightgray;
 }
 
 #feedIndexContainer li .workoutCardSection .sectionLink {
@@ -151,7 +156,7 @@
     padding-left: 44px;
 }
 
-#feedIndexContainer li section .sectionlink div {
+#feedIndexContainer .cardLi section .sectionlink div {
     background-color: #f0f2f4;
     width: 50%;
 }
@@ -176,7 +181,7 @@
     margin-left: 4px;
 }
 
-#feedIndexContainer li section .sectionlink .avgPaceInCard {
+#feedIndexContainer .cardLi section .sectionlink .avgPaceInCard {
     display: block;
     border-left: .5px solid lightgray;
 }
@@ -202,7 +207,7 @@
     margin-left: 4px;
 }
 
-#feedIndexContainer li footer {
+#feedIndexContainer .cardLi footer {
     background-color: #f0f2f4;
     display: flex;
     justify-content: space-between;
@@ -219,7 +224,15 @@
 }
 
 #feedIndexContainer .leftSideFooter {
-    margin-left: 15px
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+
+    .likeCount {
+        font-size: 12px;
+        color: rgb(34, 38, 40);
+        margin-right: 8px;
+    }
 }
 
 #feedIndexContainer .leftSideFooter button {
@@ -253,6 +266,80 @@
         line-height: 31px;
     }
 }
+
+#feedIndexContainer .commentsList {
+    list-style: none;
+    display: block;
+    // box-shadow: 1px 1px 1px lightgray;
+
+    li {
+        font-size: 12px;
+        color: rgb(34, 38, 40);
+        border-bottom: .5px lightgray solid;
+        border-left: .5px lightgray solid;
+        border-right: .5px lightgray solid;
+        padding: 10px;
+    }
+
+    .commentForm {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .commentInput {
+        width: 85%;
+        padding: 5px;
+    }
+
+    .submitComment {
+        background-color: #ff8714;
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        box-shadow: .5px .5px .5px lightgrey;
+        width: 8%;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .submitComment:hover {
+        background-color: rgb(254, 162, 76);
+        cursor: pointer;
+    }
+
+    .moreCommentsLink {
+        color: #2f98d9;
+        text-decoration: none;
+    }
+    .moreCommentsLink:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: #92BFDD
+    }
+
+    .myComment {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .commentDeleteBtn {
+        background-color: rgb(187, 25, 25);
+        color: white;
+        padding: 5px;
+        border-radius: 4px;
+        box-shadow: .5px .5px .5px lightgrey;
+        width: 8%;
+        font-size: 12px;
+    }
+
+    .commentDeleteBtn:hover {
+        background-color: rgb(215, 20, 20);
+        cursor: pointer;
+    }
+}
+
 
 
 

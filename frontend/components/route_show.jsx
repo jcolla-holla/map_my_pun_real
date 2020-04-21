@@ -9,7 +9,7 @@ class RouteShow extends React.Component {
 
     componentDidMount () {
         this.props.getRoute(this.props.routeId);
-        //need to create 'get user' to get the user's name
+        this.props.getComments()
     }
 
     handleDelete() {
@@ -19,6 +19,27 @@ class RouteShow extends React.Component {
     }
 
     render() { 
+
+        let itemComments = [];
+
+        for (let i = 0; i < this.props.commentsArr.length; i++) {
+            if (this.props.route.id === this.props.commentsArr[i].commntable_id && this.props.commentsArr[i].commntable_type.toLowerCase() === "route") {
+                itemComments.push(this.props.commentsArr[i])
+            }
+        }
+
+        let commentsList = itemComments.map((comment, idx) => {
+            if (comment.user_id === this.props.currentUserId) {
+                return <li className="myComment" key={idx}>
+                    <div>{comment.content}</div>
+                    <button className="commentDeleteBtn" onClick={() => this.props.deleteComment(comment.id)}>Delete</button>
+                </li>
+            } else {
+                return <li key={idx}>
+                    <div>{comment.content}</div>
+                </li>
+            }
+        })
         return (  
             <div id="routeShowContainer">
                 <section className="routeShowInfoCard">
@@ -30,9 +51,13 @@ class RouteShow extends React.Component {
                         </section>
                         
                         <div className="routeShowInfo">
-                            <h2>Activity Type: {this.props.route.activity_type}</h2>
-                            <h2>City: {this.props.route.city}</h2>
-                            <h2>Distance: {this.props.route.distance}</h2>
+                            <h2 className="nonList">Activity Type: {this.props.route.activity_type}</h2>
+                            <h2 className="nonList">City: {this.props.route.city}</h2>
+                            <h2 className="nonList">Distance: {this.props.route.distance}</h2>
+                            <ul className="routeWorkoutsCommentsList">
+                                <h2>Comments:</h2>
+                                {commentsList}
+                            </ul>
                         </div>
                     </div>
                 

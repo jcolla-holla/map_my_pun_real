@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :routes, only: [:create, :show, :update, :destroy, :index]
     resources :workouts, only: [:create, :show, :update, :destroy, :index]
     resources :friendships, only: [:create, :show, :update, :destroy, :index]
+    resources :likes, only: [:create, :show, :update, :destroy, :index]
+    resources :comments, only: [:create, :show, :update, :destroy, :index]
   end
 
   root to: "static_pages#root"

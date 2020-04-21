@@ -15,6 +15,9 @@ class FeedIndex extends React.Component {
             this.props.getUsers();
             this.props.getRoutes();
             this.props.getWorkouts();
+            this.props.getFriendships();
+            this.props.getLikes();
+            this.props.getComments();
     };
     
 
@@ -31,17 +34,40 @@ class FeedIndex extends React.Component {
         const itemsLis = mergedIndex.map(item => {
             let completedRoute = undefined;
             // let that = this; // ran into google chrome browser bug of 'this' being undefined, that = this is for debuggering
-            let that = this;
+            let itemLikes = [];
+            let itemComments =[];
+            let userLiked = false;
+            let likeId;
+
+
+            // itemLikes
+            for (let i = 0; i < this.props.likesArr.length; i++) {
+                if (item.id === this.props.likesArr[i].likeable_id && this.workoutOrRoute(item) === this.props.likesArr[i].likeable_type.toLowerCase()) {
+                    itemLikes.push(this.props.likesArr[i].likeable_id)
+                    if (this.props.currentUser.id === this.props.likesArr[i].user_id) {
+                        userLiked = true;
+                        likeId = this.props.likesArr[i].id;
+                    }
+                }
+
+            }
+
+            // itemComments
+            for (let i = 0; i < this.props.commentsArr.length; i++) {
+                if (item.id === this.props.commentsArr[i].commntable_id && this.workoutOrRoute(item) === this.props.commentsArr[i].commntable_type.toLowerCase()) {
+                    itemComments.push(this.props.commentsArr[i])
+                }
+            }
+
+
             if (this.workoutOrRoute(item) === "workout") {
-
-
                 //terrible N query here bc entities.routes is an array, can potentially fix later with following line:
                 // completedRoute = this.props.routesObj[item.route_completed_id];
 
                 // Array (slower) version:
-                for (let index = 0; index < this.props.routesArr.length; index++) {
-                    if (this.props.routesArr[index].id === item.route_completed_id) {
-                        completedRoute = this.props.routesArr[index];
+                for (let i = 0; i < this.props.routesArr.length; i++) {
+                    if (this.props.routesArr[i].id === item.route_completed_id) {
+                        completedRoute = this.props.routesArr[i];
                     }
                 }   
             }
@@ -57,7 +83,22 @@ class FeedIndex extends React.Component {
                 userThread = { email:"", password_digest:"", first_name:"",last_name:"",session_token:"",created_at:"",updated_at:"" };
             }
 
-            return <FeedIndexItem user={userThread} completedRoute={completedRoute} itemType={this.workoutOrRoute(item)} item={item} key={this.workoutOrRoute(item) + item.id.toString()} />
+            return <FeedIndexItem 
+                createComment={this.props.createComment}
+                deleteComment={this.props.deleteComment}
+                createLike={this.props.createLike}
+                deleteLike={this.props.deleteLike}
+                currentUserId={this.props.currentUser.id} 
+                user={userThread} 
+                likeId={likeId} 
+                userLiked={userLiked} 
+                likeCount={itemLikes.length} 
+                commentsArr={itemComments} 
+                completedRoute={completedRoute} 
+                itemType={this.workoutOrRoute(item)} 
+                item={item} 
+                key={this.workoutOrRoute(item) + item.id.toString()} 
+            />
         })
 
         return (
