@@ -22,7 +22,6 @@ class WorkoutShow extends React.Component {
         // this.props.deleteWorkout(this.props.workoutId)//.then(() => this.props.history.push("/home/feed"))
         
         deleteWorkout(this.props.workoutId).then(() => this.props.history.push("/home/feed"))
-        location.reload()
 
         // .then(alert("Workout Successfully Deleted!"));
     }
@@ -59,10 +58,9 @@ class WorkoutShow extends React.Component {
                 <title className="workoutShowInfoTitle">{this.props.workout.name}</title>
                 <div className="workoutShowInfoBody">
                     <section className="workoutShowMap">
-                        <img className="mapImage" src={this.props.route.maps_api_static_img} />
-                        {/* <img className="mapImage" /> */}
-                        {/* the below to test if route props is */}
-                            <div>{this.props.route.name}</div>
+                        {/* commenting these out for now */}
+                        {/* <img className="mapImage" src={this.props.route.maps_api_static_img} />
+                            <div>{this.props.route.name}</div> */}
                     </section>
 
                     <div className="workoutShowInfo">
@@ -76,7 +74,8 @@ class WorkoutShow extends React.Component {
                 </div>
 
                 <div className="actionButtons">
-                    <Link className="editButton" to={`/workout_edit/${this.props.workout.id}`}>Edit</Link>
+                    {/* commenting edit workout button out for now */}
+                    {/* <Link className="editButton" to={`/workout_edit/${this.props.workout.id}`}>Edit</Link> */}
                     <button onClick={() => this.handleDelete()} className="deleteButton">Delete</button>
                 </div>
             </section>

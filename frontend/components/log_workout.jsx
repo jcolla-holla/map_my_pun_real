@@ -1,8 +1,6 @@
 import React from 'react';
 import {calculateAvgPace} from '../util/date_util';
 
-//check out: https://momentjs.com/
-
 class LogWorkout extends React.Component {
     constructor(props) {
         super(props);

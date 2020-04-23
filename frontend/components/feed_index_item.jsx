@@ -8,7 +8,7 @@ class FeedIndexItem extends React.Component {
         super(props);
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        // this.handleCommentDelete = this.handleCommentDelete.bind(this);
+        this.handleCommentDelete = this.handleCommentDelete.bind(this);
         this.handleLikeClick = this.handleLikeClick.bind(this);
 
         let itemType = this.props.itemType;
@@ -19,30 +19,38 @@ class FeedIndexItem extends React.Component {
     handleLikeClick() {
         if (this.props.userLiked) {
             this.props.deleteLike(this.props.likeId)
+
+            // crappy fix to reload whole feed instead of rendering component
+            location.reload();
         } else {
             // need to capitalize "workout" to "Workout" (and same for 'route') in order for rails to accept it
             let itemType = this.props.itemType;
             let newItemType = itemType.charAt(0).toUpperCase() + itemType.slice(1);
             this.props.createLike({ likeable_id: this.props.item.id, likeable_type: newItemType, user_id: this.props.currentUserId});
+
+            // crappy fix to reload whole feed instead of rendering component
+            location.reload();
         }
-
-        // temporary fix to get like number to update, reload whole page.  Would be much better to have component render by changing state, though line below doesn't seem to re-render the component:
-        // this.setState({ ["content"]: "" });
-
-        // crappy fix:
-        // location.reload()
-
     }
 
+    handleCommentDelete(commentId) {
+        // crappy fix to reload whole feed instead of rendering component
+        location.reload();
+        this.props.deleteComment(commentId);
+
+        // possible re-render
+        // this.setState({ ["content"]: "" });
+    }
+
+
+    // for the creation of a new comment
     handleSubmit(e) {
         e.preventDefault();
         this.props.createComment(this.state);
         this.setState({ ["content"]: "" });
     }
 
-    // handleCommentDelete() {
-
-    // }
+   
 
     update(field) {
         return e => {
@@ -90,14 +98,14 @@ class FeedIndexItem extends React.Component {
                     if (comment.user_id === this.props.currentUserId) {
                         return <li className="myComment" key={idx}>
                             <div>{comment.content}</div>
-                            <button className="commentDeleteBtn" onClick={() => this.props.deleteComment(comment.id)}>Delete</button>
+                            <button className="commentDeleteBtn" onClick={() => this.handleCommentDelete(comment.id)}>Delete</button>
                         </li>
                     } else {
                         return <li key={idx}>
                             <div>{comment.content}</div>
                         </li>
                     }
-                } else {
+                } else if (idx === 2) {
                     return <li key={idx} className="moreComments"> <Link className="moreCommentsLink" to={`/${comment.commntable_type}s/${comment.commntable_id}`}>See All Comments</Link> </li>
                 }
             })

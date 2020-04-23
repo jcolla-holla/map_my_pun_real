@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                 (
                     <section className="headerButtons">
                         <Link to="/login" className="loginButton">LOG IN</Link>
-                        <Link to="/signup" className="signupButton">SIGN UP</Link>
+                        {/* <Link to="/signup" className="signupButton">SIGN UP</Link> */}
                     </section>
                 )
 
