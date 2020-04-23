@@ -19,11 +19,7 @@ class WorkoutShow extends React.Component {
     }
 
     handleDelete () {
-        // this.props.deleteWorkout(this.props.workoutId)//.then(() => this.props.history.push("/home/feed"))
-        
-        deleteWorkout(this.props.workoutId).then(() => this.props.history.push("/home/feed"))
-
-        // .then(alert("Workout Successfully Deleted!"));
+        deleteWorkout(this.props.workoutId).then(() => this.props.history.push("/home/feed")).then(alert("Workout Successfully Deleted !"));
     }
 
 
