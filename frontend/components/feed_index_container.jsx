@@ -9,6 +9,7 @@ import { getComments, createComment } from '../actions/comment_actions';
 
 
 const mapStateToProps = (state) => {
+
     return {
     routesArr: Object.values(state.entities.routes),
     routesObj: state.entities.routes,

@@ -45,7 +45,7 @@ class FriendsOverview extends React.Component {
                     if (this.friendCount === 0 && idx === this.props.friendships.length - 1) {
                         return (
                             <Link className="noFriendsLink" key={idx} to={`/find_friends`}>
-                                <div>You don't have any friends yet!  Click here to add some.</div>
+                                <div>You don't have any friends yet! Add some here.</div>
                             </Link>
                         )
                     }

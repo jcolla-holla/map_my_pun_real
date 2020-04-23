@@ -19,6 +19,16 @@ class FeedIndex extends React.Component {
             this.props.getLikes();
             this.props.getComments();
     };
+
+    // how to get feed to refresh without using location.reload() ???
+    // componentDidUpdate () {
+    //         this.props.getUsers();
+    //         this.props.getRoutes();
+    //         this.props.getWorkouts();
+    //         this.props.getFriendships();
+    //         this.props.getLikes();
+    //         this.props.getComments();
+    // };
     
 
     //hacky way of testing if the item is a route or workout by checking if the item has a key that only workouts have
@@ -104,7 +114,7 @@ class FeedIndex extends React.Component {
         return (
         <div id="statusFormContainer">
                 
-                <div className="collapseContainer">
+                {/* <div className="collapseContainer">
                 <label className="collapse" htmlFor="_1"></label>
                 <input id="_1" type="checkbox"></input>
                     <div>
@@ -119,7 +129,7 @@ class FeedIndex extends React.Component {
                                 <button type="submit" className="statusSubmit">POST</button>
                             </div>
                         </form></div>
-                </div>
+                </div> */}
 
                 <div id="feedIndexContainer">
                     <div className="scrollDownMsg">

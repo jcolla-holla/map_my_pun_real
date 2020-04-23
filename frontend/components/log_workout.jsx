@@ -1,8 +1,6 @@
 import React from 'react';
 import {calculateAvgPace} from '../util/date_util';
 
-//check out: https://momentjs.com/
-
 class LogWorkout extends React.Component {
     constructor(props) {
         super(props);
@@ -32,8 +30,26 @@ class LogWorkout extends React.Component {
 
         let routeDistance = chosenRoute.distance;
 
-        let durationVal = this.state.hoursDuration + ":" + this.state.minutesDuration + ":" + this.state.secondsDuration;
+
+        let tempHoursDuration = "00";
+        let tempMinutesDuration = "00";
+        let tempSecondsDuration = "00";
+        if (typeof this.state.hoursDuration !== 'undefined') {
+            tempHoursDuration = this.state.hoursDuration;
+        }
+
+        if (typeof this.state.hoursDuration !== 'undefined') {
+            tempMinutesDuration = this.state.minutesDuration
+        }
+
+        if (typeof this.state.hoursDuration !== 'undefined') {
+            tempSecondsDuration = this.state.secondsDuration
+        }
+
+
+        let durationVal = tempHoursDuration + ":" + tempMinutesDuration + ":" + tempSecondsDuration;
         this.setState({ duration: durationVal })
+
 
         // delete these temporary values from state before submitting:
         delete this.state.hoursDuration;

@@ -1,6 +1,6 @@
 import * as util from '../util/comments_api_util';
-export const RECEIVE_COMMENT = "RECEIEVE_COMMENT";
-export const RECEIVE_COMMENTS = "RECEIEVE_COMMENTS";
+export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
+export const RECEIVE_COMMENTS = "RECEIVE_COMMENTS";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
 export const RECEIVE_COMMENT_ERRORS = "RECEIVE_COMMENT_ERRORS";
 

@@ -1,6 +1,6 @@
 import * as util from '../util/likes_api_util';
-export const RECEIVE_LIKE = "RECEIEVE_LIKE";
-export const RECEIVE_LIKES = "RECEIEVE_LIKES";
+export const RECEIVE_LIKE = "RECEIVE_LIKE";
+export const RECEIVE_LIKES = "RECEIVE_LIKES";
 export const REMOVE_LIKE = "REMOVE_LIKE";
 export const RECEIVE_LIKE_ERRORS = "RECEIVE_LIKE_ERRORS";
 

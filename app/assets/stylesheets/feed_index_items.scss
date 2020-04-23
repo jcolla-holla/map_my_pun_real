@@ -72,9 +72,9 @@
 
 #feedIndexContainer .routeCard .mapImage {
     width: 110.5%;
-    //99.7% to maintain inside of border
     height: 99.7%;
     border-right: .5px solid lightgray;
+    border-left: .5px solid lightgray;
 }
 
 #feedIndexContainer .workoutCard .mapInCard {
@@ -171,7 +171,7 @@
 
 #feedIndexContainer .distanceValue {
     font-size: 40px;
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 #feedIndexContainer .mileTag {
@@ -197,7 +197,7 @@
 
 #feedIndexContainer .avgPaceValue {
     font-size: 40px;
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 #feedIndexContainer .mileTag {
