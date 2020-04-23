@@ -1,1 +1,1 @@
-json.extract! @comment, :commntable_id, :commntable_type, :user_id, :content
+json.extract! @comment, :id, :commntable_id, :commntable_type, :user_id, :content

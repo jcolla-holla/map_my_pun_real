@@ -104,7 +104,7 @@ class FeedIndex extends React.Component {
         return (
         <div id="statusFormContainer">
                 
-                <div className="collapseContainer">
+                {/* <div className="collapseContainer">
                 <label className="collapse" htmlFor="_1"></label>
                 <input id="_1" type="checkbox"></input>
                     <div>
@@ -119,7 +119,7 @@ class FeedIndex extends React.Component {
                                 <button type="submit" className="statusSubmit">POST</button>
                             </div>
                         </form></div>
-                </div>
+                </div> */}
 
                 <div id="feedIndexContainer">
                     <div className="scrollDownMsg">
