@@ -34,9 +34,3 @@ Using several Google Maps APIs to generate a responsive map, and real-time dista
 Merge Routes and Workouts into a single feed, ordered by last updated date.
 
 ![Create Route](app/assets/gifs/feed.gif.gifcask.2020-02-21_11_05_13.gif)
-
-## Possible Future Improvements
-  * Likes
-  * Comments
-  * Friends
-  * Other ideas? - message me on Github!
