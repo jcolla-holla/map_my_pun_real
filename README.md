@@ -19,7 +19,7 @@
     * Maps JavaScript API
     * Distance Matrix API
     * Directions API
-    * [Free Joke API - icanhazdadjoke.com](https://icanhazdadjoke.com/)
+* [Free Joke API - icanhazdadjoke.com](https://icanhazdadjoke.com/)
 
 
 ## Route Creation (below)
